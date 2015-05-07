@@ -5,19 +5,35 @@
 <table class="table table-hover table-condensened">
 	<thead>
 		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Email</th>
-			<th>Username</th>
+			<th>Edit</th>
+			<th></th>
+			<th class="col-sm-4">First Name</th>
+			<th class="col-sm-4">Last Name</th>
+			<th class="col-sm-4">Email</th>
+			<th class="col-sm-4">Username</th>
+			<th>Save</th>
 		</tr>
 	</thead>
 	<tbody>
-		{{#each model as |user|}}
+		{{#each model itemController="user-row" as |user|}}
 		<tr>
-			<td>{{user.firstname}}</td>
-			<td>{{user.lastname}}</td>
-			<td>{{user.email}}</td>
-			<td>{{user.username}}</td>
+			<td>{{input type="checkbox" checked=user.isEditing}}</td>
+			<td><button class="close">&times;</button></td>
+			{{#if user.isEditing}}
+				<td>{{input value=user.model.firstname class="form-control input-sm"}}</td>
+				<td>{{input value=user.model.lastname class="form-control input-sm"}}</td>
+				<td>{{input value=user.model.email class="form-control input-sm"}}</td>
+				<td>{{input value=user.model.username class="form-control input-sm"}}</td>
+
+			{{else}}
+				<td>{{user.model.firstname}}</td>
+				<td>{{user.model.lastname}}</td>
+				<td>{{user.model.email}}</td>
+				<td>{{user.model.username}}</td>
+			{{/if}}
+			<td><button class="btn btn-sm btn-info" disabled={{user.saveDisabled}} {{action "saveUser"}}>Save</button></td>
+
+			
 		</tr>
 		{{/each}}
 	</tbody>

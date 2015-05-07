@@ -20,6 +20,13 @@ router.post('/', function(req, res){
 		}).then(function(user){
 			res.json({user:user});
 		});
-})
+});
+
+router.put('/:userId', function(req, res){
+	var userId = req.params.userId;
+	UserModel.findByIdAndUpdate(userId, {$set:req.body.user}, function(err, updatedUser){
+		res.json({user:updatedUser});
+	});
+});
 
 module.exports = router;
