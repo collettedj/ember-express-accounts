@@ -5,10 +5,29 @@ export default Ember.Controller.extend({
 
 	saveDisabled: Ember.computed.not('isEditing'),
 
+	initUserRow: function(){
+		var isNew = this.get('model.isNew');
+		if(isNew){
+			this.set('isEditing', true);
+		}
+	}.on('init'),
+
 	actions:{
 		saveUser: function(){
 			var user = this.get('model');
-			user.save();
+			user.save()
+				.catch(function(){
+					user.rollback();
+				});
+
+		}, 
+
+		deleteUser: function(){
+			var user = this.get('model');
+			user.destroyRecord()
+				.catch(function(){
+					user.rollback();
+				});			
 		}
 	}
 });

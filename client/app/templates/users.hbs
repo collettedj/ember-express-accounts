@@ -16,9 +16,9 @@
 	</thead>
 	<tbody>
 		{{#each model itemController="user-row" as |user|}}
-		<tr>
+		<tr class="{{if user.model.isDirty 'info'}}"> 
 			<td>{{input type="checkbox" checked=user.isEditing}}</td>
-			<td><button class="close">&times;</button></td>
+			<td><button class="close" {{action "deleteUser"}}>&times;</button></td>
 			{{#if user.isEditing}}
 				<td>{{input value=user.model.firstname class="form-control input-sm"}}</td>
 				<td>{{input value=user.model.lastname class="form-control input-sm"}}</td>
