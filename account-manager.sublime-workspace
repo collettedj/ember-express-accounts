@@ -1,0 +1,666 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"append",
+				"appendToList"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"blo",
+				"blockName"
+			],
+			[
+				"mom",
+				"momentDate〔variable〕"
+			],
+			[
+				"over",
+				"overflow-y: 〔property〕"
+			],
+			[
+				"scrollbar",
+				"scrollbarWidth"
+			],
+			[
+				"scro",
+				"scrollPosition"
+			],
+			[
+				"stringi",
+				"querystring.stringify"
+			],
+			[
+				"bs",
+				"bs3-row	bs3-row"
+			],
+			[
+				"bs3-al",
+				"bs3-alert:danger	bs3-alert-danger"
+			],
+			[
+				"b",
+				"bs3-row	bs3-row"
+			],
+			[
+				"pos",
+				"posts"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client/app/routes/users.js",
+			"settings":
+			{
+				"buffer_size": 125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/templates/users.hbs",
+			"settings":
+			{
+				"buffer_size": 275,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 355.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"new fi",
+				"File: New File Relative to Current View"
+			],
+			[
+				"syntax jad",
+				"Set Syntax: Jade"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax: ",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"bs3-li",
+				"Snippet: bs3-list-group"
+			],
+			[
+				"bs3-co",
+				"Snippet: bs3-col"
+			],
+			[
+				"bs3-a	",
+				"Snippet: bs3-alert"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 476.0,
+		"history":
+		[
+			"git status",
+			"print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest();",
+			"urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) );",
+			"ipp = sublime.installed_packages_path(); ",
+			"pf = 'Package Control.sublime-package';",
+			"h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0';",
+			"import urllib.request,os,hashlib;",
+			"view"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/david/projects/ember-express",
+		"/home/david/projects/ember-express/client",
+		"/home/david/projects/ember-express/client/app",
+		"/home/david/projects/ember-express/client/app/adapters",
+		"/home/david/projects/ember-express/client/app/models",
+		"/home/david/projects/ember-express/client/app/serializers",
+		"/home/david/projects/ember-express/server",
+		"/home/david/projects/ember-express/server/bin",
+		"/home/david/projects/ember-express/server/models",
+		"/home/david/projects/ember-express/server/routes"
+	],
+	"file_history":
+	[
+		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/david/projects/ember-express/client/app/controllers/application.js",
+		"/home/david/projects/ember-express/client/app/routes/application.js",
+		"/home/david/projects/ember-express/server/app.js",
+		"/home/david/projects/ember-express/client/app/adapters/application.js",
+		"/home/david/projects/ember-express/server/routes/users.js",
+		"/home/david/projects/ember-express/client/app/serializers/application.js",
+		"/home/david/projects/ember-express/client/app/models/user.js",
+		"/home/david/projects/ember-express/client/app/templates/application.hbs",
+		"/home/david/projects/ember-express/client/app/templates/users.hbs",
+		"/home/david/projects/ember-express/server/models/user.js",
+		"/home/david/projects/pro-express/cli-app/app.js",
+		"/home/david/projects/codeschool-express/level5/routes/blocks.js",
+		"/home/david/projects/pro-express/ch2/cli-app/app.js",
+		"/home/david/projects/codeschool-express/level5/app.js",
+		"/home/david/projects/pro-express/ch2/hello-name.js",
+		"/home/david/projects/codeschool-express/level2/public/client.js",
+		"/home/david/projects/codeschool-express/level4/public/client.js",
+		"/home/david/projects/pro-express/edge1/testedge.js",
+		"/home/david/projects/codeschool-express/level4/app.js",
+		"/home/david/projects/codeschool-express/level2/public/index.html",
+		"/home/david/projects/codeschool-express/level4/public/index.html",
+		"/home/david/projects/codeschool-express/level2/app.js",
+		"/home/david/projects/codeschool-express/level3/app.js",
+		"/home/david/projects/codeschool-express/level4/test",
+		"/home/david/projects/pro-express/ch2/hello.js",
+		"/home/david/projects/pro-express/ch2/cli-app/public/stylesheets/style.less",
+		"/home/david/projects/pro-express/ch2/cli-app/package.json",
+		"/home/david/projects/codeschool-express/level2/node_modules/express/lib/application.js",
+		"/home/david/projects/codeschool-express/level4/routes/test1.js",
+		"/home/david/projects/codeschool-express/level4/routes/test2.js",
+		"/home/david/projects/codeschool-express/level4/routes/test3.js",
+		"/home/david/projects/codeschool-express/level4/routes/test4.js",
+		"/home/david/projects/codeschool-express/level2/logger.js",
+		"/home/david/projects/codeschool-express/level2/public/style.css",
+		"/home/david/projects/codeschool-express/level2/node_modules/express/lib/response.js",
+		"/home/david/projects/pro-express/ch2/cli-app/public/stylesheets/style.css",
+		"/home/david/projects/lftest/vendor/.gitkeep",
+		"/home/david/projects/lftest/app/controllers/index.js",
+		"/home/david/projects/lftest/node_modules/ember-cli/blueprints/controller/index.js",
+		"/home/david/projects/lftest/app/app.js",
+		"/home/david/projects/lftest/app/templates/application.hbs",
+		"/home/david/projects/lftest/app/templates/index.hbs",
+		"/home/david/projects/lftest/app/controllers/foo.js",
+		"/home/david/projects/dateinput/package.json",
+		"/home/david/projects/dateinput/bower.json",
+		"/home/david/projects/dateinput/Brocfile.js",
+		"/home/david/projects/dateinput/app/components/input-mask.js",
+		"/home/david/projects/dateinput/app/controllers/application.js",
+		"/home/david/projects/dateinput/app/templates/application.hbs",
+		"/home/david/projects/lftest/package.json",
+		"/home/david/projects/lfembercanary/bower.json",
+		"/home/david/projects/lfembercanary/app/transitions.js",
+		"/home/david/projects/lfembercanary/app/templates/application.hbs",
+		"/home/david/projects/lftest/app/transitions.js",
+		"/home/david/projects/test-slider/app/templates/application.hbs",
+		"/home/david/projects/test-slider/app/components/table-slider.js",
+		"/home/david/projects/test-slider/app/templates/components/table-slider.hbs",
+		"/home/david/projects/test-slider/Brocfile.js",
+		"/home/david/projects/liquidfiretest/bower.json",
+		"/home/david/projects/test-slider/app/index.html",
+		"/home/david/projects/ember-pack/node_modules/ember-cli/package.json",
+		"/home/david/projects/youdontknowjs/now.js",
+		"/home/david/projects/plots/plot.js",
+		"/home/david/projects/ember-test-htmlbars/app/router.js",
+		"/home/david/projects/ember-test-htm2/bower.json",
+		"/home/david/projects/ember-test-htm2/config/environment.js",
+		"/home/david/projects/ember-test-htm2/app/index.html",
+		"/home/david/projects/ember-test-htm2/app/templates/application.hbs",
+		"/home/david/projects/ember-test-htmlbars/bower.json",
+		"/home/david/projects/ember-test-htmlbars/.bowerrc",
+		"/home/david/projects/ember-test-htmlbars/package.json",
+		"/home/david/projects/csvParse/views/error.hbs",
+		"/home/david/projects/csvParse/views/layout.hbs",
+		"/home/david/projects/csvParse/public/javascripts/site.js",
+		"/home/david/projects/csvParse/views/index.hbs",
+		"/home/david/projects/youdontknowjs/strap.js",
+		"/home/david/projects/therightway/mycode/watcher-spawn-parse.js",
+		"/home/david/projects/therightway/mycode/cat.js",
+		"/home/david/projects/therightway/mycode/test-server.js",
+		"/home/david/projects/therightway/mycode/net-watcher.js",
+		"/home/david/projects/therightway/mycode/watcher-json-service.js",
+		"/home/david/projects/therightway/mycode/net-watcher-json-client.js",
+		"/home/david/projects/therightway/mycode/net-watcher-json-test-service.js",
+		"/home/david/projects/therightway/mycode/ldj.js",
+		"/home/david/projects/therightway/code/file-system/watcher-spawn-parse.js",
+		"/home/david/projects/gulpember/emberapp/views/layout.hbs",
+		"/home/david/projects/gulpember/gulpfile.js",
+		"/home/david/projects/precompilehbs/Gruntfile.js",
+		"/home/david/projects/precompilehbs/public/javascripts/result.js",
+		"/home/david/projects/gulpember/package.json",
+		"/home/david/projects/gulpember/emberapp/public/javascripts/templates.js",
+		"/home/david/projects/gulpember/emberapp/app.js",
+		"/home/david/projects/gulpember/emberapp/views/index.hbs",
+		"/home/david/projects/brocember/Brocfile.js",
+		"/home/david/projects/gulpember/emberapp/views/layouts/main.handlebars",
+		"/home/david/projects/precompilehbs/app.js",
+		"/home/david/projects/precompilehbs/bin/www",
+		"/home/david/projects/gulpember/emberapp/views/error.handlebars",
+		"/home/david/projects/gulpember/emberapp/views/index.handlebars",
+		"/home/david/projects/gulpember/.gitignore",
+		"/home/david/projects/ember-spell-collab/ember-spell-client/bower.json",
+		"/home/david/projects/precompilehbs/client/templates/test/index.handlebars",
+		"/home/david/projects/precompilehbs/client/templates/application.handlebars",
+		"/home/david/projects/precompilehbs/public/javascripts/emberapp.js",
+		"/home/david/projects/precompilehbs/views/layouts/main.handlebars",
+		"/home/david/projects/precompilehbs/public/vendor/ember.js",
+		"/home/david/projects/precompilehbs/public/vendor/jquery.js",
+		"/home/david/projects/precompilehbs/client",
+		"/home/david/projects/precompilehbs/views/error.handlebars",
+		"/home/david/projects/precompilehbs/bower.json",
+		"/home/david/projects/precompilehbs/client/templates/index.handlebars",
+		"/home/david/projects/precompilehbs/node_modules/ember-template-compiler/vendor/ember-template-compiler.js",
+		"/home/david/projects/precompilehbs/client/result.js",
+		"/home/david/projects/precompilehbs/views/index.handlebars",
+		"/home/david/projects/precompilehbs/npm-debug.log",
+		"/home/david/projects/precompilehbs/public/vendor/handlebars.runtime.min.js",
+		"/home/david/projects/precompilehbs/views/error.hbs",
+		"/home/david/projects/web-development-with-node-and-express/meadowlark.js",
+		"/home/david/projects/validations/node_modules/ember-validations/dist/assets/vendor.js",
+		"/home/david/projects/validations/node_modules/ember-validations/tests/unit/validators/remote/uniqueness_test.js",
+		"/home/david/projects/validations/node_modules/ember-validations/dist/testem.js",
+		"/home/david/projects/validations/node_modules/ember-validations/Brocfile.js",
+		"/home/david/projects/validations/node_modules/ember-validations/dist/assets/dummy.js",
+		"/home/david/projects/web-development-with-node-and-express/views/newsletter.handlebars",
+		"/home/david/projects/expDev/views/newsletter.hbs",
+		"/home/david/projects/expDev/views/thank-you.hbs"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"etag",
+			"replacer",
+			"development",
+			"req.params.name",
+			"th>",
+			">\n",
+			"td>",
+			"th>",
+			"td",
+			"th>",
+			"th",
+			"th>",
+			"th",
+			"td",
+			"th",
+			">\n",
+			"th",
+			">\n",
+			"th",
+			">\n",
+			"th",
+			">\n",
+			"\n      ",
+			">\n",
+			"\n      ",
+			">\n",
+			"\n        ",
+			">\n",
+			"\n        ",
+			">\n",
+			"<th>",
+			"th",
+			"<th>",
+			"ember-validations",
+			"Ember.Validations",
+			"header",
+			"master",
+			"module.js",
+			"app.css",
+			"theme"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client/app/routes/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								125,
+								125
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/app/templates/users.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "account-manager.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"users.hb",
+				"client/app/templates/users.hbs"
+			],
+			[
+				"routes/users",
+				"client/app/routes/users.js"
+			],
+			[
+				"routes/user",
+				"server/routes/users.js"
+			],
+			[
+				"users.",
+				"client/app/templates/users.hbs"
+			],
+			[
+				"application.hb",
+				"client/app/templates/application.hbs"
+			],
+			[
+				"controllers/applic",
+				"client/app/controllers/application.js"
+			],
+			[
+				"level5/ap",
+				"codeschool-express/level5/app.js"
+			],
+			[
+				"app",
+				"codeschool-express/level4/app.js"
+			],
+			[
+				"client",
+				"codeschool-express/level4/public/client.js"
+			],
+			[
+				"",
+				"codeschool-express/level4/public/client.js"
+			],
+			[
+				"level4/cli",
+				"codeschool-express/level4/public/client.js"
+			],
+			[
+				"clien",
+				"codeschool-express/level2/public/client.js"
+			],
+			[
+				"app.j",
+				"codeschool-express/level4/app.js"
+			],
+			[
+				"ap",
+				"level4/app.js"
+			],
+			[
+				"cl",
+				"level4/public/client.js"
+			],
+			[
+				"app.js",
+				"level4/app.js"
+			],
+			[
+				"level3/app",
+				"level3/app.js"
+			],
+			[
+				"views/in",
+				"views/index.jade"
+			],
+			[
+				"routes/in",
+				"routes/index.js"
+			],
+			[
+				"templates/appl",
+				"app/templates/application.hbs"
+			],
+			[
+				"controllers/index",
+				"app/controllers/index.js"
+			],
+			[
+				"controller/inde",
+				"node_modules/ember-cli/blueprints/controller/index.js"
+			],
+			[
+				"controllers/inde",
+				"app/controllers/index.js"
+			],
+			[
+				"templates/ind",
+				"app/templates/index.hbs"
+			],
+			[
+				"templates/application",
+				"app/templates/application.hbs"
+			],
+			[
+				"foo.js",
+				"app/controllers/foo.js"
+			],
+			[
+				"appli",
+				"app/templates/application.hbs"
+			],
+			[
+				"module.js",
+				"ember-spell-client/node_modules/broccoli-ember-hbs-template-compiler/test/expected-module.js"
+			],
+			[
+				"ember.js",
+				"ember-spell-client/vendor/ember-resolver/dist/ember-resolver.js"
+			],
+			[
+				"loadinitializers",
+				"ember-spell-client/vendor/ember-load-initializers/ember-load-initializers.js"
+			],
+			[
+				"app.c",
+				"ember-spell-client/tmp/es_safe_filter-tmp_dest_dir-HDZRD5Wc.tmp/ember-spell-client/styles/app.css"
+			],
+			[
+				".css",
+				"ember-spell-client/app/styles/app.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/sails-test/sails-test.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 325.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
