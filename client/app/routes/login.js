@@ -1,0 +1,11 @@
+import Ember from 'ember';
+import UnauthenticatedRouteMixin from 'simple-auth/mixins/unauthenticated-route-mixin';
+
+export default Ember.Route.extend(UnauthenticatedRouteMixin, {
+
+  actions:{
+    sessionAuthenticationFailed(error){
+      this.controller.set('authError', error.responseText);
+    }
+  }
+});

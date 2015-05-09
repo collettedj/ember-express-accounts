@@ -20,14 +20,14 @@
 			<td>{{input type="checkbox" checked=user.isEditing}}</td>
 			<td><button class="close" {{action "deleteUser"}}>&times;</button></td>
 			{{#if user.isEditing}}
-				<td>{{input value=user.model.firstname class="form-control input-sm"}}</td>
-				<td>{{input value=user.model.lastname class="form-control input-sm"}}</td>
+				<td>{{input value=user.model.firstName class="form-control input-sm"}}</td>
+				<td>{{input value=user.model.lastName class="form-control input-sm"}}</td>
 				<td>{{input value=user.model.email class="form-control input-sm"}}</td>
 				<td>{{input value=user.model.username class="form-control input-sm"}}</td>
 
 			{{else}}
-				<td>{{user.model.firstname}}</td>
-				<td>{{user.model.lastname}}</td>
+				<td>{{user.model.firstName}}</td>
+				<td>{{user.model.lastName}}</td>
 				<td>{{user.model.email}}</td>
 				<td>{{user.model.username}}</td>
 			{{/if}}

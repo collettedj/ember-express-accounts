@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-sm-6">
+      <div class="well well-sm">
+
+          <label>Username</label>
+          <span class="text-danger">{{errors.username}}</span>
+        {{input value=username class="form-control"}}
+
+          <label>Email</label>
+          <span class="text-danger">{{errors.email}}</span>
+        {{input value=email class="form-control"}}
+
+          <label>Password</label>
+          <span class="text-danger">{{errors.password}}</span>
+        {{input type="password" value=password class="form-control"}}
+
+          <label>Confirm Password</label>
+          <span class="text-danger">{{errors.passwordConfirmation}}</span>
+        {{input type="password" value=passwordConfirmation class="form-control"}}
+
+          <button type="button" class="btn btn-default pull-right" {{action 'registerUser'}} style="margin-top:10px;">Register</button>
+          <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="well well-sm">
+            <label>First Name</label>
+            <span class="text-danger">{{errors.firstName}}</span>
+            {{input value=firstName class="form-control"}}
+
+            <label>Last Name</label>
+            <span class="text-danger">{{errors.lastName}}</span>
+          {{input value=lastName class="form-control"}}
+        </div>
+    </div>
+</div>
+
