@@ -12,6 +12,14 @@ router.get('/', function(req, res) {
   	});
 });
 
+router.get('/:userId', function(req, res) {
+	var userId = req.params.userId;
+	var user = UserModel.findOne({_id:userId}).exec()
+		.then(function(user){
+			res.json({user:user});
+		});
+});
+
 router.post('/', function(req, res){
 	var newUser = new UserModel(req.body.user);
 	newUser

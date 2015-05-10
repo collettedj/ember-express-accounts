@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   email:'collettedj@gmail.com',
+  username: 'collettedj',
   password:'1qaz2wsx!QAZ@WSX',
   authError: '',
 
@@ -12,9 +13,9 @@ export default Ember.Controller.extend({
 
   actions:{
     login:function(){
-      var email = this.get('email');
+      var username = this.get('username');
       var password = this.get('password');
-      this.get('session').authenticate('authenticator:custom', {identifier: email, password: password});
+      this.get('session').authenticate('authenticator:custom', {username: username, password: password});
         //.then(function(){
         //  var currentUserId = this.get('session.content.secure.id');
         //  return this.store.find('user', currentUserId);

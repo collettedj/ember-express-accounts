@@ -22,7 +22,7 @@ export default Base.extend({
   restore: function() {
     return this.ajaxPromise({
       type: "GET",
-      url: "../auth/currentUser",
+      url: "../api/v1/auth/user",
       //xhrFields: {
       //  withCredentials: true
       //},
@@ -37,7 +37,7 @@ export default Base.extend({
   authenticate: function(options) {
     return this.ajaxPromise({
         type: "POST",
-        url: "../auth/local",
+        url: "../api/v1/auth/login",
         data: options,
         //xhrFields: {
         //  withCredentials: true
@@ -53,7 +53,7 @@ export default Base.extend({
   invalidate: function() {
     return this.ajaxPromise({
       type: "GET",
-      url: "../logout",
+      url: "../api/v1/auth/signout",
       data: {},
       //xhrFields: {
       //  withCredentials: true

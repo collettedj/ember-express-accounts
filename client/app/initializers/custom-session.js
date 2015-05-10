@@ -4,7 +4,7 @@ import Session from "simple-auth/session";
 export function initialize(/* container, application */) {
   Session.reopen({
     currentUser: function() {
-      var id = this.get("content.secure.id");
+      var id = this.get("content.secure._id");
       var self = this;
 
       if (!Ember.isEmpty(id)) {
@@ -13,7 +13,7 @@ export function initialize(/* container, application */) {
             self.set("content.currentUser", user);
           });
       }
-    }.observes("content.secure.id")
+    }.observes("content.secure._id")
   });
 }
 

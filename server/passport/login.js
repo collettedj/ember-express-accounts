@@ -22,11 +22,11 @@ module.exports = function(passport){
                     // User exists but wrong password, log the error 
                     if (!isValidPassword(user, password)){
                         console.log('Invalid Password');
-                        return done(null, false, req.flash('message', 'Invalid Password')); // redirect back to login page
+                        return done(null, false, { message: 'Invalid Password'}); // redirect back to login page
                     }
                     // User and password both match, return user from done method
                     // which will be treated like success
-                    return done(null, user);
+                    return done(null, user.toJSON());
                 }
             );
 

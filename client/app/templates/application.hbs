@@ -1,7 +1,18 @@
-
-
 <div class="container">
 <h2 id="title">Welcome to Ember.js</h2>
+
+  <p>Current User: {{session.content.currentUser.fullName}}</p>
+  {{#if session.isAuthenticated}}
+    <div>
+      <button type="button" class="btn-link" {{ action 'endSession' }}>Logout</button>
+    {{#link-to 'users'}}Users{{/link-to}}
+
+    </div>
+  {{else}}
+    {{#link-to 'login'}}Login{{/link-to}}
+    {{#link-to 'register'}}Register{{/link-to}}
+  {{/if}}
+
 {{outlet}}
 </div>
 
