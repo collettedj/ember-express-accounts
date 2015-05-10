@@ -23,10 +23,6 @@ export default Base.extend({
     return this.ajaxPromise({
       type: "GET",
       url: "../api/v1/auth/user",
-      //xhrFields: {
-      //  withCredentials: true
-      //},
-      //crossDomain: true
     }).then(function(res){
       return res;
     }, function(err){
@@ -39,10 +35,6 @@ export default Base.extend({
         type: "POST",
         url: "../api/v1/auth/login",
         data: options,
-        //xhrFields: {
-        //  withCredentials: true
-        //},
-        //crossDomain: true
       }).then(function(res){
         return res;
       }, function(err){
@@ -55,10 +47,6 @@ export default Base.extend({
       type: "GET",
       url: "../api/v1/auth/signout",
       data: {},
-      //xhrFields: {
-      //  withCredentials: true
-      //},
-      //crossDomain: true
     }).then(function(res){
       return res;
     }, function(err){

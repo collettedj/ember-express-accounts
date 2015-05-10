@@ -31,11 +31,12 @@ module.exports = function(passport){
 	});
 
 	/* Handle Registration POST */
-	router.post('/signup', passport.authenticate('signup', {
-		successRedirect: '/home',
-		failureRedirect: '/signup',
-		failureFlash : true  
-	}));
+	router.post('/signup', 
+		passport.authenticate('signup'), 
+		function(req, res){
+			res.status(200).json(req.user);
+		}
+	);
 
 	/* Handle Logout */
 	router.get('/signout', function(req, res) {

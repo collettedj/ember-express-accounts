@@ -48,16 +48,16 @@ export default Ember.Controller.extend(EmberValidations.Mixin, {
       if(isValid){
         Ember.$.ajax({
           type: "POST",
-          url: "../auth/local/register",
+          url: "../api/v1/auth/signup",
           data: {
             username:username,
             email:email,
             password:password,
-            firstname:firstname,
-            lastname:lastname
+            firstName:firstname,
+            lastName:lastname
           }
         }).then(function(){
-          this.get('session').authenticate('authenticator:custom', {identifier: email, password: password});
+          this.get('session').authenticate('authenticator:custom', {username: username, password: password});
         }.bind(this));
       }
     }
