@@ -60,98 +60,10 @@
 	"buffers":
 	[
 		{
-			"file": "client/app/models/user.js",
-			"settings":
-			{
-				"buffer_size": 189,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/templates/users.hbs",
-			"settings":
-			{
-				"buffer_size": 1294,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/views/index.hbs",
-			"settings":
-			{
-				"buffer_size": 1306,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/views/register.hbs",
-			"settings":
-			{
-				"buffer_size": 770,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/routes/index.js",
-			"settings":
-			{
-				"buffer_size": 1436,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/adapters/application.js",
-			"settings":
-			{
-				"buffer_size": 500,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "client/app/authenticators/custom.js",
 			"settings":
 			{
-				"buffer_size": 1453,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/initializers/custom-session.js",
-			"settings":
-			{
-				"buffer_size": 589,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/initializers/authentication.js",
-			"settings":
-			{
-				"buffer_size": 332,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/routes/users.js",
-			"settings":
-			{
-				"buffer_size": 234,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/routes/login.js",
-			"settings":
-			{
-				"buffer_size": 306,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/controllers/login.js",
-			"settings":
-			{
-				"buffer_size": 817,
+				"buffer_size": 1195,
 				"line_ending": "Unix"
 			}
 		},
@@ -164,50 +76,18 @@
 			}
 		},
 		{
-			"file": "/etc/sysctl.conf",
+			"file": "server/routes/authentication.js",
 			"settings":
 			{
-				"buffer_size": 2469,
+				"buffer_size": 1173,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/app/templates/application.hbs",
+			"file": "server/passport/signup.js",
 			"settings":
 			{
-				"buffer_size": 85,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/templates/register.hbs",
-			"settings":
-			{
-				"buffer_size": 1359,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/templates/login.hbs",
-			"settings":
-			{
-				"buffer_size": 358,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/routes/register.js",
-			"settings":
-			{
-				"buffer_size": 183,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/config/environment.js",
-			"settings":
-			{
-				"buffer_size": 1072,
+				"buffer_size": 2453,
 				"line_ending": "Unix"
 			}
 		},
@@ -215,7 +95,7 @@
 			"file": "server/passport/login.js",
 			"settings":
 			{
-				"buffer_size": 1684,
+				"buffer_size": 1683,
 				"line_ending": "Unix"
 			}
 		},
@@ -223,7 +103,39 @@
 			"file": "server/app.js",
 			"settings":
 			{
-				"buffer_size": 2048,
+				"buffer_size": 2086,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/initializers/custom-session.js",
+			"settings":
+			{
+				"buffer_size": 591,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/routes/users.js",
+			"settings":
+			{
+				"buffer_size": 1368,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/templates/application.hbs",
+			"settings":
+			{
+				"buffer_size": 445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/user.js",
+			"settings":
+			{
+				"buffer_size": 321,
 				"line_ending": "Unix"
 			}
 		}
@@ -328,36 +240,50 @@
 		"/home/david/projects/ember-express/client/app/controllers",
 		"/home/david/projects/ember-express/client/app/initializers",
 		"/home/david/projects/ember-express/client/app/routes",
+		"/home/david/projects/ember-express/client/app/styles",
 		"/home/david/projects/ember-express/client/app/templates",
 		"/home/david/projects/ember-express/client/config",
+		"/home/david/projects/ember-express/client/public",
 		"/home/david/projects/ember-express/server",
-		"/home/david/projects/ember-express/server/public",
+		"/home/david/projects/ember-express/server/passport",
 		"/home/david/projects/ember-express/server/routes",
 		"/home/david/projects/ember-express/server/views"
 	],
 	"file_history":
 	[
-		"/home/david/projects/ember-express/client/app/routes/users.js",
-		"/home/david/projects/ember-express/client/app/controllers/users.js",
+		"/home/david/projects/ember-express/client/app/templates/application.hbs",
+		"/home/david/projects/ember-express/server/app.js",
+		"/home/david/projects/ember-express/client/app/templates/login.hbs",
+		"/home/david/projects/ember-express/server/routes/index.js",
+		"/home/david/projects/ember-express/server/passport/login.js",
+		"/home/david/projects/ember-express/client/app/controllers/login.js",
+		"/home/david/projects/ember-express/client/app/models/user.js",
 		"/home/david/projects/ember-express/client/app/templates/users.hbs",
+		"/home/david/projects/ember-express/server/views/index.hbs",
+		"/home/david/projects/ember-express/server/views/register.hbs",
+		"/home/david/projects/ember-express/client/app/adapters/application.js",
+		"/home/david/projects/ember-express/client/app/authenticators/custom.js",
+		"/home/david/projects/ember-express/client/app/initializers/custom-session.js",
+		"/home/david/projects/ember-express/client/app/initializers/authentication.js",
+		"/home/david/projects/ember-express/client/app/routes/users.js",
+		"/home/david/projects/ember-express/client/app/routes/login.js",
+		"/home/david/projects/ember-express/client/app/controllers/register.js",
+		"/etc/sysctl.conf",
+		"/home/david/projects/ember-express/client/app/templates/register.hbs",
+		"/home/david/projects/ember-express/client/app/routes/register.js",
+		"/home/david/projects/ember-express/client/config/environment.js",
+		"/home/david/projects/ember-express/client/app/controllers/users.js",
 		"/home/david/projects/ember-express/client/app/controllers/user-row.js",
 		"/home/david/projects/ember-express/server/routes/users.js",
-		"/home/david/projects/ember-express/server/app.js",
-		"/home/david/projects/ember-express/server/routes/index.js",
-		"/home/david/projects/ember-express/server/views/index.hbs",
-		"/home/david/projects/ember-express/server/passport/login.js",
 		"/home/david/projects/ember-express/server/passport/signup.js",
 		"/home/david/projects/ember-express/server/models/user.js",
 		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/david/projects/ember-express/client/app/templates/application.hbs",
 		"/home/david/projects/ember-express/client/Brocfile.js",
 		"/home/david/projects/ember-express/server/passport/init.js",
 		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/david/projects/ember-express/client/app/controllers/application.js",
 		"/home/david/projects/ember-express/client/app/routes/application.js",
-		"/home/david/projects/ember-express/client/app/adapters/application.js",
 		"/home/david/projects/ember-express/client/app/serializers/application.js",
-		"/home/david/projects/ember-express/client/app/models/user.js",
 		"/home/david/projects/pro-express/cli-app/app.js",
 		"/home/david/projects/codeschool-express/level5/routes/blocks.js",
 		"/home/david/projects/pro-express/ch2/cli-app/app.js",
@@ -452,19 +378,7 @@
 		"/home/david/projects/precompilehbs/client/templates/test/index.handlebars",
 		"/home/david/projects/precompilehbs/client/templates/application.handlebars",
 		"/home/david/projects/precompilehbs/public/javascripts/emberapp.js",
-		"/home/david/projects/precompilehbs/views/layouts/main.handlebars",
-		"/home/david/projects/precompilehbs/public/vendor/ember.js",
-		"/home/david/projects/precompilehbs/public/vendor/jquery.js",
-		"/home/david/projects/precompilehbs/client",
-		"/home/david/projects/precompilehbs/views/error.handlebars",
-		"/home/david/projects/precompilehbs/bower.json",
-		"/home/david/projects/precompilehbs/client/templates/index.handlebars",
-		"/home/david/projects/precompilehbs/node_modules/ember-template-compiler/vendor/ember-template-compiler.js",
-		"/home/david/projects/precompilehbs/client/result.js",
-		"/home/david/projects/precompilehbs/views/index.handlebars",
-		"/home/david/projects/precompilehbs/npm-debug.log",
-		"/home/david/projects/precompilehbs/public/vendor/handlebars.runtime.min.js",
-		"/home/david/projects/precompilehbs/views/error.hbs"
+		"/home/david/projects/precompilehbs/views/layouts/main.handlebars"
 	],
 	"find":
 	{
@@ -483,6 +397,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"identifier",
+			"registerUser",
 			"api/v1",
 			"expressSession",
 			"<th>",
@@ -545,60 +461,124 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/app/models/user.js",
+					"file": "client/app/authenticators/custom.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 189,
+						"buffer_size": 1195,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								189,
-								189
+								1075,
+								1075
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/app/templates/users.hbs",
+					"file": "client/app/controllers/register.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1294,
+						"buffer_size": 1645,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1042,
-								1042
+								1280,
+								1280
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 470.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/routes/authentication.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								942,
+								942
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/passport/signup.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1524,
+								1524
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -608,59 +588,30 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "server/views/index.hbs",
+					"buffer": 4,
+					"file": "server/passport/login.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1306,
+						"buffer_size": 1683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27,
-								27
+								550,
+								550
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "server/views/register.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 770,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								770,
-								770
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"open_with_edit": true,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
+						"translation.x": 24.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -668,20 +619,82 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "server/routes/index.js",
+					"buffer": 5,
+					"file": "server/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1436,
+						"buffer_size": 2086,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1003,
-								1003
+								825,
+								825
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/app/initializers/custom-session.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server/routes/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
 							]
 						],
 						"settings":
@@ -698,57 +711,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "client/app/adapters/application.js",
+					"buffer": 8,
+					"file": "client/app/templates/application.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 500,
+						"buffer_size": 445,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								335,
-								335
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/app/authenticators/custom.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1453,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								442,
-								442
+								436,
+								436
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -758,78 +740,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "client/app/initializers/custom-session.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								509,
-								509
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "client/app/initializers/authentication.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 332,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								332,
-								332
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
 					"buffer": 9,
-					"file": "client/app/routes/users.js",
+					"file": "client/app/models/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 234,
+						"buffer_size": 321,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								321,
+								321
 							]
 						],
 						"settings":
@@ -841,330 +765,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "client/app/routes/login.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 306,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								306,
-								306
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "client/app/controllers/login.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								812,
-								812
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "client/app/controllers/register.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1645,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								816,
-								816
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 92.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/etc/sysctl.conf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2469,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2104,
-								2104
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 255.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "client/app/templates/application.hbs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 85,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "client/app/templates/register.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1002,
-								1002
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "client/app/templates/login.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 358,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								358,
-								358
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "client/app/routes/register.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 183,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								183,
-								183
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "client/config/environment.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1072,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1054,
-								1054
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "server/passport/login.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1684,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1503,
-								1503
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "server/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2048,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1166,
-								1166
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 459.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1223,6 +824,38 @@
 		"selected_items":
 		[
 			[
+				"authent",
+				"server/routes/authentication.js"
+			],
+			[
+				"model/users",
+				"client/app/models/user.js"
+			],
+			[
+				"application.",
+				"client/app/templates/application.hbs"
+			],
+			[
+				"custom-session",
+				"client/app/initializers/custom-session.js"
+			],
+			[
+				"session",
+				"client/app/initializers/custom-session.js"
+			],
+			[
+				"application.hb",
+				"client/app/templates/application.hbs"
+			],
+			[
+				"index.js",
+				"server/routes/index.js"
+			],
+			[
+				"custom.js",
+				"client/app/authenticators/custom.js"
+			],
+			[
 				"users.hb",
 				"client/app/templates/users.hbs"
 			],
@@ -1261,10 +894,6 @@
 			[
 				"controllers/users",
 				"client/app/controllers/users.js"
-			],
-			[
-				"application.hb",
-				"client/app/templates/application.hbs"
 			],
 			[
 				"routes/user",

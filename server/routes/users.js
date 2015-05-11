@@ -2,7 +2,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
 var UserModel = require('../models/user');
+var isAuthenticated = require('../passport/isAuthenticated');
 
+router.use(isAuthenticated);
 
 /* GET users listing. */
 router.get('/', function(req, res) {
