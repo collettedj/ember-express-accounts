@@ -8,7 +8,13 @@ app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
   destDir: 'assets'
 });
 
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+  destDir: 'fonts'
+});
+
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
