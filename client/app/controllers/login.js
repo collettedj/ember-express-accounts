@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   email:'collettedj@gmail.com',
-  username: 'collettedj',
-  password:'1qaz2wsx!QAZ@WSX',
+  username:null,
+  password:null,
   authError: '',
 
   hasErrors: function(){
