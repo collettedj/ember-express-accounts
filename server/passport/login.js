@@ -26,7 +26,9 @@ module.exports = function(passport){
                     }
                     // User and password both match, return user from done method
                     // which will be treated like success
-                    return done(null, user.toJSON());
+                    var userInfo = user.toJSON();
+                    delete userInfo.password;
+                    return done(null, userInfo);
                 }
             );
 

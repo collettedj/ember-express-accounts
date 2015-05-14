@@ -51,7 +51,10 @@
   <h2 id="title">Welcome to Ember.js</h2> 
 
   <div>
-    {{#link-to 'users'}}Users{{/link-to}} 
+  <ul class="nav nav-tabs">
+    {{#link-to 'users' tagName="li" href=false role="presentation"}}{{#link-to 'users'}}Users{{/link-to}}{{/link-to}} 
+    {{#link-to 'apps' tagName="li" href=false role="presentation"}}{{#link-to 'apps'}}Apps{{/link-to}}{{/link-to}} 
+  </ul>
   </div>
  
   {{outlet}}
