@@ -60,60 +60,50 @@
 	"buffers":
 	[
 		{
-			"file": "client/deployment/deploy-ember",
+			"file": "/home/david/projects/NodePackages/node_modules/express-generator/package.json",
 			"settings":
 			{
-				"buffer_size": 84,
+				"buffer_size": 2836,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/config/environment.js",
+			"file": "/home/david/projects/NodePackages/node_modules/sails/package.json",
 			"settings":
 			{
-				"buffer_size": 1072,
+				"buffer_size": 4692,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/app.js",
+			"file": "client/package.json",
 			"settings":
 			{
-				"buffer_size": 2146,
+				"buffer_size": 1093,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/etc/init/mongod.conf",
+			"file": "client/bower.json",
 			"settings":
 			{
-				"buffer_size": 1676,
+				"buffer_size": 538,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 426 files for \"express-static\"\n\n0 matches",
+			"file": "client/app/templates/application.hbs",
 			"settings":
 			{
-				"buffer_size": 51,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "client/.editorconfig",
-			"settings":
-			{
-				"buffer_size": 543,
+				"buffer_size": 2348,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/node_modules/express/node_modules/serve-static/index.js",
+			"file": "/home/david/projects/express",
 			"settings":
 			{
-				"buffer_size": 3206,
+				"buffer_size": 8873,
 				"line_ending": "Unix"
 			}
 		}
@@ -213,7 +203,6 @@
 	[
 		"/home/david/projects/ember-express",
 		"/home/david/projects/ember-express/client",
-		"/home/david/projects/ember-express/client/config",
 		"/home/david/projects/ember-express/client/deployment",
 		"/home/david/projects/ember-express/server",
 		"/home/david/projects/ember-express/server/passport",
@@ -223,41 +212,54 @@
 	],
 	"file_history":
 	[
+		"/home/david/projects/NodePackages/node_modules/express/package.json",
+		"/home/david/projects/NodePackages/node_modules/express-generator/pack",
+		"/home/david/projects/NodePackages/node_modules/ember-cli/package.json",
+		"/home/david/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/david/projects/ember-express/client/app/templates/application.hbs",
+		"/home/david/projects/ember-express/client/app/router.js",
+		"/home/david/projects/ember-express/client/app/routes/apps.js",
+		"/home/david/projects/ember-express/client/app/templates/apps.hbs",
+		"/home/david/projects/ember-express/client/app/models/app.js",
+		"/home/david/projects/ember-express/server/routes/users.js",
+		"/home/david/projects/ember-express/client/app/models/user.js",
+		"/home/david/projects/ember-express/server/passport/init.js",
+		"/home/david/projects/ember-express/client/app/controllers/login.js",
+		"/home/david/projects/NodePackages/node_modules/phantomjs/package.json",
+		"/home/david/projects/ember-express/server/routes/authentication.js",
+		"/home/david/projects/ember-express/server/passport/login.js",
+		"/home/david/projects/ember-express/client/app/routes/users.js",
+		"/home/david/projects/ember-express/client/app/templates/users.hbs",
+		"/home/david/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/david/projects/ember-express/server/app.js",
+		"/home/david/projects/ember-express/client/deployment/deploy-ember",
+		"/home/david/projects/ember-express/client/config/environment.js",
+		"/home/david/projects/ember-express/server/node_modules/express/node_modules/serve-static/index.js",
+		"/etc/init/mongod.conf",
 		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/david/projects/ember-express/client/app/authenticators/custom.js",
 		"/home/david/projects/ember-express/client/tests/unit/initializers/authentication-test.js",
 		"/home/david/projects/ember-express/client/app/controllers/register.js",
-		"/home/david/projects/ember-express/server/routes/authentication.js",
 		"/home/david/projects/ember-express/server/passport/signup.js",
-		"/home/david/projects/ember-express/server/passport/login.js",
 		"/home/david/projects/ember-express/server/passport/isAuthenticated.js",
-		"/home/david/projects/ember-express/server/app.js",
 		"/home/david/projects/ember-express/client/app/initializers/custom-session.js",
-		"/home/david/projects/ember-express/server/routes/users.js",
-		"/home/david/projects/ember-express/client/app/templates/application.hbs",
 		"/home/david/projects/ember-express/client/tests/unit/controllers/users-test.js",
 		"/home/david/projects/ember-express/client/app/styles/app.less",
-		"/home/david/projects/ember-express/client/app/models/user.js",
 		"/home/david/projects/ember-express/client/Brocfile.js",
 		"/home/david/projects/ember-express/client/app/templates/login.hbs",
 		"/home/david/projects/ember-express/server/routes/index.js",
-		"/home/david/projects/ember-express/client/app/controllers/login.js",
-		"/home/david/projects/ember-express/client/app/templates/users.hbs",
 		"/home/david/projects/ember-express/server/views/index.hbs",
 		"/home/david/projects/ember-express/server/views/register.hbs",
 		"/home/david/projects/ember-express/client/app/adapters/application.js",
 		"/home/david/projects/ember-express/client/app/initializers/authentication.js",
-		"/home/david/projects/ember-express/client/app/routes/users.js",
 		"/home/david/projects/ember-express/client/app/routes/login.js",
 		"/etc/sysctl.conf",
 		"/home/david/projects/ember-express/client/app/templates/register.hbs",
 		"/home/david/projects/ember-express/client/app/routes/register.js",
-		"/home/david/projects/ember-express/client/config/environment.js",
 		"/home/david/projects/ember-express/client/app/controllers/users.js",
 		"/home/david/projects/ember-express/client/app/controllers/user-row.js",
 		"/home/david/projects/ember-express/server/models/user.js",
 		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/david/projects/ember-express/server/passport/init.js",
 		"/home/david/projects/ember-express/client/app/controllers/application.js",
 		"/home/david/projects/ember-express/client/app/routes/application.js",
 		"/home/david/projects/ember-express/client/app/serializers/application.js",
@@ -337,20 +339,7 @@
 		"/home/david/projects/therightway/mycode/ldj.js",
 		"/home/david/projects/therightway/code/file-system/watcher-spawn-parse.js",
 		"/home/david/projects/gulpember/emberapp/views/layout.hbs",
-		"/home/david/projects/gulpember/gulpfile.js",
-		"/home/david/projects/precompilehbs/Gruntfile.js",
-		"/home/david/projects/precompilehbs/public/javascripts/result.js",
-		"/home/david/projects/gulpember/package.json",
-		"/home/david/projects/gulpember/emberapp/public/javascripts/templates.js",
-		"/home/david/projects/gulpember/emberapp/app.js",
-		"/home/david/projects/gulpember/emberapp/views/index.hbs",
-		"/home/david/projects/brocember/Brocfile.js",
-		"/home/david/projects/gulpember/emberapp/views/layouts/main.handlebars",
-		"/home/david/projects/precompilehbs/app.js",
-		"/home/david/projects/precompilehbs/bin/www",
-		"/home/david/projects/gulpember/emberapp/views/error.handlebars",
-		"/home/david/projects/gulpember/emberapp/views/index.handlebars",
-		"/home/david/projects/gulpember/.gitignore"
+		"/home/david/projects/gulpember/gulpfile.js"
 	],
 	"find":
 	{
@@ -361,6 +350,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"",
 			"<project>",
 			""
 		]
@@ -370,6 +360,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			":",
+			" \"",
+			"\": ",
+			":",
+			"deserializing",
 			"max",
 			"express-static",
 			"identifier",
@@ -436,90 +431,92 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/deployment/deploy-ember",
+					"file": "/home/david/projects/NodePackages/node_modules/express-generator/package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 84,
+						"buffer_size": 2836,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								1148,
+								1148
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/config/environment.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1072,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								179,
-								179
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 612.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "server/app.js",
+					"buffer": 1,
+					"file": "/home/david/projects/NodePackages/node_modules/sails/package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2146,
+						"buffer_size": 4692,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								857,
-								857
+								3131,
+								3131
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1352.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1093,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -527,79 +524,46 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/etc/init/mongod.conf",
-					"semi_transient": false,
+					"file": "client/bower.json",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1676,
+						"buffer_size": 538,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								527,
-								533
+								538,
+								538
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "client/app/templates/application.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 51,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51,
-								51
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/david/projects/ember-express",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/.editorconfig",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 543,
+						"buffer_size": 2348,
 						"regions":
 						{
 						},
@@ -612,30 +576,33 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"auto_complete": false,
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "server/node_modules/express/node_modules/serve-static/index.js",
+					"buffer": 5,
+					"file": "/home/david/projects/express",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3206,
+						"buffer_size": 8873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1341,
-								1341
+								1169,
+								1169
 							]
 						],
 						"settings":
@@ -644,11 +611,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 663.0,
+						"translation.x": -0.0,
+						"translation.y": 3570.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -706,6 +673,50 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"application.hbs",
+				"client/app/templates/application.hbs"
+			],
+			[
+				"clconlogin",
+				"client/app/controllers/login.js"
+			],
+			[
+				"clmouse",
+				"client/app/models/user.js"
+			],
+			[
+				"login.js",
+				"server/passport/login.js"
+			],
+			[
+				"routes/users",
+				"server/routes/users.js"
+			],
+			[
+				"models/apps",
+				"client/app/models/app.js"
+			],
+			[
+				"apps.hbs",
+				"client/app/templates/apps.hbs"
+			],
+			[
+				"routes/apps",
+				"client/app/routes/apps.js"
+			],
+			[
+				"router.js",
+				"client/app/router.js"
+			],
+			[
+				"",
+				"client/app/templates/application.hbs"
+			],
+			[
+				"users.hbs",
+				"client/app/templates/users.hbs"
+			],
 			[
 				"applica",
 				"client/app/templates/application.hbs"
@@ -791,10 +802,6 @@
 				"server/models/user.js"
 			],
 			[
-				"routes/users",
-				"server/routes/users.js"
-			],
-			[
 				"controllers/users",
 				"client/app/controllers/users.js"
 			],
@@ -820,10 +827,6 @@
 			],
 			[
 				"client",
-				"codeschool-express/level4/public/client.js"
-			],
-			[
-				"",
 				"codeschool-express/level4/public/client.js"
 			],
 			[
