@@ -12,7 +12,7 @@
 	</thead>
 	<tbody>
 		{{#each model itemController="user-row" as |user|}}
-		<tr class="{{if user.model.isDirty 'info'}}"> 
+		<tr class="user-row {{if user.model.isDirty 'info'}}"> 
 			<td>{{input type="checkbox" checked=user.isEditing}}</td>
 			<td><button class="close" {{action "deleteUser"}}>&times;</button></td>
 			{{#if user.isEditing}}
