@@ -22,10 +22,10 @@
 				<td>{{input value=user.model.username class="form-control input-sm"}}</td>
 
 			{{else}}
-				<td>{{user.model.firstName}}</td>
-				<td>{{user.model.lastName}}</td>
-				<td>{{user.model.email}}</td>
-				<td>{{user.model.username}}</td>
+				<td class="user-first-name">{{user.model.firstName}}</td>
+				<td class="user-last-name">{{user.model.lastName}}</td>
+				<td class="user-email">{{user.model.email}}</td>
+				<td class="user-username">{{user.model.username}}</td>
 			{{/if}}
 			<td><button class="btn btn-sm btn-info" disabled={{user.saveDisabled}} {{action "saveUser"}}>Save</button></td>
 

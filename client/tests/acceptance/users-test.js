@@ -31,5 +31,23 @@ test('visiting /users', function(assert) {
 
     var userRows = find('.user-row');
     assert.equal(userRows.length, 4, "Number of users");
+
+    var firstNames = find('.user-first-name');
+    var lastNames = find('.user-last-name');
+    var emails = find('.user-email');
+    var usernames = find('.user-username');
+
+    for (var i = 0; i < usersData.users.length; i++) {
+      var expectedUserInfo = usersData.users[i];
+      var firstName = $(firstNames[i]).text();
+      var lastName = $(lastNames[i]).text();
+      var email = $(emails[i]).text();
+      var username = $(usernames[i]).text();
+      assert.equal(firstName, expectedUserInfo.firstName);
+      assert.equal(lastName, expectedUserInfo.lastName);
+      assert.equal(email, expectedUserInfo.email);
+      assert.equal(username, expectedUserInfo.username);
+
+    }    
   });
 });
