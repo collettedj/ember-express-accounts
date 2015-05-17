@@ -1,8 +1,15 @@
 /* global require, module */
 
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
+	isProduction = EmberApp.env() === 'production';
 
 var app = new EmberApp();
+
+if ( !isProduction ) { 
+	// app.import( app.bowerDirectory + '/sinonjs/sinon.js', { type: 'test' } );
+	// app.import( app.bowerDirectory + '/sinon-qunit/lib/sinon-qunit.js', { type: 'test' } );
+	app.import('bower_components/jquery-mockjax/jquery.mockjax.js', { type: 'test' } );
+}
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
   destDir: 'assets'
@@ -15,6 +22,10 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+
+
+
+
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
