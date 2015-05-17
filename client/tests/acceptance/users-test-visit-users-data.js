@@ -1,7 +1,8 @@
 
 export default {
   "users":[
-      {"_id":"554d96840b66257326b08b34",
+      {
+        "_id":"554d96840b66257326b08b34",
         "firstName":"David",
         "email":"collettedj@gmial.com",
         "username":"collettedj",
@@ -9,7 +10,8 @@ export default {
         "lastName":"Collette",
         "age":36
       },
-      {"_id":"554ee22d35e086b2437e11e8",
+      {
+        "_id":"554ee22d35e086b2437e11e8",
         "lastName":"Collette",
         "firstName":"Reshma",
         "email":"collettedj2@gmail.com",
@@ -17,7 +19,8 @@ export default {
         "__v":0,
         "age":22
       },
-      {"_id":"554ee30ac77991b844e64827",
+      {
+        "_id":"554ee30ac77991b844e64827",
         "lastName":"Collette",
         "firstName":"Andrew",
         "email":"collettedj3@gmail.com",
@@ -25,7 +28,8 @@ export default {
         "__v":0,
         "age":44
       },
-      {"_id":"554ee3bac77991b844e64828",
+      {
+        "_id":"554ee3bac77991b844e64828",
         "lastName":"Collette",
         "firstName":"Adam",
         "email":"collettedj5@gmail.com",
