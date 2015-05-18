@@ -24,9 +24,12 @@ module('Acceptance | users', {
 
 test('visiting /users', function(assert) {
   authenticateSession();
+  var session = currentSession();
+  
   visit('/users');  
 
   andThen(function() {
+    console.log(session);
     assert.equal(currentURL(), '/users');
 
     var userRows = find('.user-row');
