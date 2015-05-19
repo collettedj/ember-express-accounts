@@ -1,5 +1,4 @@
-export default {
-  "apps":[
+export default [
       {
         "_id":"1",
         "name":"App 1"
@@ -19,6 +18,5 @@ export default {
       {
         "_id":"5",
         "name":"App 5"
-      }      
-    ]
-};
+      }  
+];

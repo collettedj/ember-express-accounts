@@ -1,14 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from 'client/tests/helpers/start-app';
-import appsData from './apps-test-visit-apps-data';
-
-$.mockjax({
-    type:"GET",
-    url:  "/api/v1/apps",
-    dataType: 'json',
-    responseText: appsData
-});
 
 var application;
 
@@ -23,6 +15,9 @@ module('Acceptance | apps', {
 });
 
 test('visiting /apps', function(assert) {
+  var numRows = 10;
+
+  server.createList('app', numRows);
   authenticateSession();
   visit('/apps');
 
@@ -30,12 +25,12 @@ test('visiting /apps', function(assert) {
     assert.equal(currentURL(), '/apps');
 
     var appRows = find('.app-row');
-    assert.equal(appRows.length, 5);    
+    assert.equal(appRows.length, numRows);    
 
     var actualAppNames = find('.app-name');
 
-    for (var i = 0; i < appsData.apps.length; i++) {
-      var expectedAppName = appsData.apps[i].name;
+    for (var i = 0; i < numRows; i++) {
+      var expectedAppName = "App " + i;
       var appName = $(actualAppNames[i]).text();
       assert.equal(appName, expectedAppName);
 

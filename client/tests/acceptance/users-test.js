@@ -1,14 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from 'client/tests/helpers/start-app';
-import usersData from './users-test-visit-users-data';
-
-$.mockjax({
-    type:"GET",
-    url:  "/api/v1/users",
-    dataType: 'json',
-    responseText: usersData
-});
 
 var application;
 
@@ -23,6 +15,8 @@ module('Acceptance | users', {
 });
 
 test('visiting /users', function(assert) {
+  var numRows = 10;
+  server.createList('user', numRows);
   authenticateSession();
   visit('/users');  
 
@@ -30,23 +24,27 @@ test('visiting /users', function(assert) {
     assert.equal(currentURL(), '/users');
 
     var userRows = find('.user-row');
-    assert.equal(userRows.length, 4, "Number of users");
+    assert.equal(userRows.length, numRows);
 
     var firstNames = find('.user-first-name');
     var lastNames = find('.user-last-name');
     var emails = find('.user-email');
     var usernames = find('.user-username');
 
-    for (var i = 0; i < usersData.users.length; i++) {
-      var expectedUserInfo = usersData.users[i];
+    for (var i = 0; i < numRows; i++) {
+      //var expectedUserInfo = usersData.users[i];
       var firstName = $(firstNames[i]).text();
       var lastName = $(lastNames[i]).text();
       var email = $(emails[i]).text();
       var username = $(usernames[i]).text();
-      assert.equal(firstName, expectedUserInfo.firstName);
-      assert.equal(lastName, expectedUserInfo.lastName);
-      assert.equal(email, expectedUserInfo.email);
-      assert.equal(username, expectedUserInfo.username);
+      var expectedFirstName = "firstName" + i;
+      var expectedLastName = "lastName" + i;
+      var expectedEmail = "email" + i;
+      var expectedUsername = "username" + i;
+      assert.equal(firstName, expectedFirstName);
+      assert.equal(lastName, expectedLastName);
+      assert.equal(email, expectedEmail);
+      assert.equal(username, expectedUsername);
 
     }    
   });

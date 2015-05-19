@@ -5,11 +5,11 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app'),
 
 var app = new EmberApp();
 
-if ( !isProduction ) { 
-	// app.import( app.bowerDirectory + '/sinonjs/sinon.js', { type: 'test' } );
-	// app.import( app.bowerDirectory + '/sinon-qunit/lib/sinon-qunit.js', { type: 'test' } );
-	app.import('bower_components/jquery-mockjax/jquery.mockjax.js', { type: 'test' } );
-}
+// if ( !isProduction ) { 
+// 	// app.import( app.bowerDirectory + '/sinonjs/sinon.js', { type: 'test' } );
+// 	// app.import( app.bowerDirectory + '/sinon-qunit/lib/sinon-qunit.js', { type: 'test' } );
+// 	app.import('bower_components/jquery-mockjax/jquery.mockjax.js', { type: 'test' } );
+// }
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
   destDir: 'assets'
