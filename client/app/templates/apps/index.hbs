@@ -2,12 +2,14 @@
 	<thead>
 		<tr>
 			<th>Name</th>
+			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
 		{{#each model as |app|}}	
 		{{#link-to 'roles' app.id tagName='tr' class="app-row echo-link"}}
 			<td class="app-name">{{app.name}}</td>
+			<td class="app-description">{{app.description}}</td>
 		{{/link-to}}
 		{{/each}}
 	</tbody>
