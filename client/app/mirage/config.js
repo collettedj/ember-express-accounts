@@ -1,6 +1,7 @@
 export default function() {
 
   this.namespace = '/api/v1';
+  this.timing = 10;
 
   this.post('/auth/login', function(db){
     return db.users.find("1");
@@ -39,6 +40,17 @@ export default function() {
       apps: db.apps
     };
   });    
+
+  this.get('/appRoles', function(db, request){
+    var appId = request.queryParams.appId;
+    var appRoles = db['app-roles'].where({app:appId});
+    var roleIds = appRoles.mapBy('role');
+    var roles = db.roles.find(roleIds);
+    return {
+      "roles": roles,
+      "app-roles": appRoles
+    };
+  });
 
   // These comments are here to help you get started. Feel free to delete them.
 
