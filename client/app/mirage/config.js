@@ -37,7 +37,9 @@ export default function() {
 
   this.get('/apps', function(db){
     return {
-      apps: db.apps
+      apps: db.apps,
+      "app-roles": db['app-roles'],
+      roles: db.roles
     };
   });    
 

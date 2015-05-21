@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"exp",
+				"expectedAppName"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
 				"bs3-bu",
 				"bs3-button:success	bs3-button-success"
 			],
@@ -60,50 +68,50 @@
 	"buffers":
 	[
 		{
-			"file": "/home/david/projects/NodePackages/node_modules/express-generator/package.json",
+			"file": "client/app/controllers/apps.js",
 			"settings":
 			{
-				"buffer_size": 2836,
+				"buffer_size": 2773,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/david/projects/NodePackages/node_modules/sails/package.json",
+			"file": "client/app/templates/apps.hbs",
 			"settings":
 			{
-				"buffer_size": 4692,
+				"buffer_size": 179,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/package.json",
+			"file": "client/app/templates/apps/index.hbs",
 			"settings":
 			{
-				"buffer_size": 1093,
+				"buffer_size": 359,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/bower.json",
+			"file": "client/app/templates/roles.hbs",
 			"settings":
 			{
-				"buffer_size": 538,
+				"buffer_size": 328,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/app/templates/application.hbs",
+			"file": "client/app/models/app.js",
 			"settings":
 			{
-				"buffer_size": 2348,
+				"buffer_size": 163,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/david/projects/express",
+			"file": "client/app/models/app-role.js",
 			"settings":
 			{
-				"buffer_size": 8873,
+				"buffer_size": 124,
 				"line_ending": "Unix"
 			}
 		}
@@ -203,24 +211,73 @@
 	[
 		"/home/david/projects/ember-express",
 		"/home/david/projects/ember-express/client",
-		"/home/david/projects/ember-express/client/deployment",
-		"/home/david/projects/ember-express/server",
-		"/home/david/projects/ember-express/server/passport",
-		"/home/david/projects/ember-express/server/public",
-		"/home/david/projects/ember-express/server/routes",
-		"/home/david/projects/ember-express/server/views"
+		"/home/david/projects/ember-express/client/app",
+		"/home/david/projects/ember-express/client/app/mirage",
+		"/home/david/projects/ember-express/client/app/models",
+		"/home/david/projects/ember-express/client/app/styles"
 	],
 	"file_history":
 	[
+		"/home/david/projects/ember-express/client/app/templates/apps/index.hbs",
+		"/home/david/projects/ember-express/client/app/templates/application.hbs",
+		"/home/david/projects/ember-express/client/app/templates/apps.hbs",
+		"/home/david/projects/ember-express/client/app/controllers/application.js",
+		"/home/david/projects/ember-express/client/app/controllers/apps.js",
+		"/home/david/projects/ember-express/client/dist/assets/vendor.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli-chart/addon/components/ember-chart.js",
+		"/home/david/projects/ember-express/client/app/mirage/config.js",
+		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/david/projects/ember-express/client/app/routes/roles.js",
+		"/home/david/projects/ember-express/client/tests/.jshintrc",
+		"/home/david/projects/ember-express/client/.jshintrc",
+		"/home/david/projects/ember-express/client/tests/unit/models/app-role-test.js",
+		"/home/david/projects/ember-express/client/Brocfile.js",
+		"/home/david/projects/ember-express/client/app/mirage/fixtures/app-roles.js",
+		"/home/david/projects/ember-express/client/app/models/app.js",
+		"/home/david/projects/ember-express/client/app/models/role.js",
+		"/home/david/projects/ember-express/client/app/mirage/fixtures/apps.js",
+		"/home/david/projects/ember-express/client/app/mirage/fixtures/roles.js",
+		"/home/david/projects/ember-express/client/app/templates/roles.hbs",
+		"/home/david/projects/ember-express/client/bower.json",
+		"/home/david/projects/ember-express/client/config/environment.js",
+		"/home/david/projects/ember-express/client/app/routes/apps.js",
+		"/home/david/projects/ember-express/client/app/styles/app.less",
+		"/home/david/projects/ember-express/client/app/routes/apps/roles.js",
+		"/home/david/projects/ember-express/client/app/router.js",
+		"/home/david/projects/ember-express/client/app/models/app-role.js",
+		"/home/david/projects/ember-express/client/app/templates/users.hbs",
+		"/home/david/projects/ember-express/client/tests/acceptance/apps-test.js",
+		"/home/david/projects/ember-express/client/tests/acceptance/users-test.js",
+		"/home/david/projects/ember-express/client/tests/acceptance/apps/roles-test.js",
+		"/home/david/projects/ember-express/client/app/mirage/factories/app.js",
+		"/home/david/projects/ember-express/client/app/mirage/factories/user.js",
+		"/home/david/projects/ember-express/client/app/models/apps/role.js",
+		"/home/david/projects/ember-express/client/app/authenticators/custom.js",
+		"/home/david/projects/ember-express/client/app/mirage/fixtures/users.js",
+		"/home/david/projects/ember-express/client/app/mirage/fixtures/contacts.js",
+		"/home/david/projects/ember-express/client/.ember-cli",
+		"/home/david/projects/ember-express/client/bower_components/route-recognizer/dist/route-recognizer.js",
+		"/home/david/projects/ember-express/client/tests/acceptance/apps/roles-test-data.js",
+		"/home/david/projects/ember-express/client/app/initializers/custom-session.js",
+		"/home/david/projects/ember-express/client/package.json",
+		"/home/david/projects/ember-express/server/app.js",
+		"/home/david/projects/ember-express/client/app/app.js",
+		"/home/david/projects/ember-express/client/app/controllers/user-row.js",
+		"/home/david/projects/ember-express/client/app/controllers/users.js",
+		"/home/david/projects/ember-express/client/app/routes/users.js",
+		"/home/david/projects/ember-express/client/tests/unit/adapters/application-test.js",
+		"/home/david/projects/ember-express/client/bower_components/ember/ember.debug.js",
+		"/home/david/projects/ember-express/client/tests/acceptance/users-test-visit-users-data.js",
+		"/home/david/projects/ember-express/client/tests/acceptance/apps-test-visit-apps-data.js",
+		"/home/david/projects/ember-express/client/tests/helpers/start-app.js",
+		"/home/david/projects/ember-express/client/app/templates/login.hbs",
+		"/home/david/projects/NodePackages/node_modules/sails/package.json",
+		"/home/david/projects/NodePackages/node_modules/express-generator/package.json",
+		"/home/david/projects/express",
 		"/home/david/projects/NodePackages/node_modules/express/package.json",
 		"/home/david/projects/NodePackages/node_modules/express-generator/pack",
 		"/home/david/projects/NodePackages/node_modules/ember-cli/package.json",
 		"/home/david/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/david/projects/ember-express/client/app/templates/application.hbs",
-		"/home/david/projects/ember-express/client/app/router.js",
-		"/home/david/projects/ember-express/client/app/routes/apps.js",
-		"/home/david/projects/ember-express/client/app/templates/apps.hbs",
-		"/home/david/projects/ember-express/client/app/models/app.js",
 		"/home/david/projects/ember-express/server/routes/users.js",
 		"/home/david/projects/ember-express/client/app/models/user.js",
 		"/home/david/projects/ember-express/server/passport/init.js",
@@ -228,25 +285,16 @@
 		"/home/david/projects/NodePackages/node_modules/phantomjs/package.json",
 		"/home/david/projects/ember-express/server/routes/authentication.js",
 		"/home/david/projects/ember-express/server/passport/login.js",
-		"/home/david/projects/ember-express/client/app/routes/users.js",
-		"/home/david/projects/ember-express/client/app/templates/users.hbs",
 		"/home/david/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/david/projects/ember-express/server/app.js",
 		"/home/david/projects/ember-express/client/deployment/deploy-ember",
-		"/home/david/projects/ember-express/client/config/environment.js",
 		"/home/david/projects/ember-express/server/node_modules/express/node_modules/serve-static/index.js",
 		"/etc/init/mongod.conf",
 		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/david/projects/ember-express/client/app/authenticators/custom.js",
 		"/home/david/projects/ember-express/client/tests/unit/initializers/authentication-test.js",
 		"/home/david/projects/ember-express/client/app/controllers/register.js",
 		"/home/david/projects/ember-express/server/passport/signup.js",
 		"/home/david/projects/ember-express/server/passport/isAuthenticated.js",
-		"/home/david/projects/ember-express/client/app/initializers/custom-session.js",
 		"/home/david/projects/ember-express/client/tests/unit/controllers/users-test.js",
-		"/home/david/projects/ember-express/client/app/styles/app.less",
-		"/home/david/projects/ember-express/client/Brocfile.js",
-		"/home/david/projects/ember-express/client/app/templates/login.hbs",
 		"/home/david/projects/ember-express/server/routes/index.js",
 		"/home/david/projects/ember-express/server/views/index.hbs",
 		"/home/david/projects/ember-express/server/views/register.hbs",
@@ -256,11 +304,7 @@
 		"/etc/sysctl.conf",
 		"/home/david/projects/ember-express/client/app/templates/register.hbs",
 		"/home/david/projects/ember-express/client/app/routes/register.js",
-		"/home/david/projects/ember-express/client/app/controllers/users.js",
-		"/home/david/projects/ember-express/client/app/controllers/user-row.js",
 		"/home/david/projects/ember-express/server/models/user.js",
-		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/david/projects/ember-express/client/app/controllers/application.js",
 		"/home/david/projects/ember-express/client/app/routes/application.js",
 		"/home/david/projects/ember-express/client/app/serializers/application.js",
 		"/home/david/projects/pro-express/cli-app/app.js",
@@ -301,45 +345,7 @@
 		"/home/david/projects/dateinput/Brocfile.js",
 		"/home/david/projects/dateinput/app/components/input-mask.js",
 		"/home/david/projects/dateinput/app/controllers/application.js",
-		"/home/david/projects/dateinput/app/templates/application.hbs",
-		"/home/david/projects/lftest/package.json",
-		"/home/david/projects/lfembercanary/bower.json",
-		"/home/david/projects/lfembercanary/app/transitions.js",
-		"/home/david/projects/lfembercanary/app/templates/application.hbs",
-		"/home/david/projects/lftest/app/transitions.js",
-		"/home/david/projects/test-slider/app/templates/application.hbs",
-		"/home/david/projects/test-slider/app/components/table-slider.js",
-		"/home/david/projects/test-slider/app/templates/components/table-slider.hbs",
-		"/home/david/projects/test-slider/Brocfile.js",
-		"/home/david/projects/liquidfiretest/bower.json",
-		"/home/david/projects/test-slider/app/index.html",
-		"/home/david/projects/ember-pack/node_modules/ember-cli/package.json",
-		"/home/david/projects/youdontknowjs/now.js",
-		"/home/david/projects/plots/plot.js",
-		"/home/david/projects/ember-test-htmlbars/app/router.js",
-		"/home/david/projects/ember-test-htm2/bower.json",
-		"/home/david/projects/ember-test-htm2/config/environment.js",
-		"/home/david/projects/ember-test-htm2/app/index.html",
-		"/home/david/projects/ember-test-htm2/app/templates/application.hbs",
-		"/home/david/projects/ember-test-htmlbars/bower.json",
-		"/home/david/projects/ember-test-htmlbars/.bowerrc",
-		"/home/david/projects/ember-test-htmlbars/package.json",
-		"/home/david/projects/csvParse/views/error.hbs",
-		"/home/david/projects/csvParse/views/layout.hbs",
-		"/home/david/projects/csvParse/public/javascripts/site.js",
-		"/home/david/projects/csvParse/views/index.hbs",
-		"/home/david/projects/youdontknowjs/strap.js",
-		"/home/david/projects/therightway/mycode/watcher-spawn-parse.js",
-		"/home/david/projects/therightway/mycode/cat.js",
-		"/home/david/projects/therightway/mycode/test-server.js",
-		"/home/david/projects/therightway/mycode/net-watcher.js",
-		"/home/david/projects/therightway/mycode/watcher-json-service.js",
-		"/home/david/projects/therightway/mycode/net-watcher-json-client.js",
-		"/home/david/projects/therightway/mycode/net-watcher-json-test-service.js",
-		"/home/david/projects/therightway/mycode/ldj.js",
-		"/home/david/projects/therightway/code/file-system/watcher-spawn-parse.js",
-		"/home/david/projects/gulpember/emberapp/views/layout.hbs",
-		"/home/david/projects/gulpember/gulpfile.js"
+		"/home/david/projects/dateinput/app/templates/application.hbs"
 	],
 	"find":
 	{
@@ -360,6 +366,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"chart-data-updater",
+			"container.lookup",
+			"userData",
+			"mockjax",
+			"route-recognizer.js.map",
+			"instanceInitializersFeatureEnabled",
+			"},",
+			",",
+			"{",
 			":",
 			" \"",
 			"\": ",
@@ -431,94 +446,127 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/david/projects/NodePackages/node_modules/express-generator/package.json",
+					"file": "client/app/controllers/apps.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2836,
+						"buffer_size": 2773,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1148,
-								1148
+								1959,
+								1959
 							]
 						],
 						"settings":
 						{
-							"auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 612.0,
+						"translation.x": 0.0,
+						"translation.y": 714.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "client/app/templates/apps.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								167,
+								167
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/home/david/projects/NodePackages/node_modules/sails/package.json",
+					"buffer": 2,
+					"file": "client/app/templates/apps/index.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4692,
+						"buffer_size": 359,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3131,
-								3131
+								349,
+								349
 							]
 						],
 						"settings":
 						{
-							"auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_complete": false,
+							"history_list_is_closing": true,
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1352.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/package.json",
+					"buffer": 3,
+					"file": "client/app/templates/roles.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1093,
+						"buffer_size": 328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								470,
-								470
+								328,
+								328
 							]
 						],
 						"settings":
 						{
-							"auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -528,27 +576,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/bower.json",
-					"semi_transient": true,
+					"buffer": 4,
+					"file": "client/app/models/app.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 538,
+						"buffer_size": 163,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								538
+								163,
+								163
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -558,64 +604,31 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "client/app/templates/application.hbs",
+					"buffer": 5,
+					"file": "client/app/models/app-role.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2348,
+						"buffer_size": 124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								124,
+								124
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/david/projects/express",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1169,
-								1169
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 3570.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -638,11 +651,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -674,8 +694,176 @@
 		"selected_items":
 		[
 			[
+				"conapps",
+				"client/app/controllers/apps.js"
+			],
+			[
+				"modelapp",
+				"client/app/models/app.js"
+			],
+			[
+				"modelappro",
+				"client/app/models/app-role.js"
+			],
+			[
+				"models/app",
+				"client/app/models/app.js"
+			],
+			[
+				"roles.h",
+				"client/app/templates/roles.hbs"
+			],
+			[
+				"apps/inde",
+				"client/app/templates/apps/index.hbs"
+			],
+			[
+				"apps.hb",
+				"client/app/templates/apps.hbs"
+			],
+			[
+				"contapps.",
+				"client/app/controllers/apps.js"
+			],
+			[
+				"apps/ind",
+				"client/app/templates/apps/index.hbs"
+			],
+			[
+				"contapp",
+				"client/app/controllers/application.js"
+			],
+			[
 				"application.hbs",
 				"client/app/templates/application.hbs"
+			],
+			[
+				"env",
+				"client/config/environment.js"
+			],
+			[
+				"roles.hbs",
+				"client/app/templates/roles.hbs"
+			],
+			[
+				"apps.hbs",
+				"client/app/templates/apps.hbs"
+			],
+			[
+				"",
+				"client/app/mirage/config.js"
+			],
+			[
+				"unitapp",
+				"client/tests/unit/models/app-role-test.js"
+			],
+			[
+				"roroles",
+				"client/app/routes/roles.js"
+			],
+			[
+				"roapps.j",
+				"client/app/routes/apps.js"
+			],
+			[
+				"roles.hb",
+				"client/app/templates/roles.hbs"
+			],
+			[
+				"conapp",
+				"client/app/controllers/application.js"
+			],
+			[
+				"config.js",
+				"client/app/mirage/config.js"
+			],
+			[
+				"apps-test",
+				"client/tests/acceptance/apps-test.js"
+			],
+			[
+				"users-",
+				"client/tests/acceptance/users-test.js"
+			],
+			[
+				"roles-tes",
+				"client/tests/acceptance/apps/roles-test.js"
+			],
+			[
+				"config.j",
+				"client/app/mirage/config.js"
+			],
+			[
+				"users.hbs",
+				"client/app/templates/users.hbs"
+			],
+			[
+				"apps-test.js",
+				"client/tests/acceptance/apps-test.js"
+			],
+			[
+				"users-test",
+				"client/tests/acceptance/users-test.js"
+			],
+			[
+				"application-test",
+				"client/tests/unit/adapters/application-test.js"
+			],
+			[
+				"broc",
+				"client/Brocfile.js"
+			],
+			[
+				"contapplication",
+				"client/app/controllers/application.js"
+			],
+			[
+				"application.hb",
+				"client/app/templates/application.hbs"
+			],
+			[
+				"bower.json",
+				"client/bower.json"
+			],
+			[
+				"controllers/user",
+				"client/app/controllers/users.js"
+			],
+			[
+				"app.js",
+				"server/app.js"
+			],
+			[
+				"initises",
+				"client/app/initializers/custom-session.js"
+			],
+			[
+				"apps-te",
+				"client/tests/acceptance/apps-test.js"
+			],
+			[
+				"routes/users",
+				"client/app/routes/users.js"
+			],
+			[
+				"user-r",
+				"client/app/controllers/user-row.js"
+			],
+			[
+				"clconusers.js",
+				"client/app/controllers/users.js"
+			],
+			[
+				"clapp.js",
+				"client/app/app.js"
+			],
+			[
+				"clroapps",
+				"client/app/routes/apps.js"
+			],
+			[
+				"login.hb",
+				"client/app/templates/login.hbs"
 			],
 			[
 				"clconlogin",
@@ -690,16 +878,8 @@
 				"server/passport/login.js"
 			],
 			[
-				"routes/users",
-				"server/routes/users.js"
-			],
-			[
 				"models/apps",
 				"client/app/models/app.js"
-			],
-			[
-				"apps.hbs",
-				"client/app/templates/apps.hbs"
 			],
 			[
 				"routes/apps",
@@ -708,14 +888,6 @@
 			[
 				"router.js",
 				"client/app/router.js"
-			],
-			[
-				"",
-				"client/app/templates/application.hbs"
-			],
-			[
-				"users.hbs",
-				"client/app/templates/users.hbs"
 			],
 			[
 				"applica",
@@ -728,10 +900,6 @@
 			[
 				"appcli",
 				"client/app/templates/application.hbs"
-			],
-			[
-				"broc",
-				"client/Brocfile.js"
 			],
 			[
 				"application",
@@ -756,10 +924,6 @@
 			[
 				"session",
 				"client/app/initializers/custom-session.js"
-			],
-			[
-				"application.hb",
-				"client/app/templates/application.hbs"
 			],
 			[
 				"index.js",
@@ -848,10 +1012,6 @@
 			[
 				"cl",
 				"level4/public/client.js"
-			],
-			[
-				"app.js",
-				"level4/app.js"
 			],
 			[
 				"level3/app",
@@ -949,8 +1109,8 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 325.0,
+	"side_bar_visible": false,
+	"side_bar_width": 412.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
