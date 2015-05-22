@@ -68,50 +68,47 @@
 	"buffers":
 	[
 		{
-			"file": "client/app/controllers/apps.js",
+			"file": "client/app/controllers/users.js",
 			"settings":
 			{
-				"buffer_size": 2773,
+				"buffer_size": 185,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/app/templates/apps.hbs",
+			"file": "client/app/controllers/user-row.js",
 			"settings":
 			{
-				"buffer_size": 179,
+				"buffer_size": 561,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/app/templates/apps/index.hbs",
+			"file": "client/tests/acceptance/users-test.js",
 			"settings":
 			{
-				"buffer_size": 359,
+				"buffer_size": 1431,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/app/templates/roles.hbs",
+			"contents": "{\n  // save before running commands\n  \"save_first\": true,\n  // if present, use this command instead of plain \"node\"\n  // e.g. \"/usr/bin/node\" or \"C:\\bin\\node.exe\"\n  \"node_command\": false,\n  // Same for NPM command\n  \"npm_command\": false,\n  // as 'NODE_PATH' environment variable for node runtime\n  \"node_path\": false,\n\n  \"expert_mode\": false,\n\n  \"ouput_to_new_tab\": false\n}\n",
+			"file": "/home/david/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 328,
-				"line_ending": "Unix"
+				"buffer_size": 374,
+				"line_ending": "Unix",
+				"read_only": true,
+				"scratch": true
 			}
 		},
 		{
-			"file": "client/app/models/app.js",
+			"file": "client/app/templates/users.hbs",
 			"settings":
 			{
-				"buffer_size": 163,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/models/app-role.js",
-			"settings":
-			{
-				"buffer_size": 124,
+				"buffer_size": 1274,
 				"line_ending": "Unix"
 			}
 		}
@@ -123,10 +120,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 355.0,
-		"last_filter": "insta",
+		"height": 171.0,
+		"last_filter": "nodejs::d",
 		"selected_items":
 		[
+			[
+				"nodejs::d",
+				"Nodejs::Default File Settings"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -180,7 +181,7 @@
 				"Snippet: bs3-alert"
 			]
 		],
-		"width": 435.0
+		"width": 579.0
 	},
 	"console":
 	{
@@ -210,41 +211,40 @@
 	"expanded_folders":
 	[
 		"/home/david/projects/ember-express",
-		"/home/david/projects/ember-express/client",
-		"/home/david/projects/ember-express/client/app",
-		"/home/david/projects/ember-express/client/app/mirage",
-		"/home/david/projects/ember-express/client/app/models",
-		"/home/david/projects/ember-express/client/app/styles"
+		"/home/david/projects/ember-express/client"
 	],
 	"file_history":
 	[
-		"/home/david/projects/ember-express/client/app/templates/apps/index.hbs",
-		"/home/david/projects/ember-express/client/app/templates/application.hbs",
-		"/home/david/projects/ember-express/client/app/templates/apps.hbs",
-		"/home/david/projects/ember-express/client/app/controllers/application.js",
+		"/home/david/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/david/projects/ember-express/client/app/controllers/apps.js",
-		"/home/david/projects/ember-express/client/dist/assets/vendor.js",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli-chart/addon/components/ember-chart.js",
-		"/home/david/projects/ember-express/client/app/mirage/config.js",
+		"/home/david/projects/ember-express/client/app/templates/apps.hbs",
+		"/home/david/projects/ember-express/client/app/templates/apps/index.hbs",
+		"/home/david/projects/ember-express/client/app/templates/roles.hbs",
+		"/home/david/projects/ember-express/client/app/models/app.js",
+		"/home/david/projects/ember-express/client/app/models/app-role.js",
 		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli-chart/addon/components/ember-chart.js",
+		"/home/david/projects/ember-express/client/bower.json",
+		"/home/david/projects/ember-express/client/bower_components/pretender/.bower.json",
+		"/home/david/projects/ember-express/client/app/templates/application.hbs",
+		"/home/david/projects/ember-express/client/app/controllers/application.js",
+		"/home/david/projects/ember-express/client/dist/assets/vendor.js",
+		"/home/david/projects/ember-express/client/app/mirage/config.js",
 		"/home/david/projects/ember-express/client/app/routes/roles.js",
 		"/home/david/projects/ember-express/client/tests/.jshintrc",
 		"/home/david/projects/ember-express/client/.jshintrc",
 		"/home/david/projects/ember-express/client/tests/unit/models/app-role-test.js",
 		"/home/david/projects/ember-express/client/Brocfile.js",
 		"/home/david/projects/ember-express/client/app/mirage/fixtures/app-roles.js",
-		"/home/david/projects/ember-express/client/app/models/app.js",
 		"/home/david/projects/ember-express/client/app/models/role.js",
 		"/home/david/projects/ember-express/client/app/mirage/fixtures/apps.js",
 		"/home/david/projects/ember-express/client/app/mirage/fixtures/roles.js",
-		"/home/david/projects/ember-express/client/app/templates/roles.hbs",
-		"/home/david/projects/ember-express/client/bower.json",
 		"/home/david/projects/ember-express/client/config/environment.js",
 		"/home/david/projects/ember-express/client/app/routes/apps.js",
 		"/home/david/projects/ember-express/client/app/styles/app.less",
 		"/home/david/projects/ember-express/client/app/routes/apps/roles.js",
 		"/home/david/projects/ember-express/client/app/router.js",
-		"/home/david/projects/ember-express/client/app/models/app-role.js",
 		"/home/david/projects/ember-express/client/app/templates/users.hbs",
 		"/home/david/projects/ember-express/client/tests/acceptance/apps-test.js",
 		"/home/david/projects/ember-express/client/tests/acceptance/users-test.js",
@@ -289,7 +289,6 @@
 		"/home/david/projects/ember-express/client/deployment/deploy-ember",
 		"/home/david/projects/ember-express/server/node_modules/express/node_modules/serve-static/index.js",
 		"/etc/init/mongod.conf",
-		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/david/projects/ember-express/client/tests/unit/initializers/authentication-test.js",
 		"/home/david/projects/ember-express/client/app/controllers/register.js",
 		"/home/david/projects/ember-express/server/passport/signup.js",
@@ -343,9 +342,7 @@
 		"/home/david/projects/dateinput/package.json",
 		"/home/david/projects/dateinput/bower.json",
 		"/home/david/projects/dateinput/Brocfile.js",
-		"/home/david/projects/dateinput/app/components/input-mask.js",
-		"/home/david/projects/dateinput/app/controllers/application.js",
-		"/home/david/projects/dateinput/app/templates/application.hbs"
+		"/home/david/projects/dateinput/app/components/input-mask.js"
 	],
 	"find":
 	{
@@ -356,6 +353,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"*.js",
 			"",
 			"<project>",
 			""
@@ -366,6 +364,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deleteUser",
+			"route-rec",
 			"chart-data-updater",
 			"container.lookup",
 			"userData",
@@ -446,98 +446,29 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/app/controllers/apps.js",
+					"file": "client/app/controllers/users.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2773,
+						"buffer_size": 185,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1959,
-								1959
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 714.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"file": "client/app/templates/apps.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								167,
-								167
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"history_list_is_closing": true,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/app/templates/apps/index.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								349,
-								349
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"history_list_is_closing": true,
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -547,25 +478,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/app/templates/roles.hbs",
+					"buffer": 1,
+					"file": "client/app/controllers/user-row.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 328,
+						"buffer_size": 561,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								328,
-								328
+								372,
+								372
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -576,59 +507,98 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "client/app/models/app.js",
+					"buffer": 2,
+					"file": "client/tests/acceptance/users-test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 163,
+						"buffer_size": 1431,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								305,
+								305
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 102.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/david/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "client/app/templates/users.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								706,
+								706
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/app/models/app-role.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 124,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								124,
-								124
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -662,7 +632,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.555121043041,
 			1.0
 		],
 		"rows":
@@ -693,6 +663,30 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"accusers",
+				"client/tests/acceptance/users-test.js"
+			],
+			[
+				"conusers.js",
+				"client/app/controllers/users.js"
+			],
+			[
+				"users.hbs",
+				"client/app/templates/users.hbs"
+			],
+			[
+				"bower.j",
+				"client/bower.json"
+			],
+			[
+				"bower.js",
+				"client/bower.json"
+			],
+			[
+				"contapp.js",
+				"client/app/controllers/apps.js"
+			],
 			[
 				"conapps",
 				"client/app/controllers/apps.js"
@@ -792,10 +786,6 @@
 			[
 				"config.j",
 				"client/app/mirage/config.js"
-			],
-			[
-				"users.hbs",
-				"client/app/templates/users.hbs"
 			],
 			[
 				"apps-test.js",

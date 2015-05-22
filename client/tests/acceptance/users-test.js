@@ -49,3 +49,22 @@ test('visiting /users', function(assert) {
     }    
   });
 });
+
+
+test('delete user', function(assert){
+  var numRows = 5;
+  server.createList('user', 5);
+  authenticateSession();
+  visit('/users');
+  
+
+  andThen(function(){
+    click('.delete-user-btn:nth(2)');
+  });
+
+  andThen(function(){
+    var userRows = find('.user-row');
+    assert.equal(userRows.length, numRows - 1); 
+  });
+
+})

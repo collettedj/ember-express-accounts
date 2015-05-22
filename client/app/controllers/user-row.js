@@ -20,14 +20,6 @@ export default Ember.Controller.extend({
 					user.rollback();
 				});
 
-		}, 
-
-		deleteUser: function(){
-			var user = this.get('model');
-			user.destroyRecord()
-				.catch(function(){
-					user.rollback();
-				});			
 		}
 	}
 });

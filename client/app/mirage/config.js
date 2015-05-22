@@ -1,58 +1,18 @@
+import auths from './routes/auth';
+import users from './routes/users';
+import apps from './routes/apps';
+import appRoles from './routes/appRoles';
+
+
 export default function() {
 
   this.namespace = '/api/v1';
   this.timing = 10;
 
-  this.post('/auth/login', function(db){
-    return db.users.find("1");
-  });
-
-  this.get('/auth/user', function(db){
-    return db.users.find("1");
-  });    
-
-  this.get('/auth/signout', function(){
-    return {};
-  });  
-
-  this.get('/users/:id', function(db, request){
-   var id = request.params.id;
-    return {
-      users: db.users.find(id)
-    };
-  });
-
-  this.get('/users', function(db){
-    return {
-      users: db.users
-    };
-  });  
-
-  this.get('/apps/:id', function(db, request){
-   var id = request.params.id;
-    return {
-      apps: db.apps.find(id)
-    };
-  });
-
-  this.get('/apps', function(db){
-    return {
-      apps: db.apps,
-      "app-roles": db['app-roles'],
-      roles: db.roles
-    };
-  });    
-
-  this.get('/appRoles', function(db, request){
-    var appId = request.queryParams.appId;
-    var appRoles = db['app-roles'].where({app:appId});
-    var roleIds = appRoles.mapBy('role');
-    var roles = db.roles.find(roleIds);
-    return {
-      "roles": roles,
-      "app-roles": appRoles
-    };
-  });
+  auths(this);
+  users(this);
+  apps(this);
+  appRoles(this);
 
   // These comments are here to help you get started. Feel free to delete them.
 

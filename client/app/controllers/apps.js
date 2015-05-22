@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
 		            data: roleLengths
 		        }
 		    ]
-		}
+		};
 	}.property('model.@each.app.name','model.@each.appRoles.length', 'multiplier'),
 
 	chartOption: {

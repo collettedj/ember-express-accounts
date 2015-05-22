@@ -6,6 +6,13 @@ export default Ember.ArrayController.extend({
 	actions: {
 		addUser: function(){
 			this.store.createRecord('user');
+		}, 
+
+		deleteUser: function(user){
+			user.destroyRecord()
+				.catch(function(){
+					user.rollback();
+				});			
 		}
 	}
 });

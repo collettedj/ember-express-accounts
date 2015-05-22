@@ -16,7 +16,7 @@
 		<tr class="user-row {{if user.model.isDirty 'info'}}"> 
 
 			<td>{{input type="checkbox" checked=user.isEditing}}</td>
-			<td><button class="close" {{action "deleteUser"}}>&times;</button></td>
+			<td><button class="close delete-user-btn" {{action "deleteUser" user.model}}>&times;</button></td>
 			{{#if user.isEditing}}
 				<td>{{input value=user.model.firstName class="form-control input-sm"}}</td>
 				<td>{{input value=user.model.lastName class="form-control input-sm"}}</td>
