@@ -67,4 +67,4 @@ test('delete user', function(assert){
     assert.equal(userRows.length, numRows - 1); 
   });
 
-})
+});
