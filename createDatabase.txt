@@ -1,0 +1,8 @@
+sudo su - postgres
+
+psql template1
+
+//must have semicolon at end for command to work.
+CREATE david tom WITH PASSWORD '1234';
+CREATE DATABASE saildb;
+GRANT ALL PRIVILEGES ON DATABASE saildb to david;

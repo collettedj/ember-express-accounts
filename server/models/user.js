@@ -1,16 +1,26 @@
-var mongoose = require('mongoose');
+"use strict";
 
-var Schema = mongoose.Schema;
+module.exports = function(sequelize, DataTypes) {
+  var User = sequelize.define("User", {
+    username: DataTypes.STRING,
+    password: DataTypes.STRING,
+    email: DataTypes.STRING,
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    testField1: DataTypes.STRING,
+    testField2: DataTypes.STRING,
+    testField3: DataTypes.STRING,
+    testField4: DataTypes.STRING,    
+    testField5: DataTypes.STRING,
+  }, {
+    classMethods: {
+      // associate: function(models) {
+      //   Task.belongsTo(models.User);
+      // }
+    }
+  });
 
-var userSchema = new Schema({
-	id: String,
-	username: String,
-	password: String,
-	email: String,
-	firstName: String,
-	lastName: String
-});
-
-module.exports = mongoose.model('user', userSchema);
+  return User;
+};
 
 

@@ -5,11 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compression = require('compression')
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var app = express();
 
 
-mongoose.connect('mongodb://localhost/emberData');
+//mongoose.connect('mongodb://localhost/emberData');
 
 app.use(compression());
 
