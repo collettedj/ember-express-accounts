@@ -1,14 +1,14 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
-var UserModel = require('../models/user');
+var models = require('../models');
 var isAuthenticated = require('../passport/isAuthenticated');
 
 router.use(isAuthenticated);
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  var users = UserModel.find({}, {password:0}).exec()
+  var users = models.User.findAll()
   	.then(function(users){
   		res.json({users:users});
   	});
@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 
 router.get('/:userId', function(req, res) {
 	var userId = req.params.userId;
-	var user = UserModel.findOne({_id:userId}, {password:0}).exec()
+	var user = models.User.findById(userId)
 		.then(function(user){
 			res.json({user:user});
 		});
@@ -38,26 +38,49 @@ router.get('/:userId', function(req, res) {
 router.put('/:userId', function(req, res){
 	var userId = req.params.userId;
 	var user = req.body.user;
-	UserModel.findByIdAndUpdate(userId, {$set:req.body.user}, function(err, updatedUser){
-		if(err){
-			throw new Error(err);
-		}
-		var updatedUserJson = updatedUser.toJSON();
-		delete updatedUserJson.password;
-		res.json({user:updatedUserJson});
-	});
+
+	models.User.findById(userId)
+		.then(function(user){
+			if(user){
+				user.updateAttributes(user)
+				.then(function(updatedUser){
+					var updatedUserJson = updatedUser.toJSON();
+					delete updatedUserJson.password;
+					res.json({user:updatedUserJson})
+				})
+
+			}
+
+		})
+
+	
+	// UserModel.findByIdAndUpdate(userId, {$set:req.body.user}, function(err, updatedUser){
+	// 	if(err){
+	// 		throw new Error(err);
+	// 	}
+	// 	var updatedUserJson = updatedUser.toJSON();
+	// 	delete updatedUserJson.password;
+	// 	res.json({user:updatedUserJson});
+	// });
 });
 
 router.delete('/:userId', function(req, res){
 	var userId = req.params.userId;
-	UserModel.remove({_id:userId}).exec(function(err){
-			if(err){
-				res.status(500).json(err);
-			}
-		})
-		.then(function(err){
+	models.User.destroy({ where: { id: userId}})
+		.then(function(){
 			res.sendStatus(204);
 		})
+		.catch(function(err){
+			res.status(500).json(err);
+		})
+	// UserModel.remove({_id:userId}).exec(function(err){
+	// 		if(err){
+	// 			res.status(500).json(err);
+	// 		}
+	// 	})
+	// 	.then(function(err){
+	// 		res.sendStatus(204);
+	// 	})
 	//UserModel.findByIdAndUpdate(userId, {$set:req.body.user}, function(err, updatedUser){
 	//	res.json({user:updatedUser});
 	//});
