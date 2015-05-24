@@ -37,12 +37,12 @@ router.get('/:userId', function(req, res) {
 
 router.put('/:userId', function(req, res){
 	var userId = req.params.userId;
-	var user = req.body.user;
+	var userUpdates = req.body.user;
 
 	models.User.findById(userId)
 		.then(function(user){
 			if(user){
-				user.updateAttributes(user)
+				user.updateAttributes(userUpdates)
 				.then(function(updatedUser){
 					var updatedUserJson = updatedUser.toJSON();
 					delete updatedUserJson.password;
