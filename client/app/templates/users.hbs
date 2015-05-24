@@ -29,7 +29,7 @@
 				<td class="user-email">{{user.model.email}}</td>
 				<td class="user-username">{{user.model.username}}</td>
 			{{/if}}
-			<td><button class="btn btn-sm btn-info" disabled={{user.saveDisabled}} {{action "saveUser"}}>Save</button></td>
+			<td><button class="btn btn-sm btn-info" disabled={{user.saveDisabled}} {{action "saveUser" user.model}}>Save</button></td>
 
 			
 		</tr>

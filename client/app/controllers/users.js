@@ -13,6 +13,10 @@ export default Ember.ArrayController.extend({
 				.catch(function(){
 					user.rollback();
 				});			
+		}, 
+
+		saveUser: function(user){
+			user.save();
 		}
 	}
 });
