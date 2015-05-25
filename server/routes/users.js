@@ -38,6 +38,8 @@ router.get('/:userId', function(req, res) {
 // 		});
 // });
 
+
+
 router.put('/:userId', function(req, res){
 	var models = req.app.get('models');	
 	var userId = req.params.userId;

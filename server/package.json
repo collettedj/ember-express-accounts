@@ -27,8 +27,12 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.0",
     "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nodemon": "^0.4.0",
     "jshint": "^2.7.0",
+    "jshint-stylish": "^2.0.0",
     "mongoose": "^4.0.2"
   }
 }
