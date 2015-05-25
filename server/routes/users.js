@@ -1,20 +1,23 @@
+"use strict";
+
 var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
-var models = require('../models');
 var isAuthenticated = require('../passport/isAuthenticated');
 
 router.use(isAuthenticated);
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  var users = models.User.findAll()
-  	.then(function(users){
-  		res.json({users:users});
-  	});
+	var models = req.app.get('models');
+	var users = models.User.findAll()
+		.then(function(users){
+			res.json({users:users});
+		});
 });
 
 router.get('/:userId', function(req, res) {
+	var models = req.app.get('models');
 	var userId = req.params.userId;
 	var user = models.User.findById(userId)
 		.then(function(user){
@@ -36,6 +39,7 @@ router.get('/:userId', function(req, res) {
 // });
 
 router.put('/:userId', function(req, res){
+	var models = req.app.get('models');	
 	var userId = req.params.userId;
 	var userUpdates = req.body.user;
 
@@ -46,12 +50,12 @@ router.put('/:userId', function(req, res){
 				.then(function(updatedUser){
 					var updatedUserJson = updatedUser.toJSON();
 					delete updatedUserJson.password;
-					res.json({user:updatedUserJson})
-				})
+					res.json({user:updatedUserJson});
+				});
 
 			}
 
-		})
+		});
 
 	
 	// UserModel.findByIdAndUpdate(userId, {$set:req.body.user}, function(err, updatedUser){
@@ -65,6 +69,7 @@ router.put('/:userId', function(req, res){
 });
 
 router.delete('/:userId', function(req, res){
+	var models = req.app.get('models');	
 	var userId = req.params.userId;
 	models.User.destroy({ where: { id: userId}})
 		.then(function(){
@@ -72,7 +77,7 @@ router.delete('/:userId', function(req, res){
 		})
 		.catch(function(err){
 			res.status(500).json(err);
-		})
+		});
 	// UserModel.remove({_id:userId}).exec(function(err){
 	// 		if(err){
 	// 			res.status(500).json(err);

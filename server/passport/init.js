@@ -1,3 +1,5 @@
+"use strict";
+
 var login = require('./login');
 var signup = require('./signup');
 var models = require("../models");
@@ -26,4 +28,4 @@ module.exports = function(passport){
     login(passport);
     signup(passport);
 
-}
+};
