@@ -45,11 +45,9 @@ app.use(flash());
 var initPassport = require('./passport/init');
 initPassport(passport);
 
-var authRoutes = require('./routes/authentication')(passport);
-var userRoutes = require('./routes/users');
-
-app.use('/api/v1/auth', authRoutes);
-app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/auth', require('./routes/authentication')(passport));
+app.use('/api/v1/users', require('./routes/users'));
+app.use('/api/v1/apps', require('./routes/apps'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

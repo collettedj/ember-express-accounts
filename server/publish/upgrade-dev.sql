@@ -1,9 +1,10 @@
 
-DROP TABLE "SequelizeMeta";
+ALTER TABLE "AppRoles"
+	ADD COLUMN "AppId" integer,
+	ADD COLUMN "RoleId" integer;
 
-ALTER TABLE "Users"
-	DROP COLUMN "testField1",
-	DROP COLUMN "testField2",
-	DROP COLUMN "testField3",
-	DROP COLUMN "testField4",
-	DROP COLUMN "testField5";
+ALTER TABLE "AppRoles"
+	ADD CONSTRAINT "AppRoles_AppId_fkey" FOREIGN KEY ("AppId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+
+ALTER TABLE "AppRoles"
+	ADD CONSTRAINT "AppRoles_RoleId_fkey" FOREIGN KEY ("RoleId") REFERENCES "Roles"(id) ON UPDATE CASCADE ON DELETE SET NULL;

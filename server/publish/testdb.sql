@@ -30,6 +30,116 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: AppRoles; Type: TABLE; Schema: public; Owner: david; Tablespace: 
+--
+
+CREATE TABLE "AppRoles" (
+    id integer NOT NULL,
+    "appId" integer,
+    "roleId" integer,
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL,
+    "AppId" integer,
+    "RoleId" integer
+);
+
+
+ALTER TABLE public."AppRoles" OWNER TO david;
+
+--
+-- Name: AppRoles_id_seq; Type: SEQUENCE; Schema: public; Owner: david
+--
+
+CREATE SEQUENCE "AppRoles_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."AppRoles_id_seq" OWNER TO david;
+
+--
+-- Name: AppRoles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: david
+--
+
+ALTER SEQUENCE "AppRoles_id_seq" OWNED BY "AppRoles".id;
+
+
+--
+-- Name: Apps; Type: TABLE; Schema: public; Owner: david; Tablespace: 
+--
+
+CREATE TABLE "Apps" (
+    id integer NOT NULL,
+    name character varying(255),
+    description character varying(255),
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."Apps" OWNER TO david;
+
+--
+-- Name: Apps_id_seq; Type: SEQUENCE; Schema: public; Owner: david
+--
+
+CREATE SEQUENCE "Apps_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Apps_id_seq" OWNER TO david;
+
+--
+-- Name: Apps_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: david
+--
+
+ALTER SEQUENCE "Apps_id_seq" OWNED BY "Apps".id;
+
+
+--
+-- Name: Roles; Type: TABLE; Schema: public; Owner: david; Tablespace: 
+--
+
+CREATE TABLE "Roles" (
+    id integer NOT NULL,
+    name character varying(255),
+    description character varying(255),
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."Roles" OWNER TO david;
+
+--
+-- Name: Roles_id_seq; Type: SEQUENCE; Schema: public; Owner: david
+--
+
+CREATE SEQUENCE "Roles_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Roles_id_seq" OWNER TO david;
+
+--
+-- Name: Roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: david
+--
+
+ALTER SEQUENCE "Roles_id_seq" OWNED BY "Roles".id;
+
+
+--
 -- Name: Users; Type: TABLE; Schema: public; Owner: david; Tablespace: 
 --
 
@@ -72,7 +182,60 @@ ALTER SEQUENCE "Users_id_seq" OWNED BY "Users".id;
 -- Name: id; Type: DEFAULT; Schema: public; Owner: david
 --
 
+ALTER TABLE ONLY "AppRoles" ALTER COLUMN id SET DEFAULT nextval('"AppRoles_id_seq"'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "Apps" ALTER COLUMN id SET DEFAULT nextval('"Apps_id_seq"'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "Roles" ALTER COLUMN id SET DEFAULT nextval('"Roles_id_seq"'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: david
+--
+
 ALTER TABLE ONLY "Users" ALTER COLUMN id SET DEFAULT nextval('"Users_id_seq"'::regclass);
+
+
+--
+-- Name: AppRoles_appId_roleId_key; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "AppRoles"
+    ADD CONSTRAINT "AppRoles_appId_roleId_key" UNIQUE ("appId", "roleId");
+
+
+--
+-- Name: AppRoles_pkey; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "AppRoles"
+    ADD CONSTRAINT "AppRoles_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Apps_pkey; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "Apps"
+    ADD CONSTRAINT "Apps_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Roles_pkey; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "Roles"
+    ADD CONSTRAINT "Roles_pkey" PRIMARY KEY (id);
 
 
 --
@@ -81,6 +244,22 @@ ALTER TABLE ONLY "Users" ALTER COLUMN id SET DEFAULT nextval('"Users_id_seq"'::r
 
 ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: AppRoles_AppId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "AppRoles"
+    ADD CONSTRAINT "AppRoles_AppId_fkey" FOREIGN KEY ("AppId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+
+
+--
+-- Name: AppRoles_RoleId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "AppRoles"
+    ADD CONSTRAINT "AppRoles_RoleId_fkey" FOREIGN KEY ("RoleId") REFERENCES "Roles"(id) ON UPDATE CASCADE ON DELETE SET NULL;
 
 
 --

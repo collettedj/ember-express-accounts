@@ -1,16 +1,18 @@
+<button class="btn btn-success" {{action 'createApp'}} style="margin-top:10px;">Create App</button>
+
 <table class="table table-hover">
 	<thead>
 		<tr>
 			<th>Name</th>
 			<th>Description</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
 		{{#each model as |app|}}	
-		{{#link-to 'roles' app.id tagName='tr' class="app-row echo-link"}}
-			<td class="app-name">{{app.name}}</td>
-			<td class="app-description">{{app.description}}</td>
-		{{/link-to}}
+		{{#app-row tagName='' app=app}}
+
+		{{/app-row}}
 		{{/each}}
 	</tbody>
 </table>
