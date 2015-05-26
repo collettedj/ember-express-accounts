@@ -31,6 +31,9 @@
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-nodemon": "^0.4.0",
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.11.0",
+    "gulp-nodemon": "^2.0.3",
     "jshint": "^2.7.0",
     "jshint-stylish": "^2.0.0",
     "mongoose": "^4.0.2"
