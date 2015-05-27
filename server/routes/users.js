@@ -2,7 +2,9 @@
 
 var express = require('express');
 var router = express.Router();
+var modelRoute = require('./modelRoute.js')('User');
 var isAuthenticated = require('../passport/isAuthenticated');
+
 
 router.use(isAuthenticated);
 
@@ -15,14 +17,17 @@ router.get('/', function(req, res) {
 		});
 });
 
-router.get('/:userId', function(req, res) {
-	var models = req.app.get('models');
-	var userId = req.params.userId;
-	var user = models.User.findById(userId)
-		.then(function(user){
-			res.json({user:user});
-		});
-});
+modelRoute.getOne(router);
+modelRoute.put(router);
+
+// router.get('/:userId', function(req, res) {
+// 	var models = req.app.get('models');
+// 	var userId = req.params.userId;
+// 	var user = models.User.findById(userId)
+// 		.then(function(user){
+// 			res.json({user:user});
+// 		});
+// });
 
 // router.post('/', function(req, res){
 // 	var newUser = new UserModel(req.body.user);
@@ -39,24 +44,24 @@ router.get('/:userId', function(req, res) {
 
 
 
-router.put('/:userId', function(req, res){
-	var models = req.app.get('models');	
-	var userId = req.params.userId;
-	var userUpdates = req.body.user;
+// router.put('/:userId', function(req, res){
+// 	var models = req.app.get('models');	
+// 	var userId = req.params.userId;
+// 	var userUpdates = req.body.user;
 
-	models.User.findById(userId)
-		.then(function(user){
-			if(user){
-				user.updateAttributes(userUpdates)
-				.then(function(updatedUser){
-					var updatedUserJson = updatedUser.toJSON();
-					delete updatedUserJson.password;
-					res.json({user:updatedUserJson});
-				});
+// 	models.User.findById(userId)
+// 		.then(function(user){
+// 			if(user){
+// 				user.updateAttributes(userUpdates)
+// 				.then(function(updatedUser){
+// 					var updatedUserJson = updatedUser.toJSON();
+// 					delete updatedUserJson.password;
+// 					res.json({user:updatedUserJson});
+// 				});
 
-			}
+// 			}
 
-		});
+// 		});
 
 	
 	// UserModel.findByIdAndUpdate(userId, {$set:req.body.user}, function(err, updatedUser){
@@ -67,7 +72,7 @@ router.put('/:userId', function(req, res){
 	// 	delete updatedUserJson.password;
 	// 	res.json({user:updatedUserJson});
 	// });
-});
+//});
 
 router.delete('/:userId', function(req, res){
 	var models = req.app.get('models');	
