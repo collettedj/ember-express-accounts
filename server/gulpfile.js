@@ -9,7 +9,7 @@ gulp.task('default', function() {
   // place code for your default task here
 });
 
-var jshintFiles = ['gulpfile.js', 'routes/**/*.js', 'models/**/*.js', 'passport/**/*.js'];
+var jshintFiles = ['gulpfile.js', 'routes/**/*.js', 'models/**/*.js', 'passport/**/*.js', 'routeHelpers/**/*.js'];
 
 gulp.task('lint', function() {
   return gulp.src(jshintFiles)

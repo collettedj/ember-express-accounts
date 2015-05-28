@@ -2,8 +2,11 @@
 
 var express = require('express');
 var router = express.Router();
-var modelRoute = require('./modelRoute.js')('User');
+
 var isAuthenticated = require('../passport/isAuthenticated');
+
+var modelRoute = require('../routeHelpers/modelRoute.js')('User');
+var utils = require('../routeHelpers/utils');
 
 
 router.use(isAuthenticated);
@@ -17,8 +20,13 @@ router.get('/', function(req, res) {
 		});
 });
 
-modelRoute.getOne(router);
-modelRoute.put(router);
+
+utils.applyRoute(router, modelRoute.getOne);
+utils.applyRoute(router, modelRoute.put);
+
+//router.get(modelRoute.getOne.route, modelRoute.getOne.handler);
+//router.get(modelRoute.put.route, modelRoute.put.handler);
+
 
 // router.get('/:userId', function(req, res) {
 // 	var models = req.app.get('models');
