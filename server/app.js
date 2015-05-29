@@ -48,6 +48,7 @@ initPassport(passport);
 app.use('/api/v1/auth', require('./routes/authentication')(passport));
 app.use('/api/v1/users', require('./routes/users'));
 app.use('/api/v1/apps', require('./routes/apps'));
+app.use('/api/v1/appRoles', require('./routes/appRoles'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

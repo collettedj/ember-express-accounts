@@ -36,11 +36,11 @@ SET default_with_oids = false;
 CREATE TABLE "AppRoles" (
     id integer NOT NULL,
     "appId" integer,
-    "roleId" integer,
+    name character varying(255),
+    description character varying(255),
     "createdAt" timestamp with time zone NOT NULL,
     "updatedAt" timestamp with time zone NOT NULL,
-    "AppId" integer,
-    "RoleId" integer
+    "AppId" integer
 );
 
 
@@ -207,11 +207,11 @@ ALTER TABLE ONLY "Users" ALTER COLUMN id SET DEFAULT nextval('"Users_id_seq"'::r
 
 
 --
--- Name: AppRoles_appId_roleId_key; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+-- Name: AppRoles_appId_name_key; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
 --
 
 ALTER TABLE ONLY "AppRoles"
-    ADD CONSTRAINT "AppRoles_appId_roleId_key" UNIQUE ("appId", "roleId");
+    ADD CONSTRAINT "AppRoles_appId_name_key" UNIQUE ("appId", name);
 
 
 --
@@ -252,14 +252,6 @@ ALTER TABLE ONLY "Users"
 
 ALTER TABLE ONLY "AppRoles"
     ADD CONSTRAINT "AppRoles_AppId_fkey" FOREIGN KEY ("AppId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
-
-
---
--- Name: AppRoles_RoleId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
---
-
-ALTER TABLE ONLY "AppRoles"
-    ADD CONSTRAINT "AppRoles_RoleId_fkey" FOREIGN KEY ("RoleId") REFERENCES "Roles"(id) ON UPDATE CASCADE ON DELETE SET NULL;
 
 
 --

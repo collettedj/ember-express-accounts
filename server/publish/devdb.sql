@@ -38,7 +38,9 @@ CREATE TABLE "AppRoles" (
     "appId" integer,
     "roleId" integer,
     "createdAt" timestamp with time zone NOT NULL,
-    "updatedAt" timestamp with time zone NOT NULL
+    "updatedAt" timestamp with time zone NOT NULL,
+    "AppId" integer,
+    "RoleId" integer
 );
 
 
@@ -242,6 +244,22 @@ ALTER TABLE ONLY "Roles"
 
 ALTER TABLE ONLY "Users"
     ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: AppRoles_AppId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "AppRoles"
+    ADD CONSTRAINT "AppRoles_AppId_fkey" FOREIGN KEY ("AppId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+
+
+--
+-- Name: AppRoles_RoleId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "AppRoles"
+    ADD CONSTRAINT "AppRoles_RoleId_fkey" FOREIGN KEY ("RoleId") REFERENCES "Roles"(id) ON UPDATE CASCADE ON DELETE SET NULL;
 
 
 --

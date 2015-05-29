@@ -1,10 +1,15 @@
 
 ALTER TABLE "AppRoles"
-	ADD COLUMN "AppId" integer,
-	ADD COLUMN "RoleId" integer;
+	DROP CONSTRAINT "AppRoles_appId_roleId_key";
 
 ALTER TABLE "AppRoles"
-	ADD CONSTRAINT "AppRoles_AppId_fkey" FOREIGN KEY ("AppId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+	DROP CONSTRAINT "AppRoles_RoleId_fkey";
 
 ALTER TABLE "AppRoles"
-	ADD CONSTRAINT "AppRoles_RoleId_fkey" FOREIGN KEY ("RoleId") REFERENCES "Roles"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+	DROP COLUMN "roleId",
+	DROP COLUMN "RoleId",
+	ADD COLUMN name character varying(255),
+	ADD COLUMN description character varying(255);
+
+ALTER TABLE "AppRoles"
+	ADD CONSTRAINT "AppRoles_appId_name_key" UNIQUE ("appId", name);
