@@ -33,10 +33,21 @@ var expressSession = require('express-session');
 app.use(expressSession({
    secret: 'mySecretKey',
    saveUninitialized: true,
-   resave: true  
+   resave: true,
+   cookie: { maxAge: 1200000 }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(function (req, res, next) {
+    if ('HEAD' == req.method || 'OPTIONS' == req.method) return next();
+
+    // break session hash / force express to spit out a new cookie once per second at most
+    req.session._garbage = Date();
+    req.session.touch();
+
+    next();
+});
 
 var flash = require('connect-flash');
 app.use(flash());
