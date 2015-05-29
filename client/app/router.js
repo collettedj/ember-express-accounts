@@ -10,6 +10,6 @@ export default Router.map(function() {
   this.route('login');
   this.route('register');
   this.resource('apps', function() {
-    this.resource('roles', { path: '/:app_id' }, function() {});
+    this.resource('app', { path: '/:app_id' }, function() {});
   });
 });

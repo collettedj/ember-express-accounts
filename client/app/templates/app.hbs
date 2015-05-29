@@ -1,4 +1,4 @@
-<h4>{{app.name}}: Roles</h4>
+<h4>{{model.name}}: Roles</h4>
 
 <button class="btn btn-success" {{action "createAppRole"}}>Create Role For Application</button>
 
@@ -10,7 +10,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		{{#each model as |appRole|}}	
+		{{#each model.appRoles as |appRole|}}	
 		<tr>
 			<td class="app-name">{{appRole.name}}</td>
 			<td class="app-description">{{appRole.description}}</td>
