@@ -9,7 +9,9 @@ module.exports = function(sequelize, DataTypes) {
     {
       classMethods: {
         associate: function(models) {
-          AppRole.belongsTo(models.App);
+          AppRole.belongsTo(models.App, {
+            foreignKey:'appId'
+          });
         }
       }
     });

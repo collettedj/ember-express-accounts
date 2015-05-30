@@ -16,6 +16,7 @@
     "express-session": "^1.11.1",
     "hbs": "~2.9.0",
     "less-middleware": "1.0.x",
+    "lodash": "^3.9.3",
     "morgan": "~1.5.1",
     "passport": "^0.2.1",
     "passport-local": "^1.0.0",

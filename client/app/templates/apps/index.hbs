@@ -3,15 +3,35 @@
 <table class="table table-hover">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Description</th>
+			<th></th>
+			<th class="col-sm-4">Name</th>
+			<th class="col-sm-8">Description</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
 		{{#each model as |app|}}	
-		{{#app-row tagName='' app=app}}
+		{{#app-row tagName="tr" app=app classNameBindings=":app-row app.isDirty:info" as |appRow| }}
 
+			<td>
+				{{input type="checkbox" checked=appRow.isEditing}}
+			</td>
+			<td class="app-name">
+				{{#if appRow.isEditing}}
+					{{input value=app.name class="form-control input-sm" }}
+				{{else}}
+				{{app.name}}
+				{{/if}}
+			</td>
+			<td class="app-description">{{app.description}}</td>
+			<td>
+				{{#if appRow.isEditing}}
+					<button class="btn btn-success btn-xs" {{action 'saveApp' bubbles=false target=appRow}}>Save</button>
+				{{else}}
+					{{#link-to 'app' app.id class="app-row echo-link"}}view
+					{{/link-to}}		
+				{{/if}}
+			</td>
 		{{/app-row}}
 		{{/each}}
 	</tbody>

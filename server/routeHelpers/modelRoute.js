@@ -74,7 +74,7 @@ module.exports = function(modelName){
 			handler: function(req, res){
 				try{
 					var models = req.app.get('models');
-					models[modelName].create(req.body[modelRouteInfo.dashName])
+					models[modelName].create(req.body[modelRouteInfo.emberModelName])
 						.then(function(newApp){
 							var result = {};
 							result[modelRouteInfo.dashName] = newApp;
