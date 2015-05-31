@@ -25,6 +25,7 @@
 				</td>
 				<td>
 					<button class="btn btn-success btn-xs" {{action 'saveAppRole' bubbles=false target=roleRow}}>Save</button>
+					<button class="btn btn-danger btn-xs" {{action 'deleteAppRole' bubbles=false target=roleRow}}>Delete</button>
 				</td>
 			{{else}}
 				<td class="app-role-name">{{appRole.name}}</td>

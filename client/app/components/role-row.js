@@ -7,6 +7,11 @@ export default Ember.Component.extend({
 		saveAppRole: function(){
 			var appRole = this.get('appRole');
 			appRole.save();
-		}
+		},
+
+		deleteAppRole: function(){
+			var appRole = this.get('appRole');
+			appRole.destroyRecord();
+		}		
 	}
 });

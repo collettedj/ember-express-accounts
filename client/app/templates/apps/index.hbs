@@ -26,6 +26,7 @@
 				</td>
 				<td>
 					<button class="btn btn-success btn-xs" {{action 'saveApp' bubbles=false target=appRow}}>Save</button>
+					<button class="btn btn-danger btn-xs" {{action 'deleteApp' bubbles=false target=appRow}}>Delete</button>
 				</td>
 			{{else}}
 				<td class="app-name">{{app.name}}</td>
