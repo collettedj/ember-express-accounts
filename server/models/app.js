@@ -1,23 +1,7 @@
 "use strict";
 var _ = require('lodash');
-
-function getMaxAppNumber(appNames){
-    var appNameNumReg = /App([0-9]+)$/;
-    var numbers = _(appNames)
-    .map(function(appModel){
-        var appName = _.last(appNameNumReg.exec(appModel.get('name')));
-        return appName;
-    })
-    .filter(function(appNumber){
-        return !!appNumber;
-    })
-    .map(function(appNumberString){
-        return _.parseInt(appNumberString);
-    })
-    .value();
-
-    return Math.max(_.max(numbers), 0) + 1;
-}
+var modelUtils = require('../modelHelpers/utils');
+var appNameNumReg = /App([0-9]+)$/;
 
 module.exports = function(sequelize, DataTypes) {
     var App = sequelize.define("App", {
@@ -45,7 +29,7 @@ module.exports = function(sequelize, DataTypes) {
                     }
                 })
                 .then(function(appModels){
-                    var maxAppNumber = getMaxAppNumber(appModels);
+                    var maxAppNumber = modelUtils.getMaxNumber(appNameNumReg, _.pluck(appModels, "name"));
                     appModel.set('name', 'App' + maxAppNumber);
                     done(null);
                 })
