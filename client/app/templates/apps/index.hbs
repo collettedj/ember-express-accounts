@@ -16,22 +16,27 @@
 			<td>
 				{{input type="checkbox" checked=appRow.isEditing}}
 			</td>
-			<td class="app-name">
-				{{#if appRow.isEditing}}
+
+			{{#if appRow.isEditing}}
+				<td class="app-name">
 					{{input value=app.name class="form-control input-sm" }}
-				{{else}}
-				{{app.name}}
-				{{/if}}
-			</td>
-			<td class="app-description">{{app.description}}</td>
-			<td>
-				{{#if appRow.isEditing}}
+				</td>
+				<td class="app-description">
+					{{textarea value=app.description class="form-control input-sm" }}
+				</td>
+				<td>
 					<button class="btn btn-success btn-xs" {{action 'saveApp' bubbles=false target=appRow}}>Save</button>
-				{{else}}
+				</td>
+			{{else}}
+				<td class="app-name">{{app.name}}</td>
+				<td class="app-description">{{app.description}}</td>
+				<td>
 					{{#link-to 'app' app.id class="app-row echo-link"}}view
 					{{/link-to}}		
-				{{/if}}
-			</td>
+				</td>						
+			{{/if}}
+
+
 		{{/app-row}}
 		{{/each}}
 	</tbody>

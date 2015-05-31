@@ -9,10 +9,7 @@ export default Ember.Component.extend({
 		saveApp: function(){
 			var app = this.get('app');
 			app.save();
-		},
-
-		doNothing: function(){
-
 		}
+
 	}
 });

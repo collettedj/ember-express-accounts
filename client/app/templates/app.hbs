@@ -5,16 +5,35 @@
 <table class="table table-hover">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Description</th>
+			<th></th>
+			<th class="col-sm-4">Name</th>
+			<th class="col-sm-8">Description</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
 		{{#each model.appRoles as |appRole|}}	
-		<tr>
-			<td class="app-name">{{appRole.name}}</td>
-			<td class="app-description">{{appRole.description}}</td>
+		{{#role-row tagName='' appRole=appRole as |roleRow|}}
+		<tr class="app-role-row {{if appRole.isDirty "info"}}">
+			<td>{{input type="checkbox" checked=appRole.isEditing}}</td>
+			{{#if appRole.isEditing}}
+				<td class="app-name">
+					{{input value=appRole.name class="form-control input-sm" }}
+				</td>
+				<td class="app-role-description">
+					{{textarea value=appRole.description class="form-control input-sm" }}
+				</td>
+				<td>
+					<button class="btn btn-success btn-xs" {{action 'saveAppRole' bubbles=false target=roleRow}}>Save</button>
+				</td>
+			{{else}}
+				<td class="app-role-name">{{appRole.name}}</td>
+				<td class="app-role-description">{{appRole.description}}</td>
+				<td>
+				</td>						
+			{{/if}}
 		</tr>
+		{{/role-row}}
 		{{/each}}
 	</tbody>
 </table>

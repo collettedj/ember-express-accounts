@@ -41,7 +41,7 @@ module.exports = function(modelName){
 				try{
 					var models = req.app.get('models');	
 					var modelId = req.params[modelRouteInfo.paramName];
-					var updates = req.body[modelRouteInfo.dashName];					
+					var updates = req.body[modelRouteInfo.emberModelName];					
 					models[modelName]
 						.update(updates, {
 							hooks: true,
