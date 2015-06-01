@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "client/node_modules/ember-cli"
 		}
 	]
 }

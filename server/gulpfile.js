@@ -21,7 +21,7 @@ gulp.task('develop', function () {
   nodemon({ script: './bin/www.js',
         ext: 'html js',
         tasks: ['lint'],
-        execMap: {'js':'node --debug'}
+        execMap: {'js':'node --harmony --debug'}
     })
     .on('restart', function () {
       console.log('restarted!');
