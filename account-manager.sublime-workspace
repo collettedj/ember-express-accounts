@@ -72,44 +72,10 @@
 	"buffers":
 	[
 		{
-			"file": "client/node_modules/ember-cli/blueprints/component/index.js",
-			"settings":
-			{
-				"buffer_size": 2382,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/node_modules/ember-cli/blueprints/acceptance-test/files/tests/acceptance/__name__-test.js",
-			"settings":
-			{
-				"buffer_size": 538,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 22 files for \"__name__\"\n\n0 matches\n\nSearching 634 files for \"__name__\"\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/addon-import/index.js:\n   10    fileMapTokens: function() {\n   11      return {\n   12:       __name__: function(options) {\n   13          if (options.pod && options.hasPathToken) {\n   14            return options.originBlueprintName;\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/component-addon/index.js:\n   17          return 'components';\n   18        },\n   19:       __name__: function(options) {\n   20          if (options.pod) {\n   21            return 'component';\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/lib/models/blueprint.js:\n   45    │   ├── app\n   46    │   │   └── __path__\n   47:   │   │       └── __name__.js\n   48    └── index.js\n   49  \n   ..\n   62    installed into the target directory.\n   63  \n   64:   The `__name__` token is subtituted with the dasherized\n   65    entity name at install time. For example, when the user\n   66:   invokes `ember generate controller foo` then `__name__` becomes\n   67    `foo`. When the `--pod` flag is used, for example `ember\n   68:   generate controller foo --pod` then `__name__` becomes\n   69    `controller`.\n   70  \n   ..\n   86    if the blueprint requires support for a pod structure. If\n   87    the blueprint does not require pod support, simply use the\n   88:   `__name__` token instead.\n   89  \n   90    ## Template Variables (AKA Locals)\n   ..\n   94  \n   95    For example, the built-in `util` blueprint\n   96:   `files/app/utils/__name__.js` looks like this:\n   97  \n   98    ```js\n   ..\n  578  Blueprint.prototype._fileMapTokens = function(options) {\n  579    var standardTokens = {\n  580:     __name__: function(options) {\n  581        if (options.pod && options.hasPathToken) {\n  582          return options.blueprintName;\n  ...\n  763  Blueprint.prototype.mapFile = function(file, locals) {\n  764    var pattern, i;\n  765:   var fileMap = locals.fileMap || { __name__: locals.dasherizedModuleName };\n  766    file = Blueprint.renamedFiles[file] || file;\n  767    for (i in fileMap) {\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/tests/acceptance/destroy-test.js:\n  577        .then(function() {\n  578          return outputFile(\n  579:           'blueprints/foo/files/app/foos/__name__.js',\n  580            \"import Ember from 'ember';\" + EOL + EOL +\n  581            'export default Ember.Object.extend({ foo: true });' + EOL\n  ...\n  603        .then(function() {\n  604          return outputFile(\n  605:           'blueprints/controller/files/app/controllers/__name__.js',\n  606            \"import Ember from 'ember';\" + EOL + EOL +\n  607            \"export default Ember.Controller.extend({ custom: true });\" + EOL\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/tests/acceptance/generate-test.js:\n  954        .then(function() {\n  955          return outputFile(\n  956:           'blueprints/foo/files/app/foos/__name__.js',\n  957            \"import Ember from 'ember';\" + EOL +\n  958            'export default Ember.Object.extend({ foo: true });' + EOL\n  ...\n  973        .then(function() {\n  974          return outputFile(\n  975:           'blueprints/controller/files/app/controllers/__name__.js',\n  976            \"import Ember from 'ember';\" + EOL + EOL +\n  977            \"export default Ember.Controller.extend({ custom: true });\" + EOL\n  ...\n 1028        .then(function() {\n 1029          outputFile(\n 1030:           'blueprints/customblue/files/app/__name__.js',\n 1031            \"Q: Can I has custom command? A: <%= hasCustomCommand %>\"\n 1032          );\n ....\n 1076        .then(function() {\n 1077          return outputFile(\n 1078:           'blueprints/controller/files/app/controllers/__name__.js',\n 1079            \"import Ember from 'ember';\" + EOL + EOL +\n 1080            \"export default Ember.Controller.extend({ custom: true });\" + EOL\n ....\n 1141                '},');\n 1142              return outputFile(\n 1143:               'blueprints/foo/files/app/foos/__name__.js',\n 1144                \"import Ember from 'ember';\" + EOL +\n 1145                'export default Ember.Object.extend({ foo: <%= foo %> });' + EOL\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/tests/acceptance/pods-destroy-test.js:\n  596        .then(function() {\n  597          return outputFile(\n  598:           'blueprints/foo/files/app/foos/__name__.js',\n  599            \"import Ember from 'ember';\" + EOL + EOL +\n  600            'export default Ember.Object.extend({ foo: true });' + EOL\n  ...\n  621        .then(function() {\n  622          return outputFile(\n  623:           'blueprints/controller/files/app/__path__/__name__.js',\n  624            \"import Ember from 'ember';\" + EOL + EOL +\n  625            \"export default Ember.Controller.extend({ custom: true });\" + EOL\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/tests/acceptance/pods-generate-test.js:\n 1697        .then(function() {\n 1698          return outputFile(\n 1699:           'blueprints/foo/files/app/foos/__name__.js',\n 1700            \"import Ember from 'ember';\" + EOL +\n 1701            'export default Ember.Object.extend({ foo: true });' + EOL\n ....\n 1716        .then(function() {\n 1717          return outputFile(\n 1718:           'blueprints/controller/files/app/__path__/__name__.js',\n 1719            \"import Ember from 'ember';\" + EOL + EOL +\n 1720            \"export default Ember.Controller.extend({ custom: true });\" + EOL\n ....\n 1735        .then(function() {\n 1736          outputFile(\n 1737:           'blueprints/customblue/files/app/__name__.js',\n 1738            \"Q: Can I has custom command? A: <%= hasCustomCommand %>\"\n 1739          );\n ....\n 1743            \"  fileMapTokens: function(options) {\" + EOL +\n 1744            \"    return {\" + EOL +\n 1745:           \"      __name__: function(options) {\" + EOL +\n 1746            \"         return options.dasherizedModuleName;\" + EOL +\n 1747            \"      }\" + EOL +\n ....\n 1778        .then(function() {\n 1779          return outputFile(\n 1780:           'blueprints/controller/files/app/__path__/__name__.js',\n 1781            \"import Ember from 'ember';\" + EOL + EOL +\n 1782            \"export default Ember.Controller.extend({ custom: true });\" + EOL\n\n/home/david/projects/ember-express/client/node_modules/ember-cli/tests/unit/models/blueprint-test.js:\n   39  \n   40    describe('.mapFile', function() {\n   41:     it('replaces all occurences of __name__ with module name',function(){\n   42:       var path = Blueprint.prototype.mapFile('__name__/__name__-controller.js',{dasherizedModuleName: 'my-blueprint'});\n   43        expect(path).to.equal('my-blueprint/my-blueprint-controller.js');\n   44  \n   45:       path = Blueprint.prototype.mapFile('__name__/controller.js',{dasherizedModuleName: 'my-blueprint'});\n   46        expect(path).to.equal('my-blueprint/controller.js');\n   47  \n   48:       path = Blueprint.prototype.mapFile('__name__/__name__.js',{dasherizedModuleName: 'my-blueprint'});\n   49        expect(path).to.equal('my-blueprint/my-blueprint.js');\n   50      });\n   ..\n   52        var locals = {};\n   53        locals.fileMap= {\n   54:         __name__: 'user',\n   55          __type__: 'controller',\n   56          __path__: 'pods/users',\n   ..\n   58        };\n   59  \n   60:       var path = Blueprint.prototype.mapFile('__name__/__type____plural__.js',locals);\n   61        expect(path).to.equal('user/controller.js');\n   62  \n   63:       path = Blueprint.prototype.mapFile('__path__/__name__/__type__.js',locals);\n   64        expect(path).to.equal('pods/users/user/controller.js');\n   65      });\n   ..\n   94        var fileMap = blueprint.generateFileMap(fileMapVariables);\n   95        var expected = {\n   96:         __name__: 'foo-baz',\n   97          __path__: 'tests',\n   98          __root__: 'app',\n\n34 matches across 8 files\n",
-			"settings":
-			{
-				"buffer_size": 7981,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "client/node_modules/ember-cli/lib/models/blueprint.js",
-			"settings":
-			{
-				"buffer_size": 39213,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "server/generator/servergen.js",
 			"settings":
 			{
-				"buffer_size": 356,
+				"buffer_size": 351,
 				"line_ending": "Unix"
 			}
 		},
@@ -117,7 +83,39 @@
 			"file": "server/generator/modelReader.js",
 			"settings":
 			{
-				"buffer_size": 242,
+				"buffer_size": 1182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/generator/templates/clientModel.js",
+			"settings":
+			{
+				"buffer_size": 166,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/user-app.js",
+			"settings":
+			{
+				"buffer_size": 211,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/app-role.js",
+			"settings":
+			{
+				"buffer_size": 157,
 				"line_ending": "Unix"
 			}
 		}
@@ -219,11 +217,33 @@
 	},
 	"expanded_folders":
 	[
-		"/home/david/projects/ember-express/client/node_modules/ember-cli",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints"
+		"/home/david/projects/ember-express",
+		"/home/david/projects/ember-express/client",
+		"/home/david/projects/ember-express/server/generator",
+		"/home/david/projects/ember-express/server/models",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/app/files",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/app/files/app",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller/files",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller/files/__root__",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller/files/__root__/__path__",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib/models"
 	],
 	"file_history":
 	[
+		"/home/david/projects/ember-express/server/models/userApp.js",
+		"/home/david/projects/ember-express/client/dist/assets/vendor.js",
+		"/home/david/projects/ember-express/client/bower_components/lodash/lodash.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/component/index.js",
+		"/home/david/projects/ember-express/client/bower_components/bootstrap/Gruntfile.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/tests/unit/models/blueprint-test.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/tests/acceptance/pods-generate-test.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/addon-import/index.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib/models/blueprint.js",
+		"/home/david/projects/ember-express/server/generator/modelReader.js",
+		"/home/david/projects/ember-express/server/generator/servergen.js",
 		"/home/david/projects/ember-express/client/app/components/role-row.js",
 		"/home/david/projects/ember-express/server/routeHelpers/modelRoute.js",
 		"/home/david/projects/ember-express/client/app/components/app-row.js",
@@ -315,7 +335,6 @@
 		"/home/david/projects/ember-express/client/bower_components/pretender/.bower.json",
 		"/home/david/projects/ember-express/client/app/templates/application.hbs",
 		"/home/david/projects/ember-express/client/app/controllers/application.js",
-		"/home/david/projects/ember-express/client/dist/assets/vendor.js",
 		"/home/david/projects/ember-express/client/.jshintrc",
 		"/home/david/projects/ember-express/client/Brocfile.js",
 		"/home/david/projects/ember-express/client/app/mirage/fixtures/app-roles.js",
@@ -341,17 +360,7 @@
 		"/home/david/projects/ember-express/client/tests/acceptance/apps-test-visit-apps-data.js",
 		"/home/david/projects/ember-express/client/tests/helpers/start-app.js",
 		"/home/david/projects/NodePackages/node_modules/sails/package.json",
-		"/home/david/projects/NodePackages/node_modules/express-generator/package.json",
-		"/home/david/projects/express",
-		"/home/david/projects/NodePackages/node_modules/express/package.json",
-		"/home/david/projects/NodePackages/node_modules/express-generator/pack",
-		"/home/david/projects/NodePackages/node_modules/ember-cli/package.json",
-		"/home/david/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/david/projects/ember-express/client/app/models/user.js",
-		"/home/david/projects/NodePackages/node_modules/phantomjs/package.json",
-		"/home/david/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/david/projects/ember-express/client/deployment/deploy-ember",
-		"/home/david/projects/ember-express/server/node_modules/express/node_modules/serve-static/index.js"
+		"/home/david/projects/NodePackages/node_modules/express-generator/package.json"
 	],
 	"find":
 	{
@@ -376,6 +385,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_.template",
+			"banner",
+			"<%",
+			"fileMapTokens",
+			"Promise.denodeify",
+			"__name_",
+			"<%",
 			"render:",
 			"render",
 			"<%",
@@ -493,305 +509,34 @@
 	"groups":
 	[
 		{
+			"sheets":
+			[
+			]
+		},
+		{
 			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/node_modules/ember-cli/blueprints/component/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1197,
-								1197
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/node_modules/ember-cli/blueprints/acceptance-test/files/tests/acceptance/__name__-test.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								538,
-								538
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7981,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										251,
-										259
-									],
-									[
-										560,
-										568
-									],
-									[
-										828,
-										836
-									],
-									[
-										944,
-										952
-									],
-									[
-										1114,
-										1122
-									],
-									[
-										1244,
-										1252
-									],
-									[
-										1444,
-										1452
-									],
-									[
-										1613,
-										1621
-									],
-									[
-										1779,
-										1787
-									],
-									[
-										2046,
-										2054
-									],
-									[
-										2385,
-										2393
-									],
-									[
-										2669,
-										2677
-									],
-									[
-										3041,
-										3049
-									],
-									[
-										3319,
-										3327
-									],
-									[
-										3591,
-										3599
-									],
-									[
-										3832,
-										3840
-									],
-									[
-										4113,
-										4121
-									],
-									[
-										4490,
-										4498
-									],
-									[
-										4771,
-										4779
-									],
-									[
-										5148,
-										5156
-									],
-									[
-										5423,
-										5431
-									],
-									[
-										5695,
-										5703
-									],
-									[
-										5936,
-										5944
-									],
-									[
-										6214,
-										6222
-									],
-									[
-										6567,
-										6575
-									],
-									[
-										6659,
-										6667
-									],
-									[
-										6668,
-										6676
-									],
-									[
-										6869,
-										6877
-									],
-									[
-										7057,
-										7065
-									],
-									[
-										7066,
-										7074
-									],
-									[
-										7285,
-										7293
-									],
-									[
-										7464,
-										7472
-									],
-									[
-										7629,
-										7637
-									],
-									[
-										7867,
-										7875
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								832,
-								832
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/david/projects/ember-express",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/node_modules/ember-cli/lib/models/blueprint.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 39213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32744,
-								32744
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 17177.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 4,
 					"file": "server/generator/servergen.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 356,
+						"buffer_size": 351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								354,
-								354
+								351,
+								351
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -802,20 +547,49 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 1,
 					"file": "server/generator/modelReader.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 242,
+						"buffer_size": 1182,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								167,
-								167
+								511,
+								511
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/generator/templates/clientModel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
 							]
 						],
 						"settings":
@@ -828,7 +602,94 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								395,
+								395
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/app/models/user-app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/app/models/app-role.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -862,7 +723,7 @@
 		"cols":
 		[
 			0.0,
-			0.683292678912,
+			0.168723142488,
 			1.0
 		],
 		"rows":
@@ -1430,7 +1291,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

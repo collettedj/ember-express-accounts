@@ -12,4 +12,3 @@ if(program.clientModel){
 	modelReader.generateClientModel(program.clientModel);
 }
 
-console.log("done");
