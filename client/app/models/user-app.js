@@ -1,7 +1,8 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-		id:DS.attr('number'), 
+import customModel from './custom/user-app';
+
+var UserApp = DS.Model.extend({
 		user:DS.belongsTo('user'), 
 		app:DS.belongsTo('app'), 
 		name:DS.attr('string'), 
@@ -10,3 +11,7 @@ export default DS.Model.extend({
 		updatedAt:DS.attr('date'), 
  
 });
+
+customModel(UserApp);
+
+export default UserApp;

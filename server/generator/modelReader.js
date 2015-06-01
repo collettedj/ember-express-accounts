@@ -32,8 +32,8 @@ function getEmberAttrName(attr){
 	return name;
 }
 
-function getEmberModelName(attr){
-	return _.kebabCase(singularize(attr.references.model));
+function getEmberModelName(modelName){
+	return _.kebabCase(singularize(modelName));
 }
 
 
@@ -61,12 +61,27 @@ module.exports = {
 			});
 			var result = compileTemplate({model:model});
 			var outputFile = '../client/app/models/' + modelDashName + '.js';
+			var customOutputFile = '../client/app/models/custom/' + modelDashName + '.js';
 
 			fs.writeFile(outputFile, result, function(err){
 				if(err){
 					console.log(chalk.bold.red("Error writing file: " + err));
 				}
 				console.log("file created: " + chalk.bold.green(outputFile))
+
+				fs.exists(customOutputFile, function(exists){
+					if(!exists){
+						fs.copy('./generator/templates/customClientModel.js', customOutputFile, function(err){
+							if(err){
+								console.log(chalk.bold.red("Could not create custom model for" + modelName));	
+							}else{
+								console.log("file created: " + chalk.bold.green(customOutputFile))								
+							}
+							
+						});
+					}
+				});
+
 			})
 		});
 		//console.log(currentModel);

@@ -1,12 +1,18 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  firstName: DS.attr('string'),
-  lastName: DS.attr('string'),
-  username: DS.attr('string'),
-  email: DS.attr('string'),
+import customModel from './custom/user';
 
-  fullName: function(){
-  	return "%@ %@".fmt(this.get('firstName'), this.get('lastName'));
-  }.property('firstName', 'lastName'),
+var User = DS.Model.extend({
+		username:DS.attr('string'), 
+		password:DS.attr('string'), 
+		email:DS.attr('string'), 
+		firstName:DS.attr('string'), 
+		lastName:DS.attr('string'), 
+		createdAt:DS.attr('date'), 
+		updatedAt:DS.attr('date'), 
+ 
 });
+
+customModel(User);
+
+export default User;
