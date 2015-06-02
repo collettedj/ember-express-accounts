@@ -22,7 +22,7 @@ var <%-model.name%> = DS.Model.extend({
 			target: assoc.target.name
 		});
 		if(assoc.associationType.toUpperCase() ==="HASMANY"){
-%>		<%-getEmberModelHasManyName(assoc.target.name)%>: DS.hasMany('<%-getEmberModelName(assoc.target.name)%>'), 
+%>		<%-getEmberModelHasManyName(assoc.target.name)%>: DS.hasMany('<%-getEmberModelName(assoc.target.name)%>', {inverse:'<%- getHasManyInverseName(assoc.foreignKey) %>'}), 
 <% 		
 		}
 	}); 

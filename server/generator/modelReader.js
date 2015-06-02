@@ -33,6 +33,10 @@ function getEmberAttrName(attr){
 	return name;
 }
 
+function getHasManyInverseName(fkField){
+	return _.trimRight(fkField, 'Id');
+}
+
 function getEmberModelName(modelName){
 	return _.kebabCase(singularize(modelName));
 }
@@ -62,7 +66,8 @@ module.exports = {
 					getEmberType:getEmberType,
 					getEmberAttrName:getEmberAttrName,
 					getEmberModelName:getEmberModelName,
-					getEmberModelHasManyName:getEmberModelHasManyName
+					getEmberModelHasManyName:getEmberModelHasManyName,
+					getHasManyInverseName: getHasManyInverseName
 				}
 			});
 			var result = compileTemplate({model:model});

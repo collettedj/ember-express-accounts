@@ -7,7 +7,7 @@ var App = DS.Model.extend({
 		description:DS.attr('string'), 
 		createdAt:DS.attr('date'), 
 		updatedAt:DS.attr('date'), 
-		appRoles: DS.hasMany('app-role'), 
+		appRoles: DS.hasMany('app-role', {inverse:'app'}), 
 });
 
 customModel(App);
