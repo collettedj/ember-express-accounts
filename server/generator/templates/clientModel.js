@@ -14,8 +14,19 @@ var <%-model.name%> = DS.Model.extend({
 			}
 		}
 	}); 
-%> 
-});
+ 	_.forEach(model.associations, function(assoc){  
+		console.log({
+			type: assoc.associationType,
+			fk: assoc.foreignKey,
+			source: assoc.source.name,
+			target: assoc.target.name
+		});
+		if(assoc.associationType.toUpperCase() ==="HASMANY"){
+%>		<%-getEmberModelHasManyName(assoc.target.name)%>: DS.hasMany('<%-getEmberModelName(assoc.target.name)%>'), 
+<% 		
+		}
+	}); 
+%>});
 
 customModel(<%-model.name%>);
 

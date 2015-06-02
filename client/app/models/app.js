@@ -1,7 +1,15 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  name: DS.attr('string'),
-  description: DS.attr('string'),
-  appRoles: DS.hasMany('app-role')
+import customModel from './custom/app';
+
+var App = DS.Model.extend({
+		name:DS.attr('string'), 
+		description:DS.attr('string'), 
+		createdAt:DS.attr('date'), 
+		updatedAt:DS.attr('date'), 
+		appRoles: DS.hasMany('app-role'), 
 });
+
+customModel(App);
+
+export default App;

@@ -1,4 +1,4 @@
-import DS from 'ember-data';
+//import DS from 'ember-data';
 
 export default function(model){
 	model.reopen({
@@ -6,4 +6,4 @@ export default function(model){
 			return "%@ %@".fmt(this.get('firstName'), this.get('lastName'));
 		}.property('firstName', 'lastName'),	
 	});
-};
+}

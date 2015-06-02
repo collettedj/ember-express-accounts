@@ -4,20 +4,18 @@
 //var appRoleNameNumReg = /Role([0-9]+)$/;
 
 module.exports = function(sequelize, DataTypes) {
-	var UserApp = sequelize.define("UserApp", {
+	var AppUser = sequelize.define("AppUser", {
         userId: {type:DataTypes.INTEGER, unique: "unique1", allowNull: false},
 		appId: {type:DataTypes.INTEGER, unique: "unique1", allowNull: false},
-		name: {type: DataTypes.STRING},
-		description: DataTypes.STRING,
 	}, 
 	{
 		classMethods: {
 			associate: function(models) {
-				UserApp.belongsTo(models.App, {
+				AppUser.belongsTo(models.App, {
 					foreignKey:'appId'
 				});
 
-				UserApp.belongsTo(models.User, {
+				AppUser.belongsTo(models.User, {
 					foreignKey:'userId'
 				});				
 			}
@@ -25,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
 
 	});
 
-	return UserApp;
+	return AppUser;
 };
 
 

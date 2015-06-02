@@ -72,6 +72,54 @@
 	"buffers":
 	[
 		{
+			"file": "client/app/models/user-app.js",
+			"settings":
+			{
+				"buffer_size": 341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/custom/user-app.js",
+			"settings":
+			{
+				"buffer_size": 87,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/custom/user.js",
+			"settings":
+			{
+				"buffer_size": 218,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/user.js",
+			"settings":
+			{
+				"buffer_size": 362,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/app.js",
+			"settings":
+			{
+				"buffer_size": 163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/models/app-role.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "server/generator/servergen.js",
 			"settings":
 			{
@@ -83,7 +131,7 @@
 			"file": "server/generator/modelReader.js",
 			"settings":
 			{
-				"buffer_size": 1182,
+				"buffer_size": 2453,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,31 +139,23 @@
 			"file": "server/generator/templates/clientModel.js",
 			"settings":
 			{
-				"buffer_size": 166,
+				"buffer_size": 540,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"file": "server/generator/templates/customClientModel.js",
 			"settings":
 			{
-				"buffer_size": 678,
+				"buffer_size": 87,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/app/models/user-app.js",
+			"file": "client/app/templates/users.hbs",
 			"settings":
 			{
-				"buffer_size": 211,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/models/app-role.js",
-			"settings":
-			{
-				"buffer_size": 157,
+				"buffer_size": 1312,
 				"line_ending": "Unix"
 			}
 		}
@@ -219,21 +259,26 @@
 	[
 		"/home/david/projects/ember-express",
 		"/home/david/projects/ember-express/client",
+		"/home/david/projects/ember-express/client/app",
+		"/home/david/projects/ember-express/client/app/models",
+		"/home/david/projects/ember-express/client/app/models/custom",
+		"/home/david/projects/ember-express/client/app/routes",
+		"/home/david/projects/ember-express/client/app/serializers",
+		"/home/david/projects/ember-express/client/app/views",
+		"/home/david/projects/ember-express/server",
 		"/home/david/projects/ember-express/server/generator",
-		"/home/david/projects/ember-express/server/models",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/app/files",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/app/files/app",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller/files",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller/files/__root__",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/controller/files/__root__/__path__",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib/models"
+		"/home/david/projects/ember-express/server/generator/templates",
+		"/home/david/projects/ember-express/server/models"
 	],
 	"file_history":
 	[
 		"/home/david/projects/ember-express/server/models/userApp.js",
+		"/home/david/projects/ember-express/client/app/templates/users.hbs",
+		"/home/david/projects/ember-express/client/app/models/user.js",
+		"/home/david/projects/ember-express/client/app/models/custom/user.js",
+		"/home/david/projects/ember-express/client/app/models/customuser.js",
+		"/home/david/projects/ember-express/server/generator/templates/customClientModel.js",
+		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/david/projects/ember-express/client/dist/assets/vendor.js",
 		"/home/david/projects/ember-express/client/bower_components/lodash/lodash.js",
 		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/component/index.js",
@@ -265,7 +310,6 @@
 		"/home/david/savetabs.sh",
 		"/home/david/basrc",
 		"/tmp/cfg",
-		"/home/david/projects/ember-express/client/app/templates/users.hbs",
 		"/home/david/projects/ember-express/server/package.json",
 		"/home/david/projects/ember-express/client/app/router.js",
 		"/home/david/projects/ember-express/client/app/models/app-role.js",
@@ -327,7 +371,6 @@
 		"/home/david/projects/ember-express/client/app/mirage/routes/users.js",
 		"/home/david/projects/ember-express/client/app/mirage/routes/auth.js",
 		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/david/.config/sublime-text-3/Packages/User/Nodejs.sublime-settings",
 		"/home/david/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
 		"/home/david/projects/ember-express/client/app/models/app.js",
@@ -356,11 +399,7 @@
 		"/home/david/projects/ember-express/client/app/routes/users.js",
 		"/home/david/projects/ember-express/client/tests/unit/adapters/application-test.js",
 		"/home/david/projects/ember-express/client/bower_components/ember/ember.debug.js",
-		"/home/david/projects/ember-express/client/tests/acceptance/users-test-visit-users-data.js",
-		"/home/david/projects/ember-express/client/tests/acceptance/apps-test-visit-apps-data.js",
-		"/home/david/projects/ember-express/client/tests/helpers/start-app.js",
-		"/home/david/projects/NodePackages/node_modules/sails/package.json",
-		"/home/david/projects/NodePackages/node_modules/express-generator/package.json"
+		"/home/david/projects/ember-express/client/tests/acceptance/users-test-visit-users-data.js"
 	],
 	"find":
 	{
@@ -509,29 +548,82 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/generator/servergen.js",
+					"file": "client/app/models/user-app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 351,
+						"buffer_size": 341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								351,
-								351
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/app/models/custom/user-app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 87,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/app/models/custom/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
 							]
 						],
 						"settings":
@@ -547,55 +639,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "server/generator/modelReader.js",
+					"buffer": 3,
+					"file": "client/app/models/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1182,
+						"buffer_size": 362,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								511,
-								511
+								362,
+								362
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "server/generator/templates/clientModel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								166
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -606,50 +668,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/home/david/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 678,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								395,
-								395
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "client/app/models/user-app.js",
+					"file": "client/app/models/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 211,
+						"buffer_size": 163,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								120,
-								120
+								163,
+								163
 							]
 						],
 						"settings":
@@ -661,7 +693,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -689,7 +721,160 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "server/generator/servergen.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								351,
+								351
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server/generator/modelReader.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								774,
+								774
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 196.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "server/generator/templates/clientModel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 540,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								540,
+								540
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "server/generator/templates/customClientModel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 87,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "client/app/templates/users.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								953,
+								953
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -723,7 +908,7 @@
 		"cols":
 		[
 			0.0,
-			0.168723142488,
+			0.345544334541,
 			1.0
 		],
 		"rows":
@@ -754,6 +939,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"users.h",
+				"ember-express/client/app/templates/users.hbs"
+			],
+			[
+				"clientm",
+				"ember-express/server/generator/templates/clientModel.js"
+			],
+			[
+				"users.hb",
+				"ember-express/client/app/templates/users.hbs"
+			],
 			[
 				"role-row.h",
 				"client/app/templates/components/role-row.hbs"
@@ -805,10 +1002,6 @@
 			[
 				"apps/ind",
 				"client/app/templates/apps/index.hbs"
-			],
-			[
-				"users.hb",
-				"client/app/templates/users.hbs"
 			],
 			[
 				"routapp.js",
@@ -1257,14 +1450,6 @@
 			[
 				"modes/users",
 				"server/models/user.js"
-			],
-			[
-				"models/users",
-				"server/models/user.js"
-			],
-			[
-				"users.js",
-				"server/routes/users.js"
 			]
 		],
 		"width": 0.0
@@ -1291,7 +1476,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

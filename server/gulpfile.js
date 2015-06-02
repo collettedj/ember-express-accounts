@@ -17,7 +17,7 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter(stylish));
 }); 
 
-gulp.task('develop', function () {
+gulp.task('default', function () {
   nodemon({ script: './bin/www.js',
         ext: 'html js',
         tasks: ['lint'],

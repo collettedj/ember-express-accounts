@@ -6,6 +6,7 @@ var _ = require("lodash");
 var chalk = require("chalk");
 var dasherize = models.sequelize.Utils.inflection.dasherize;
 var singularize =models.sequelize.Utils.inflection.singularize;
+var pluralize =models.sequelize.Utils.inflection.pluralize;
 
 
 function getEmberType(sqlType){
@@ -36,6 +37,10 @@ function getEmberModelName(modelName){
 	return _.kebabCase(singularize(modelName));
 }
 
+function getEmberModelHasManyName(modelName){
+	return _.camelCase(pluralize(modelName));
+}
+
 
 module.exports = {
 	generateClientModel: function(modelName){
@@ -56,7 +61,8 @@ module.exports = {
 				imports:{
 					getEmberType:getEmberType,
 					getEmberAttrName:getEmberAttrName,
-					getEmberModelName:getEmberModelName
+					getEmberModelName:getEmberModelName,
+					getEmberModelHasManyName:getEmberModelHasManyName
 				}
 			});
 			var result = compileTemplate({model:model});
