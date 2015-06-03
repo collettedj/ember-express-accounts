@@ -35,12 +35,11 @@ SET default_with_oids = false;
 
 CREATE TABLE "AppRoles" (
     id integer NOT NULL,
-    "appId" integer,
+    "appId" integer NOT NULL,
     name character varying(255),
     description character varying(255),
     "createdAt" timestamp with time zone NOT NULL,
-    "updatedAt" timestamp with time zone NOT NULL,
-    "AppId" integer
+    "updatedAt" timestamp with time zone NOT NULL
 );
 
 
@@ -65,6 +64,42 @@ ALTER TABLE public."AppRoles_id_seq" OWNER TO david;
 --
 
 ALTER SEQUENCE "AppRoles_id_seq" OWNED BY "AppRoles".id;
+
+
+--
+-- Name: AppUsers; Type: TABLE; Schema: public; Owner: david; Tablespace: 
+--
+
+CREATE TABLE "AppUsers" (
+    id integer NOT NULL,
+    "userId" integer NOT NULL,
+    "appId" integer NOT NULL,
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."AppUsers" OWNER TO david;
+
+--
+-- Name: AppUsers_id_seq; Type: SEQUENCE; Schema: public; Owner: david
+--
+
+CREATE SEQUENCE "AppUsers_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."AppUsers_id_seq" OWNER TO david;
+
+--
+-- Name: AppUsers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: david
+--
+
+ALTER SEQUENCE "AppUsers_id_seq" OWNED BY "AppUsers".id;
 
 
 --
@@ -189,6 +224,13 @@ ALTER TABLE ONLY "AppRoles" ALTER COLUMN id SET DEFAULT nextval('"AppRoles_id_se
 -- Name: id; Type: DEFAULT; Schema: public; Owner: david
 --
 
+ALTER TABLE ONLY "AppUsers" ALTER COLUMN id SET DEFAULT nextval('"AppUsers_id_seq"'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: david
+--
+
 ALTER TABLE ONLY "Apps" ALTER COLUMN id SET DEFAULT nextval('"Apps_id_seq"'::regclass);
 
 
@@ -223,6 +265,30 @@ ALTER TABLE ONLY "AppRoles"
 
 
 --
+-- Name: AppUsers_pkey; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "AppUsers"
+    ADD CONSTRAINT "AppUsers_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: AppUsers_userId_appId_key; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "AppUsers"
+    ADD CONSTRAINT "AppUsers_userId_appId_key" UNIQUE ("userId", "appId");
+
+
+--
+-- Name: Apps_name_key; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
+--
+
+ALTER TABLE ONLY "Apps"
+    ADD CONSTRAINT "Apps_name_key" UNIQUE (name);
+
+
+--
 -- Name: Apps_pkey; Type: CONSTRAINT; Schema: public; Owner: david; Tablespace: 
 --
 
@@ -247,11 +313,27 @@ ALTER TABLE ONLY "Users"
 
 
 --
--- Name: AppRoles_AppId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+-- Name: AppRoles_appId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
 --
 
 ALTER TABLE ONLY "AppRoles"
-    ADD CONSTRAINT "AppRoles_AppId_fkey" FOREIGN KEY ("AppId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+    ADD CONSTRAINT "AppRoles_appId_fkey" FOREIGN KEY ("appId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+
+
+--
+-- Name: AppUsers_appId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "AppUsers"
+    ADD CONSTRAINT "AppUsers_appId_fkey" FOREIGN KEY ("appId") REFERENCES "Apps"(id) ON UPDATE CASCADE ON DELETE SET NULL;
+
+
+--
+-- Name: AppUsers_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: david
+--
+
+ALTER TABLE ONLY "AppUsers"
+    ADD CONSTRAINT "AppUsers_userId_fkey" FOREIGN KEY ("userId") REFERENCES "Users"(id) ON UPDATE CASCADE ON DELETE SET NULL;
 
 
 --
