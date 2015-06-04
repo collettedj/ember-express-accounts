@@ -11,11 +11,20 @@ router.use(isAuthenticated);
 
 /* GET apps listing. */
 router.get('/', function(req, res) {
-	var models = req.app.get('models');
-	var apps = models.App.findAll()
-		.then(function(apps){
-			res.json({apps:apps});
-		});
+	try{
+		var models = req.app.get('models');
+		var apps = models.App.findAll()
+			.then(function(apps){
+				res.json({apps:apps});
+			})
+			.catch(function(err){
+				console.log(err);
+			});
+	}
+	catch(err){
+		console.log(err);
+		res.sendStatus(500);
+	}
 });
 
 utils.applyRoute(router, modelRoute.getOne);
