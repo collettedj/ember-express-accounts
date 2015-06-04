@@ -80,10 +80,26 @@
 			}
 		},
 		{
-			"file": "client/app/models/app-user.js",
+			"file": "client/.ember-cli",
 			"settings":
 			{
-				"buffer_size": 280,
+				"buffer_size": 315,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/publish/publish-db-force.js",
+			"settings":
+			{
+				"buffer_size": 338,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "createDatabase.txt",
+			"settings":
+			{
+				"buffer_size": 198,
 				"line_ending": "Unix"
 			}
 		}
@@ -186,14 +202,10 @@
 	"expanded_folders":
 	[
 		"/home/david/projects/ember-express",
-		"/home/david/projects/ember-express/client",
-		"/home/david/projects/ember-express/client/app",
-		"/home/david/projects/ember-express/client/app/models",
-		"/home/david/projects/ember-express/client/app/models/custom",
-		"/home/david/projects/ember-express/server",
 		"/home/david/projects/ember-express/server/generator",
 		"/home/david/projects/ember-express/server/generator/templates",
-		"/home/david/projects/ember-express/server/models"
+		"/home/david/projects/ember-express/server/models",
+		"/home/david/projects/ember-express/server/publish"
 	],
 	"file_history":
 	[
@@ -478,7 +490,7 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -494,8 +506,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								309,
+								309
 							]
 						],
 						"settings":
@@ -507,28 +519,57 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/app/models/app-user.js",
-					"semi_transient": true,
+					"file": "client/.ember-cli",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 280,
+						"buffer_size": 315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								278,
+								278
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/publish/publish-db-force.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								330,
+								330
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -536,6 +577,34 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "createDatabase.txt",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
