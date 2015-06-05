@@ -15,15 +15,8 @@ after(function(done){
 
 describe("routes", function(){
 	beforeEach(function(done){
-		
-		models.sequelize.sync({force: true, logging: false})
-		.then(function () {
-			done();
-		})
-		.catch(function(err){
-			console.log(chalk.red(err));	
-			done();
-		});
+		console.log('got here');
+		test.cleanDb(models, done);
   	});
 
   	afterEach(function(){
@@ -59,12 +52,40 @@ describe("routes", function(){
 				})
 		});
 
-	});
+		it("POST /apps", function(done){
+	 		var newApp = {
+	 			app: {
+	 				name: "new app", 
+	 				description: "this is the new app", 
+	 				createdAt: null, 
+	 				updatedAt: null
+	 			}
+	 		};
 
-	describe("user route 2", function(){
-		it("do something", function(){
-	 		assert.equal(1, 1);
+			request(app)
+				.post('/api/v1/apps')
+				.send(newApp)
+				.expect(200)
+				.end(function(err,res){
+					var app = res.body.app;
+					assert.equal(null, err);
+					assert.equal(app.name, "App1");
+					assert.equal(app.description, newApp.app.description);
+
+					models.App.findAll()
+						.then(function(apps){
+							var app0 = apps[0];
+							assert.equal(apps.length, 1);
+							assert.equal(app0.name, "App1");
+							assert.equal(app0.description, newApp.app.description);
+							done();
+							
+						}, done);
+
+				
+				});
 		});
 
 	});
+
 });

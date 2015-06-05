@@ -24,8 +24,11 @@ var handleError = function (err) {
 };
 
 gulp.task("test", ['lint'], function() {
+    process.env.NODE_ENV = 'test';
     return gulp.src(paths.testFiles)
-        .pipe(mocha({ reporter: "spec" })
+        .pipe(mocha({ 
+            reporter: "spec" 
+        })
         .on("error", handleError));
 });
 
