@@ -85,6 +85,42 @@ describe("routes", function(){
 				
 				});
 		});
+		
+		it("PUT /apps", function(done){
+	 		var newApp = {
+	 			app: {
+	 				id: 1, 
+	 				description: "this is the updated object", 
+	 			}
+	 		};
+
+			models.App.bulkCreate([{
+					name: "name1",
+					description: "description1"				
+				},{
+					name: "name2",
+					description: "description2"				
+				},{
+					name: "name3",
+					description: "description3"				
+				},{
+					name: "name4",
+					description: "description4"				
+				}])
+				.then(function(insertedApps){
+					request(app)
+						.put('/api/v1/apps/' + insertedApps[0].id)
+						.send(newApp)
+						.expect(200)
+						.end(function(err,res){
+							assert.equal(null, err);
+							// var jsonRes = JSON.parse(res.text);
+							// assert.notStrictEqual(jsonRes.apps, undefined);
+							// assert.equal(jsonRes.apps.length, 4);
+							done();
+						});
+				})
+		});
 
 	});
 
