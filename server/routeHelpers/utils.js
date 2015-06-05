@@ -17,7 +17,7 @@ module.exports = {
 		var paramName = this.lowerFirstLetter(modelName) + "Id";
 		var routePath = "/:" + paramName;
 		var emberModelName = this.lowerFirstLetter(modelName);
-
+ 
 		return {
 			dashName: modelDashName,
 			dashNamePlural: modelDashNamePlural,

@@ -1,4 +1,5 @@
 
+var test = require('./testUtils');
 var assert = require("assert");
 var chalk = require("chalk");
 var request = require("supertest");
@@ -6,7 +7,10 @@ var utils = require("../modelHelpers/utils.js");
 var app = require("../app");
 var models = app.get('models');
 
-
+after(function(done){
+	models.sequelize.close();
+	done();
+});
 
 
 describe("routes", function(){
@@ -14,7 +18,6 @@ describe("routes", function(){
 		
 		models.sequelize.sync({force: true, logging: false})
 		.then(function () {
-			console.log(chalk.green('	database sync complete'));
 			done();
 		})
 		.catch(function(err){
@@ -54,8 +57,6 @@ describe("routes", function(){
 							done();
 						});
 				})
-
-
 		});
 
 	});
