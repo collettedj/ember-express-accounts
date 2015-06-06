@@ -72,34 +72,34 @@
 	"buffers":
 	[
 		{
-			"file": "client/app/models/app-role.js",
+			"file": "server/gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 309,
+				"buffer_size": 1268,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/.ember-cli",
+			"file": "server/routeHelpers/modelRoute.js",
 			"settings":
 			{
-				"buffer_size": 315,
+				"buffer_size": 2615,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/publish/publish-db-force.js",
+			"file": "server/tests/routes-test.js",
 			"settings":
 			{
-				"buffer_size": 338,
+				"buffer_size": 2632,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "createDatabase.txt",
+			"file": "server/tests/testUtils.js",
 			"settings":
 			{
-				"buffer_size": 198,
+				"buffer_size": 393,
 				"line_ending": "Unix"
 			}
 		}
@@ -202,13 +202,36 @@
 	"expanded_folders":
 	[
 		"/home/david/projects/ember-express",
+		"/home/david/projects/ember-express/server",
+		"/home/david/projects/ember-express/server/bin",
+		"/home/david/projects/ember-express/server/config",
 		"/home/david/projects/ember-express/server/generator",
 		"/home/david/projects/ember-express/server/generator/templates",
+		"/home/david/projects/ember-express/server/modelHelpers",
 		"/home/david/projects/ember-express/server/models",
-		"/home/david/projects/ember-express/server/publish"
+		"/home/david/projects/ember-express/server/passport",
+		"/home/david/projects/ember-express/server/publish",
+		"/home/david/projects/ember-express/server/routeHelpers",
+		"/home/david/projects/ember-express/server/routes",
+		"/home/david/projects/ember-express/server/tests",
+		"/home/david/projects/ember-express/server/views"
 	],
 	"file_history":
 	[
+		"/home/david/projects/ember-express/server/bin/www.js",
+		"/home/david/projects/ember-express/server/routeHelpers/utils.js",
+		"/home/david/projects/ember-express/server/gulpfile.js",
+		"/home/david/projects/ember-express/server/models/index.js",
+		"/home/david/projects/ember-express/client/app/models/app-role.js",
+		"/home/david/projects/ember-express/client/.ember-cli",
+		"/home/david/projects/ember-express/server/publish/publish-db-force.js",
+		"/home/david/projects/ember-express/server/tests/model-helper-utils-test.js",
+		"/home/david/projects/ember-express/server/tests/routes-test.js",
+		"/home/david/projects/ember-express/server/tests/testUtils.js",
+		"/home/david/projects/ember-express/server/config/config.json",
+		"/home/david/projects/ember-express/server/passport/isAuthenticated.js",
+		"/home/david/projects/ember-express/server/routes/apps.js",
+		"/home/david/projects/ember-express/server/app.js",
 		"/home/david/projects/ember-express/server/models/app.js",
 		"/home/david/projects/ember-express/client/app/models/app.js",
 		"/home/david/projects/ember-express/server/generator/templates/customClientModel.js",
@@ -218,7 +241,6 @@
 		"/home/david/projects/ember-express/client/app/router.js",
 		"/home/david/projects/ember-express/client/bower.json",
 		"/home/david/projects/ember-express/client/package.json",
-		"/home/david/projects/ember-express/server/gulpfile.js",
 		"/home/david/projects/ember-express/client/app/models/user-app.js",
 		"/home/david/projects/ember-express/server/models/appUser.js",
 		"/home/david/projects/ember-express/server/models/appRole.js",
@@ -249,7 +271,6 @@
 		"/home/david/projects/ember-express/client/app/templates/components/app-row.hbs",
 		"/home/david/projects/ember-express/client/app/templates/components/role-row.hbs",
 		"/home/david/projects/ember-express/server/models/user.js",
-		"/home/david/projects/ember-express/server/routeHelpers/utils.js",
 		"/home/david/projects/ember-express/client/app/controllers/app.js",
 		"/home/david/projects/ember-express/server/modelHelpers/utils.js",
 		"/home/david/Documents/gnome-workspace",
@@ -257,8 +278,6 @@
 		"/home/david/basrc",
 		"/tmp/cfg",
 		"/home/david/projects/ember-express/server/package.json",
-		"/home/david/projects/ember-express/client/app/models/app-role.js",
-		"/home/david/projects/ember-express/server/app.js",
 		"/home/david/projects/ember-express/client/app/routes/apps.js",
 		"/home/david/projects/ember-express/client/app/routes/app.js",
 		"/home/david/projects/ember-express/client/app/models/role.js",
@@ -266,7 +285,6 @@
 		"/home/david/projects/ember-express/client/app/routes/roles.js",
 		"/home/david/projects/ember-express/client/app/controllers/roles.js",
 		"/home/david/projects/ember-express/client/app/controllers/apps.js",
-		"/home/david/projects/ember-express/server/routes/apps.js",
 		"/home/david/projects/ember-express/server/routes/appRoles.js",
 		"/home/david/projects/ember-express/client/app/controllers/apps/index.js",
 		"/home/david/projects/ember-express/client/config/environment.js",
@@ -282,7 +300,6 @@
 		"/home/david/projects/ember-express/server/publish/upgrade-dev.sql",
 		"/home/david/projects/ember-express/server/publish/testdb.sql",
 		"/home/david/projects/ember-express/server/passport/init.js",
-		"/home/david/projects/ember-express/server/passport/isAuthenticated.js",
 		"/home/david/projects/ember-express/client/app/initializers/custom-session.js",
 		"/home/david/projects/ember-express/client/app/routes/login.js",
 		"/home/david/projects/ember-express/server/passport/login.js",
@@ -291,7 +308,6 @@
 		"/home/david/projects/ember-express/server/.jshintrc",
 		"/home/david/projects/ember-express/server/routes/authentication.js",
 		"/home/david/projects/ember-express/client/tests/acceptance/apps-test.js",
-		"/home/david/projects/ember-express/server/models/index.js",
 		"/home/david/projects/ember-express/client/app/templates/login.hbs",
 		"/home/david/projects/ember-express/client/app/controllers/login.js",
 		"/home/david/projects/ember-express/server/bin/www",
@@ -299,12 +315,10 @@
 		"/home/david/projects/ember-express/client/app/controllers/users.js",
 		"/home/david/projects/ember-express/client/tests/acceptance/users-test.js",
 		"/home/david/projects/ember-express/createDatabase.txt",
-		"/home/david/projects/ember-express/server/publish/publish-db-force.js",
 		"/home/david/projects/ember-express/server/publish/update-dev-db.sh",
 		"/home/david/projects/schemacomp/original.sql",
 		"/home/david/projects/schemacomp/upgrade.sql",
 		"/etc/rc.local",
-		"/home/david/projects/ember-express/server/config/config.json",
 		"/home/david/projects/sails-test/createDatabase.txt",
 		"/home/david/projects/ember-express/server/node_modules/sequelize/lib/dialects/postgres/query.js",
 		"/home/david/projects/ember-express/server/database.js",
@@ -331,12 +345,7 @@
 		"/home/david/projects/ember-express/client/app/mirage/factories/app.js",
 		"/home/david/projects/ember-express/client/app/mirage/factories/user.js",
 		"/home/david/projects/ember-express/client/app/models/apps/role.js",
-		"/home/david/projects/ember-express/client/app/authenticators/custom.js",
-		"/home/david/projects/ember-express/client/app/mirage/fixtures/users.js",
-		"/home/david/projects/ember-express/client/app/mirage/fixtures/contacts.js",
-		"/home/david/projects/ember-express/client/.ember-cli",
-		"/home/david/projects/ember-express/client/bower_components/route-recognizer/dist/route-recognizer.js",
-		"/home/david/projects/ember-express/client/tests/acceptance/apps/roles-test-data.js"
+		"/home/david/projects/ember-express/client/app/authenticators/custom.js"
 	],
 	"find":
 	{
@@ -485,38 +494,35 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/app/models/app-role.js",
+					"file": "server/gulpfile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 309,
+						"buffer_size": 1268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								309,
-								309
+								1268,
+								1268
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 219.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -524,47 +530,84 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/.ember-cli",
+					"file": "server/routeHelpers/modelRoute.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 315,
+						"buffer_size": 2615,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								278,
-								278
+								487,
+								487
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 2,
-					"file": "server/publish/publish-db-force.js",
+					"file": "server/tests/routes-test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 338,
+						"buffer_size": 2632,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								330,
-								330
+								934,
+								934
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/tests/testUtils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
 							]
 						],
 						"settings":
@@ -576,35 +619,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "createDatabase.txt",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 198,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								149,
-								149
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -638,7 +653,7 @@
 		"cols":
 		[
 			0.0,
-			0.187025370062,
+			0.214442397479,
 			1.0
 		],
 		"rows":
@@ -669,6 +684,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gulp",
+				"ember-express/server/gulpfile.js"
+			],
+			[
+				"app.js",
+				"ember-express/server/app.js"
+			],
 			[
 				"application.js",
 				"ember-express/client/app/serializers/application.js"
@@ -720,10 +743,6 @@
 			[
 				"apps.hbs",
 				"client/app/templates/apps.hbs"
-			],
-			[
-				"gulp",
-				"server/gulpfile.js"
 			],
 			[
 				"contapp.js",
@@ -1088,10 +1107,6 @@
 			[
 				"controllers/user",
 				"client/app/controllers/users.js"
-			],
-			[
-				"app.js",
-				"server/app.js"
 			],
 			[
 				"initises",

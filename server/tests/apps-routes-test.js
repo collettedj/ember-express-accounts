@@ -9,9 +9,9 @@ var models = app.get('models');
 
 
 
-after(function(done){
+after(function(){
 	models.sequelize.close();
-	done();
+	test.logDb('the database has been closed');
 });
 
 
@@ -36,7 +36,6 @@ describe("routes", function(){
 
 
 		beforeEach(function(done){
-			console.log('got here');
 			var promise = test.cleanDb(models)
 				.then(function(){
 					return models.App.bulkCreate(appsSeedData);
@@ -45,9 +44,9 @@ describe("routes", function(){
 			test.finish(promise, done);
 	  	});
 
-	  	afterEach(function(){
-	  		//models.sequelize.close();
-	  	})
+	  	// afterEach(function(){
+	  	// 	models.sequelize.connectionManager.close();
+	  	// })
 
 
 		it("GET /apps", function(done){
