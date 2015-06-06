@@ -109,11 +109,13 @@ describe("routes", function(){
 				}])
 				.then(function(insertedApps){
 					request(app)
-						.put('/api/v1/apps/' + insertedApps[0].id)
+						.put('/api/v1/apps/1')
 						.send(newApp)
 						.expect(200)
 						.end(function(err,res){
 							assert.equal(null, err);
+							var jsonRes = JSON.parse(res.text);
+							assert.equal(jsonRes.app.description, "this is the updated object");
 							// var jsonRes = JSON.parse(res.text);
 							// assert.notStrictEqual(jsonRes.apps, undefined);
 							// assert.equal(jsonRes.apps.length, 4);

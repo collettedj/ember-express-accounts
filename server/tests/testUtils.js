@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'test';
 var chalk = require('chalk');
 
 module.exports = {
