@@ -68,8 +68,6 @@ describe("routes", function(){
 	 			app: {
 	 				name: "new app", 
 	 				description: "this is the new app", 
-	 				createdAt: null, 
-	 				updatedAt: null
 	 			}
 	 		};
 
@@ -112,26 +110,17 @@ describe("routes", function(){
 				});
 		});
 
-		// it("Delete /apps", function(done){
-	 // 		var newApp = {
-	 // 			app: {
-	 // 				id: 1, 
-	 // 				description: "this is the updated object", 
-	 // 			}
-	 // 		};
-
-
-		// 	request(app)
-		// 		.put('/api/v1/apps/1')
-		// 		.send(newApp)
-		// 		.expect(200)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			var jsonRes = JSON.parse(res.text);
-		// 			assert.equal(jsonRes.app.description, "this is the updated object");
-		// 			done();
-		// 		});
-		// });
+		it("Delete /apps", function(done){
+			request(app)
+				.delete('/api/v1/apps/1')
+				.expect(204)
+				.end(function(err,res){
+					assert.equal(null, err);
+					//var jsonRes = JSON.parse(res.text);
+					//assert.equal(jsonRes.app.description, "this is the updated object");
+					done();
+				});
+		});
 
 	});
 
