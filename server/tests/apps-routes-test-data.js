@@ -27,4 +27,6 @@ AppsRoutesTestData.prototype.seedDatabase = function(){
 	return this.models.App.bulkCreate(appsSeedData);
 };
 
-module.exports = AppsRoutesTestData;
+exports.createTestData = function(models){
+	return new AppsRoutesTestData(models);
+} ;

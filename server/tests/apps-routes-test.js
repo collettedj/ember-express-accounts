@@ -7,8 +7,8 @@ var utils = require("../modelHelpers/utils.js");
 var app = require("../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);
-var AppsRoutesTestData = new require("./apps-routes-test-data");
-var testData = new AppsRoutesTestData(models);
+var appsRoutesTestData = require("./apps-routes-test-data");
+var testData = appsRoutesTestData.createTestData(models);
 
 
 after(function(){
