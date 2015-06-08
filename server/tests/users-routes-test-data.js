@@ -1,34 +1,11 @@
 "use strict";
-var usersSeedData = [
-	{
-		username: 'username1',
-		password: 'password1',
-		email: 'email1',
-		firstName: 'firstName1',
-		lastName: 'lasteName1',			
-	},
-	{
-		username: 'username2',
-		password: 'password2',
-		email: 'email2',
-		firstName: 'firstName2',
-		lastName: 'lasteName2',					
-	},
-	{
-		username: 'username3',
-		password: 'password3',
-		email: 'email3',
-		firstName: 'firstName3',
-		lastName: 'lasteName3',				
-	},
-	{
-		username: 'username4',
-		password: 'password4',
-		email: 'email14',
-		firstName: 'firstName4',
-		lastName: 'lasteName4',					
-	}
-];
+var getTemplateHash = {
+	username: 'username${i}',
+	password: 'password${i}',
+	email: 'email${i}',
+	firstName: 'firstName${i}',
+	lastName: 'lasteName${i}',		
+};
 
 var newModel = {
 	user: {
@@ -52,13 +29,18 @@ var updateModel = {
 
 
 function UsersRoutesTestData(models){
+	this.getTemplate = this.compileTemplates(getTemplateHash);
+
 	this.models = models;
 	this.newModel = newModel;
 	this.updateModel = updateModel;
 }
 
-UsersRoutesTestData.prototype.seedDatabase = function(){
-	return this.models.User.bulkCreate(usersSeedData);
+require('./test-data.js').mixin(UsersRoutesTestData);
+
+UsersRoutesTestData.prototype.seedDatabase = function(numRecords){
+	var seedData = this.generateData(this.getTemplate, numRecords);	
+	return this.models.User.bulkCreate(seedData);
 };
 
 exports.createTestData = function(models){

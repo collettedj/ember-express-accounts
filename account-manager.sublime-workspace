@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"seedRo",
+				"seedRowTemplates〔variable〕"
+			],
+			[
 				"tr",
 				"tr	Tag"
 			],
@@ -72,26 +76,66 @@
 	"buffers":
 	[
 		{
+			"file": "server/tests/apps-routes-test.js",
+			"settings":
+			{
+				"buffer_size": 2253,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/tests/users-routes-test.js",
+			"settings":
+			{
+				"buffer_size": 1801,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/tests/app-roles-routes-test.js",
+			"settings":
+			{
+				"buffer_size": 2863,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/models/user.js",
+			"settings":
+			{
+				"buffer_size": 387,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/tests/users-routes-test-data.js",
+			"settings":
+			{
+				"buffer_size": 1216,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/tests/apps-routes-test-data.js",
+			"settings":
+			{
+				"buffer_size": 1405,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "server/gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 1268,
+				"buffer_size": 1271,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/routeHelpers/modelRoute.js",
+			"file": "/home/david/.bashrc",
 			"settings":
 			{
-				"buffer_size": 2615,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/tests/routes-test.js",
-			"settings":
-			{
-				"buffer_size": 2632,
+				"buffer_size": 3926,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +143,7 @@
 			"file": "server/tests/testUtils.js",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 1051,
 				"line_ending": "Unix"
 			}
 		}
@@ -111,10 +155,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 125.0,
-		"last_filter": "nodejs::d",
+		"height": 79.0,
+		"last_filter": "Package Control: install",
 		"selected_items":
 		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"new file",
+				"File: New File Relative to Current View"
+			],
 			[
 				"nodejs::d",
 				"Nodejs::Default File Settings"
@@ -172,7 +224,7 @@
 				"Snippet: bs3-alert"
 			]
 		],
-		"width": 435.0
+		"width": 579.0
 	},
 	"console":
 	{
@@ -202,6 +254,10 @@
 	"expanded_folders":
 	[
 		"/home/david/projects/ember-express",
+		"/home/david/projects/ember-express/client",
+		"/home/david/projects/ember-express/client/app",
+		"/home/david/projects/ember-express/client/app/mirage",
+		"/home/david/projects/ember-express/client/app/mirage/factories",
 		"/home/david/projects/ember-express/server",
 		"/home/david/projects/ember-express/server/bin",
 		"/home/david/projects/ember-express/server/config",
@@ -209,7 +265,6 @@
 		"/home/david/projects/ember-express/server/generator/templates",
 		"/home/david/projects/ember-express/server/modelHelpers",
 		"/home/david/projects/ember-express/server/models",
-		"/home/david/projects/ember-express/server/passport",
 		"/home/david/projects/ember-express/server/publish",
 		"/home/david/projects/ember-express/server/routeHelpers",
 		"/home/david/projects/ember-express/server/routes",
@@ -218,14 +273,21 @@
 	],
 	"file_history":
 	[
+		"/home/david/projects/ember-express/server/modelHelpers/utils.js",
+		"/home/david/projects/ember-express/server/tests/users-routes-test.js",
+		"/home/david/projects/ember-express/server/tests/users-routes-test-data.js",
+		"/home/david/projects/ember-express/server/tests/model-helper-utils-test.js",
+		"/home/david/projects/ember-express/server/gulpfile.js",
+		"/home/david/projects/ember-express/server/tests/.jshintrc",
+		"/home/david/projects/ember-express/server/tests/app-roles-routes-test.js",
+		"/home/david/projects/ember-express/server/tests/test-data.js",
+		"/home/david/projects/ember-express/server/routeHelpers/modelRoute.js",
+		"/home/david/projects/ember-express/server/models/index.js",
 		"/home/david/projects/ember-express/server/bin/www.js",
 		"/home/david/projects/ember-express/server/routeHelpers/utils.js",
-		"/home/david/projects/ember-express/server/gulpfile.js",
-		"/home/david/projects/ember-express/server/models/index.js",
 		"/home/david/projects/ember-express/client/app/models/app-role.js",
 		"/home/david/projects/ember-express/client/.ember-cli",
 		"/home/david/projects/ember-express/server/publish/publish-db-force.js",
-		"/home/david/projects/ember-express/server/tests/model-helper-utils-test.js",
 		"/home/david/projects/ember-express/server/tests/routes-test.js",
 		"/home/david/projects/ember-express/server/tests/testUtils.js",
 		"/home/david/projects/ember-express/server/config/config.json",
@@ -263,7 +325,6 @@
 		"/home/david/projects/ember-express/client/node_modules/ember-cli/blueprints/addon-import/index.js",
 		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib/models/blueprint.js",
 		"/home/david/projects/ember-express/client/app/components/role-row.js",
-		"/home/david/projects/ember-express/server/routeHelpers/modelRoute.js",
 		"/home/david/projects/ember-express/client/app/components/app-row.js",
 		"/home/david/projects/ember-express/client/app/templates/apps.hbs",
 		"/home/david/projects/ember-express/client/app/templates/apps/index.hbs",
@@ -272,7 +333,6 @@
 		"/home/david/projects/ember-express/client/app/templates/components/role-row.hbs",
 		"/home/david/projects/ember-express/server/models/user.js",
 		"/home/david/projects/ember-express/client/app/controllers/app.js",
-		"/home/david/projects/ember-express/server/modelHelpers/utils.js",
 		"/home/david/Documents/gnome-workspace",
 		"/home/david/savetabs.sh",
 		"/home/david/basrc",
@@ -340,12 +400,7 @@
 		"/home/david/projects/ember-express/client/app/mirage/fixtures/apps.js",
 		"/home/david/projects/ember-express/client/app/mirage/fixtures/roles.js",
 		"/home/david/projects/ember-express/client/app/styles/app.less",
-		"/home/david/projects/ember-express/client/app/routes/apps/roles.js",
-		"/home/david/projects/ember-express/client/tests/acceptance/apps/roles-test.js",
-		"/home/david/projects/ember-express/client/app/mirage/factories/app.js",
-		"/home/david/projects/ember-express/client/app/mirage/factories/user.js",
-		"/home/david/projects/ember-express/client/app/models/apps/role.js",
-		"/home/david/projects/ember-express/client/app/authenticators/custom.js"
+		"/home/david/projects/ember-express/client/app/routes/apps/roles.js"
 	],
 	"find":
 	{
@@ -370,6 +425,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"seedRow",
+			"updateApp",
+			"newApp",
+			"app",
+			"Apps",
+			"App",
+			"apps",
+			"utils",
+			"newApp",
+			"model",
+			": false",
+			"\n        ",
+			"\": false,\n",
+			": false,",
 			"_.template",
 			"banner",
 			"<%",
@@ -484,6 +553,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"user",
+			"Users",
+			"User",
+			"users"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -494,55 +567,112 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/gulpfile.js",
+					"file": "server/tests/apps-routes-test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1268,
+						"buffer_size": 2253,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1268,
-								1268
+								486,
+								486
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 219.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "server/routeHelpers/modelRoute.js",
+					"file": "server/tests/users-routes-test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2615,
+						"buffer_size": 1801,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								487,
-								487
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/tests/app-roles-routes-test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/models/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								104,
+								104
 							]
 						],
 						"settings":
@@ -554,30 +684,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 2,
-					"file": "server/tests/routes-test.js",
+					"buffer": 4,
+					"file": "server/tests/users-routes-test-data.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2632,
+						"buffer_size": 1216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								934,
-								934
+								668,
+								668
 							]
 						],
 						"settings":
@@ -587,27 +711,118 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "server/tests/testUtils.js",
+					"buffer": 5,
+					"file": "server/tests/apps-routes-test-data.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 393,
+						"buffer_size": 1405,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								321,
-								321
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "server/gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								658,
+								658
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/david/.bashrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3926,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3752,
+								3752
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "server/tests/testUtils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
 							]
 						],
 						"settings":
@@ -619,7 +834,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -627,7 +842,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -642,18 +857,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.214442397479,
 			1.0
 		],
 		"rows":
@@ -675,7 +883,7 @@
 	"project": "account-manager.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -684,6 +892,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"testuti",
+				"ember-express/server/tests/testUtils.js"
+			],
+			[
+				"users-routes-test-dat",
+				"ember-express/server/tests/users-routes-test-data.js"
+			],
+			[
+				"users-routes-test.js",
+				"ember-express/server/tests/users-routes-test.js"
+			],
 			[
 				"gulp",
 				"ember-express/server/gulpfile.js"
@@ -1183,18 +1403,6 @@
 			[
 				"custom-session",
 				"client/app/initializers/custom-session.js"
-			],
-			[
-				"session",
-				"client/app/initializers/custom-session.js"
-			],
-			[
-				"custom.js",
-				"client/app/authenticators/custom.js"
-			],
-			[
-				"client/models/users",
-				"client/app/models/user.js"
 			]
 		],
 		"width": 0.0
@@ -1221,7 +1429,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

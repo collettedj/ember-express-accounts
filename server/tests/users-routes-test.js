@@ -14,7 +14,7 @@ describe("routes", function(){
 	describe("users route", function(){
 
 		beforeEach(function(done){
-			test.testAndCleanDb(models, testData, done);
+			test.cleanAndGenerateDb(models, testData, 4, done);
 	  	});
 
 		it("GET One /users", function(done){
