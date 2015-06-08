@@ -61,11 +61,8 @@ describe("routes", function(){
 				.end(function(err,res){
 					assert.equal(null, err);
 					var jsonRes = JSON.parse(res.text);
-					assert.equal(jsonRes.app.username, "usernameU");
-					assert.equal(jsonRes.app.username, "usernameU");
-					assert.equal(jsonRes.app.username, "usernameU");
-					assert.equal(jsonRes.app.username, "usernameU");
-					assert.equal(jsonRes.app.username, "usernameU");
+					assert.equal(jsonRes.app.name, testData.updateModel.app.name);
+					assert.equal(jsonRes.app.description, testData.updateModel.app.description);
 					done();
 				});
 		});
