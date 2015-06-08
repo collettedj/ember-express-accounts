@@ -2,19 +2,13 @@
 
 var test = require('./testUtils');
 var assert = require("assert");
-var chalk = require("chalk");
-var utils = require("../modelHelpers/utils.js");
 var app = require("../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);
 var appsRoutesTestData = require("./apps-routes-test-data");
 var testData = appsRoutesTestData.createTestData(models);
 
-
-after(function(){
-	models.sequelize.close();
-	test.logDb('the database has been closed');
-});
+test.afterAll(models);
 
 describe("routes", function(){
 	describe("apps route", function(){
@@ -23,8 +17,19 @@ describe("routes", function(){
 			test.testAndCleanDb(models, testData, done);
 	  	});
 
-		it("GET /apps", function(done){
-			test.routeGet(request, '/api/v1/apps')
+		it("GET One /apps", function(done){
+			request.get('/api/v1/apps/1').expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					assert.notStrictEqual(jsonRes.app, undefined);
+					assert.equal(jsonRes.app.id, 1);
+					done();
+				});
+		});	  	
+
+		it("GET Many /apps", function(done){
+			request.get('/api/v1/apps').expect(200)
 				.end(function(err,res){
 					assert.equal(null, err);
 					var jsonRes = JSON.parse(res.text);
@@ -35,48 +40,38 @@ describe("routes", function(){
 		});
 
 		it("POST /apps", function(done){
-	 		var newApp = {
-	 			app: {
-	 				name: "new app", 
-	 				description: "this is the new app", 
-	 			}
-	 		};
-
-			test.routePost(request, '/api/v1/apps', newApp)
+			request.post('/api/v1/apps').send(testData.newModel).expect(200)
 				.end(function(err,res){
 					var app = res.body.app;
 					assert.equal(null, err);
 					assert.equal(app.name, "App1");
-					assert.equal(app.description, newApp.app.description);
+					assert.equal(app.description, testData.newModel.app.description);
 
 					models.App.findById(app.id)
 						.then(function(insertedApp){
 							assert.equal(insertedApp.name, "App1");
-							assert.equal(insertedApp.description, newApp.app.description);
+							assert.equal(insertedApp.description, testData.newModel.app.description);
 							done();
 						}, done);
 				});
 		});
 		
 		it("PUT /apps", function(done){
-	 		var appUpdate = {
-	 			app: {
-	 				id: 1, 
-	 				description: "this is the updated object", 
-	 			}
-	 		};
-
-			test.routePut(request,'/api/v1/apps/1', appUpdate)
+			request.put('/api/v1/apps/1').send(testData.updateModel).expect(200)
 				.end(function(err,res){
 					assert.equal(null, err);
 					var jsonRes = JSON.parse(res.text);
-					assert.equal(jsonRes.app.description, "this is the updated object");
+					assert.equal(jsonRes.app.username, "usernameU");
+					assert.equal(jsonRes.app.username, "usernameU");
+					assert.equal(jsonRes.app.username, "usernameU");
+					assert.equal(jsonRes.app.username, "usernameU");
+					assert.equal(jsonRes.app.username, "usernameU");
 					done();
 				});
 		});
 
 		it("Delete /apps", function(done){
-			test.routeDelete(request,'/api/v1/apps/1')
+			request.delete('/api/v1/apps/1').expect(204)
 				.end(function(err,res){
 					assert.equal(null, err);
 					done();
