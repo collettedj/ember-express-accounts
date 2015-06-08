@@ -24,12 +24,12 @@ var test =
 			});
 	}, 
 
-	cleanAndGenerateDb: function(models, testData, numRecords, done){
+	cleanAndGenerateDb: function(models, testData, done){
 		test.cleanDb(models)
 			.then(function(){
 				test.logDb('Database seed start');
 				try{
-					return testData.seedDatabase(numRecords);	
+					return testData.seedDatabase();	
 				}
 				catch(err){
 					done(err);

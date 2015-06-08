@@ -13,7 +13,16 @@ describe("routes", function(){
 	describe("appRoles route", function(){
 
 		beforeEach(function(done){
-			test.cleanAndGenerateDb(models, testData, 4, done);
+			test.cleanAndGenerateDb(models, testData, done);
+	  	});
+
+	  	it("Total Rows Generated", function(done){
+	  		models.AppRole.findAll()
+	  			.then(function(appRoles){
+	  				assert.equal(appRoles.length, 10);
+	  				done();
+	  			})
+	  			.catch(done);
 	  	});
 
 		it("GET One /appRoles", function(done){
