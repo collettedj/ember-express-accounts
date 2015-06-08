@@ -39,16 +39,17 @@ AppRolesRoutesTestData.prototype.generateAppRoles = function(numRecords, appId){
 };
 
 AppRolesRoutesTestData.prototype.seedDatabase = function(numRecords){
-	return this._appsTestData.seedDatabase(4)
+	var self = this;
+	return self._appsTestData.seedDatabase(4)
 		.spread(function(app1, app2, app3, app4){
 			var seedData = _.flatten([
-				this.generateAppRoles(4, app1.id),
-				this.generateAppRoles(3, app2.id),
-				this.generateAppRoles(2, app3.id),
-				this.generateAppRoles(1, app4.id),
+				self.generateAppRoles(4, app1.id),
+				self.generateAppRoles(3, app2.id),
+				self.generateAppRoles(2, app3.id),
+				self.generateAppRoles(1, app4.id),
 			]);
-			return this.models.AppRole.bulkCreate(seedData, {returning: true});
-		}.bind(this));
+			return self.models.AppRole.bulkCreate(seedData, {returning: true});
+		});
 };
 
 exports.createTestData = function(models){
