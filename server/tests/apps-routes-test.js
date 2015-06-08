@@ -35,6 +35,7 @@ describe("routes", function(){
 					var jsonRes = JSON.parse(res.text);
 					assert.notStrictEqual(jsonRes.apps, undefined);
 					assert.equal(jsonRes.apps.length, 4);
+					assert.equal(jsonRes.apps[0].name, "name1");
 					done();
 				});
 		});

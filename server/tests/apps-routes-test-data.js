@@ -1,30 +1,11 @@
 "use strict";
 
 var _ = require('lodash');
-// var appsSeedData = [
-// 	{
-// 		name: "name1",
-// 		description: "description1"				
-// 	},
-// 	{
-// 		name: "name2",
-// 		description: "description2"				
-// 	},
-// 	{
-// 		name: "name3",
-// 		description: "description3"				
-// 	},
-// 	{
-// 		name: "name4",
-// 		description: "description4"				
-// 	}
-// ];
-
-
+_.templateSettings.interpolate = /[$]{([\s\S]+?)}/g;
 
 var seedRow = {
-	name: "name",
-	description: "description"
+	name: 'name${i}',
+	description: 'description${i}'
 };
 
 var newModel = {
@@ -42,13 +23,27 @@ var updateModel = {
 	}
 };
 
+var seedRowTemplates = null;
+
+function createSeedRowTemplates(){
+	if(seedRowTemplates === null){
+	 	seedRowTemplates = {};
+	 	for(var prop in seedRow){
+	 		if(seedRow.hasOwnProperty(prop)){
+	 			seedRowTemplates[prop] = _.template(seedRow[prop]);
+	 		}
+	 	}	
+	}
+}
+
 function generateData(numRecords){
  	var seedData = [];
+ 	createSeedRowTemplates();
  	for (var i = 0; i < numRecords; i+=1) {
- 		var newSeedRow = _.clone(seedRow);
- 		for(var prop in newSeedRow){
- 			if(newSeedRow.hasOwnProperty(prop)){
- 				newSeedRow[prop] = seedRow[prop] + i;
+ 		var newSeedRow = {};
+ 		for(var prop in seedRowTemplates){
+ 			if(seedRowTemplates.hasOwnProperty(prop)){
+ 				newSeedRow[prop] = seedRowTemplates[prop]({i:i+1});
  			}
  		}
  		seedData.push(newSeedRow);
