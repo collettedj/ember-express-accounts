@@ -46,7 +46,7 @@ describe("routes", function(){
 					var jsonRes = JSON.parse(res.text);
 					assert.equal(jsonRes.user.username, "usernameU");
 					assert.strictEqual(jsonRes.user.password, undefined);
-					assert.equal(jsonRes.user.email, "email1U");
+					assert.equal(jsonRes.user.email, "emailU");
 					assert.equal(jsonRes.user.firstName, "firstNameU");
 					assert.equal(jsonRes.user.lastName, "lasteNameU");
 					done();

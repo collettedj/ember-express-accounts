@@ -7,39 +7,22 @@ var getTemplateHash = {
 	lastName: 'lasteName${i}',		
 };
 
-var newModel = {
-	user: {
-		username: 'usernameN',
-		password: 'passwordN',
-		email: 'email1N',
-		firstName: 'firstNameN',
-		lastName: 'lasteNameN',		
-	}
-};
-
-var updateModel = {
-	user: {
-		username: 'usernameU',
-		password: 'passwordU',
-		email: 'email1U',
-		firstName: 'firstNameU',
-		lastName: 'lasteNameU',	
-	}
-};
-
-
 function UsersRoutesTestData(models){
-	this.getTemplate = this.compileTemplates(getTemplateHash);
+	this.dataTemplate = this.compileTemplates(getTemplateHash);
 
 	this.models = models;
-	this.newModel = newModel;
-	this.updateModel = updateModel;
+	this.newModel = {
+		user: this.generateOne(this.dataTemplate, "N")	
+	};
+	this.updateModel = {
+		user: this.generateOne(this.dataTemplate, "U")
+	};
 }
 
 require('./test-data.js').mixin(UsersRoutesTestData);
 
 UsersRoutesTestData.prototype.seedDatabase = function(numRecords){
-	var seedData = this.generateData(this.getTemplate, numRecords);	
+	var seedData = this.generateData(this.dataTemplate, numRecords);	
 	return this.models.User.bulkCreate(seedData);
 };
 

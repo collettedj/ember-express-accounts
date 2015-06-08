@@ -16,24 +16,28 @@ TestData.prototype.compileTemplates = function(seedRow){
  	return seedRowTemplates;
 };
 
+TestData.prototype.generateOne = function(seedTemplate, value){
+	var newSeedItem = {};
+	for(var prop in seedTemplate){
+		if(seedTemplate.hasOwnProperty(prop)){
+			newSeedItem[prop] = seedTemplate[prop]({i:value});
+		}
+	}
+	return newSeedItem;
+};
+
 TestData.prototype.generateData = function(seedTemplate, numRecords){
  	var seedData = [];
  	numRecords = numRecords || 4;
-
  	for (var i = 0; i < numRecords; i+=1) {
- 		var newSeedRow = {};
- 		for(var prop in seedTemplate){
- 			if(seedTemplate.hasOwnProperty(prop)){
- 				newSeedRow[prop] = seedTemplate[prop]({i:i+1});
- 			}
- 		}
+ 		var newSeedRow = this.generateOne(seedTemplate, i+1);
  		seedData.push(newSeedRow);
  	}
  	return seedData;
 };
 
 TestData.mixin = function(destObject){
-	['generateData', 'compileTemplates'].forEach(function(property){
+	['generateOne', 'generateData', 'compileTemplates'].forEach(function(property){
 		destObject.prototype[property] = TestData.prototype[property];
 	});
 };
