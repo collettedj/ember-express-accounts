@@ -1,116 +1,82 @@
+"use strict";
 
-// var test = require('./testUtils');
-// var assert = require("assert");
-// var chalk = require("chalk");
-// var request = require("supertest");
-// var utils = require("../modelHelpers/utils.js");
-// var app = require("../app");
-// var models = app.get('models');
+var test = require('./testUtils');
+var assert = require("assert");
+var app = require("../app");
+var models = app.get('models');
+var request = require("supertest").agent(app);
+var testData = require("./app-roles-routes-test-data").createTestData(models);
 
-// describe("routes", function(){
+test.afterAll(models);
 
-// 	describe("app roles route", function(){
-// 		var appsSeedData = [{
-// 				name: "name1",
-// 				description: "description1"				
-// 			},{
-// 				name: "name2",
-// 				description: "description2"				
-// 			},{
-// 				name: "name3",
-// 				description: "description3"				
-// 			},{
-// 				name: "name4",
-// 				description: "description4"				
-// 			}];
+describe("routes", function(){
+	describe("appRoles route", function(){
 
+		beforeEach(function(done){
+			test.cleanAndGenerateDb(models, testData, 4, done);
+	  	});
 
-// 		beforeEach(function(done){
-// 			var promise = test.cleanDb(models)
-// 				.then(function(){
-// 					return models.App.bulkCreate(appsSeedData);
-// 				})
+		it("GET One /appRoles", function(done){
+			request.get('/api/v1/appRoles/1').expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					assert.notStrictEqual(jsonRes['app-role'], undefined);
+					assert.equal(jsonRes['app-role'].id, 1);
+					done();
+				});
+		});	  	
 
-// 			test.finish(promise, done);
-// 	  	});
+		it("GET Many /appRoles", function(done){
+			request.get('/api/v1/appRoles').query({appId:1}).expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					var appRoles = jsonRes['app-roles'];
 
-// 	  	// afterEach(function(){
-// 	  	// 	models.sequelize.connectionManager.close();
-// 	  	// })
+					assert.notStrictEqual(appRoles, undefined);
+					assert.equal(appRoles.length, 4);
+					assert.equal(appRoles[0].name, "name1");
+					done();
+				});
+		});
 
+		it("POST /appRoles", function(done){
+			request.post('/api/v1/appRoles').send(testData.newModel).expect(200)
+				.end(function(err,res){
+					var app = res.body["app-role"];
+					assert.equal(null, err);
+					assert.equal(app.name, "Role1");
+					assert.equal(app.description, testData.newModel.appRole.description);
 
-// 		it("GET /apps", function(done){
-// 			request(app)
-// 				.get('/api/v1/apps')
-// 				.expect(200)
-// 				.end(function(err,res){
-// 					assert.equal(null, err);
-// 					var jsonRes = JSON.parse(res.text);
-// 					assert.notStrictEqual(jsonRes.apps, undefined);
-// 					assert.equal(jsonRes.apps.length, 4);
-// 					done();
-// 				});
-// 		});
-
-// 		it("POST /apps", function(done){
-// 	 		var newApp = {
-// 	 			app: {
-// 	 				name: "new app", 
-// 	 				description: "this is the new app", 
-// 	 			}
-// 	 		};
-
-// 			request(app)
-// 				.post('/api/v1/apps')
-// 				.send(newApp)
-// 				.expect(200)
-// 				.end(function(err,res){
-// 					var app = res.body.app;
-// 					assert.equal(null, err);
-// 					assert.equal(app.name, "App1");
-// 					assert.equal(app.description, newApp.app.description);
-
-// 					models.App.findById(app.id)
-// 						.then(function(insertedApp){
-// 							assert.equal(insertedApp.name, "App1");
-// 							assert.equal(insertedApp.description, newApp.app.description);
-// 							done();
-// 						}, done);
-// 				});
-// 		});
+					models.AppRole.findById(app.id)
+						.then(function(insertedApp){
+							assert.equal(insertedApp.name, "Role1");
+							assert.equal(insertedApp.description, testData.newModel.appRole.description);
+							done();
+						}, done);
+				});
+		});
 		
-// 		it("PUT /apps", function(done){
-// 	 		var newApp = {
-// 	 			app: {
-// 	 				id: 1, 
-// 	 				description: "this is the updated object", 
-// 	 			}
-// 	 		};
+		it("PUT /appRoles", function(done){
+			request.put('/api/v1/appRoles/1').send(testData.updateModel).expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					assert.equal(jsonRes["app-role"].name, testData.updateModel.appRole.name);
+					assert.equal(jsonRes["app-role"].description, testData.updateModel.appRole.description);
+					done();
+				});
+		});
 
-// 			request(app)
-// 				.put('/api/v1/apps/1')
-// 				.send(newApp)
-// 				.expect(200)
-// 				.end(function(err,res){
-// 					assert.equal(null, err);
-// 					var jsonRes = JSON.parse(res.text);
-// 					assert.equal(jsonRes.app.description, "this is the updated object");
-// 					done();
-// 				});
-// 		});
+		it("Delete /appRoles", function(done){
+			request.delete('/api/v1/appRoles/1').expect(204)
+				.end(function(err,res){
+					assert.equal(null, err);
+					done();
+				});
+		});
 
-// 		it("Delete /apps", function(done){
-// 			request(app)
-// 				.delete('/api/v1/apps/1')
-// 				.expect(204)
-// 				.end(function(err,res){
-// 					assert.equal(null, err);
-// 					//var jsonRes = JSON.parse(res.text);
-// 					//assert.equal(jsonRes.app.description, "this is the updated object");
-// 					done();
-// 				});
-// 		});
+	});
 
-// 	});
-
-// });
+});

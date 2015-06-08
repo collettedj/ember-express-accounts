@@ -23,7 +23,7 @@ require('./test-data.js').mixin(UsersRoutesTestData);
 
 UsersRoutesTestData.prototype.seedDatabase = function(numRecords){
 	var seedData = this.generateData(this.dataTemplate, numRecords);	
-	return this.models.User.bulkCreate(seedData);
+	return this.models.User.bulkCreate(seedData, {returning: true});
 };
 
 exports.createTestData = function(models){

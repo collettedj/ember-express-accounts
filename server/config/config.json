@@ -11,8 +11,7 @@
     "password": "1234",
     "database": "ember_express_test",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "logging": false
+    "dialect": "postgres"
   },
   "production": {
     "username": "david",

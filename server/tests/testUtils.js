@@ -40,7 +40,7 @@ var test =
 			})
 			.catch(function(err){
 				test.logError(err);
-				done();
+				done(err);
 			});
 	},
 
