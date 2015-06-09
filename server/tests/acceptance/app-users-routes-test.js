@@ -87,16 +87,16 @@ describe("routes", function(){
 				});
 		});
 		
-		// it("PUT /appUsers", function(done){
-		// 	request.put('/api/v1/appUsers/1').send(testData.updateModel).expect(200)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			var jsonRes = JSON.parse(res.text);
-		// 			assert.equal(jsonRes["app-role"].name, testData.updateModel.appRole.name);
-		// 			assert.equal(jsonRes["app-role"].description, testData.updateModel.appRole.description);
-		// 			done();
-		// 		});
-		// });
+		it("PUT /appUsers", function(done){
+			request.put('/api/v1/appUsers/1').send(testData.updateModel).expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					assert.equal(jsonRes["app-user"].appId, testData.updateModel.appUser.appId);
+					assert.equal(jsonRes["app-user"].userId, testData.updateModel.appUser.userId);
+					done();
+				});
+		});
 
 		// it("Delete /appUsers", function(done){
 		// 	request.delete('/api/v1/appUsers/1').expect(204)
