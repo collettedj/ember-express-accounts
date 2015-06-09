@@ -98,13 +98,13 @@ describe("routes", function(){
 				});
 		});
 
-		// it("Delete /appUsers", function(done){
-		// 	request.delete('/api/v1/appUsers/1').expect(204)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			done();
-		// 		});
-		// });
+		it("DELETE /appUsers", function(done){
+			request.delete('/api/v1/appUsers/1').expect(204)
+				.end(function(err,res){
+					assert.equal(null, err);
+					done();
+				});
+		});
 
 	});
 
