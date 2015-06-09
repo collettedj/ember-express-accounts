@@ -55,4 +55,4 @@ AppRolesRoutesTestData.prototype.seedDatabase = function(numRecords){
 exports.createTestData = function(models){
 	var appsTestData = require("./apps-routes-test-data").createTestData(models);
 	return new AppRolesRoutesTestData(models, appsTestData);
-} ;
+};

@@ -1,11 +1,11 @@
 "use strict";
 
-var test = require('./testUtils');
+var test = require('../testUtils');
 var assert = require("assert");
-var app = require("../app");
+var app = require("../../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);
-var appsRoutesTestData = require("./users-routes-test-data");
+var appsRoutesTestData = require("./generators/users-routes-test-data");
 var testData = appsRoutesTestData.createTestData(models);
 
 test.afterAll(models);

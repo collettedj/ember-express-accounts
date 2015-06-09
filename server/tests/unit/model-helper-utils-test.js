@@ -1,6 +1,6 @@
 "use strict";
 var assert = require("assert");
-var utils = require("../modelHelpers/utils.js");
+var utils = require("../../modelHelpers/utils.js");
 
 describe("model helper utils", function(){
 	it("get max number should get maximum number + 1", function(){
