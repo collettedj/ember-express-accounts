@@ -1,9 +1,15 @@
 "use strict";
 
+
+var inspect = require('util').inspect;
+var chalk = require('chalk');
+var error = chalk.yellow;
 var utils = require('./utils');
 
-function handleError(res, error){
-	console.log(error);
+
+
+function handleError(res, errorMessage){
+	console.log(error(inspect(errorMessage), { showHidden: true, depth: 1 }));
 	res.status(500).send('There was an error updating the model');
 }
 

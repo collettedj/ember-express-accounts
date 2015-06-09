@@ -15,18 +15,19 @@ function AppUsersRoutesTestData(models, appsTestData, usersTestData){
 	this.dataTemplate = this.compileTemplates(appUserTemplateHash);
 	this.models = models;
 	this.newModel = {
-		"appUser": this.generateAppUser("N", 1)	
+		"appUser": this.generateAppUser(4, 4)	
 	};
 	this.updateModel = {
-		"appUser": this.generateAppUser("U", 1)
+		"appUser": this.generateAppUser(1, 1)
 	};
 }
 
 require('./test-data.js').mixin(AppUsersRoutesTestData);
 
-AppUsersRoutesTestData.prototype.generateAppUser = function(value, appId, userId){
-	var appUser = this.generateOne(this.dataTemplate, value);
+AppUsersRoutesTestData.prototype.generateAppUser = function(appId, userId){
+	var appUser = this.generateOne(this.dataTemplate, null);
 	appUser.appId = appId;
+	appUser.userId = userId;
 	return appUser;
 };
 

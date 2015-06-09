@@ -70,22 +70,22 @@ describe("routes", function(){
 				});
 		});		
 
-		// it("POST /appUsers", function(done){
-		// 	request.post('/api/v1/appUsers').send(testData.newModel).expect(200)
-		// 		.end(function(err,res){
-		// 			var app = res.body["app-role"];
-		// 			assert.equal(null, err);
-		// 			assert.equal(app.name, "Role1");
-		// 			assert.equal(app.description, testData.newModel.appRole.description);
+		it("POST /appUsers", function(done){
+			request.post('/api/v1/appUsers').send(testData.newModel).expect(200)
+				.end(function(err,res){
+					var appUser = res.body["app-user"];
+					assert.equal(null, err);
+					assert.equal(appUser.appId, testData.newModel.appUser.appId);
+					assert.equal(appUser.userId, testData.newModel.appUser.userId);
 
-		// 			models.AppRole.findById(app.id)
-		// 				.then(function(insertedApp){
-		// 					assert.equal(insertedApp.name, "Role1");
-		// 					assert.equal(insertedApp.description, testData.newModel.appRole.description);
-		// 					done();
-		// 				}, done);
-		// 		});
-		// });
+					models.AppUser.findById(appUser.id)
+						.then(function(insertedAppUser){
+							assert.equal(insertedAppUser.appId, testData.newModel.appUser.appId);
+							assert.equal(insertedAppUser.userId, testData.newModel.appUser.userId);
+							done();
+						}, done);
+				});
+		});
 		
 		// it("PUT /appUsers", function(done){
 		// 	request.put('/api/v1/appUsers/1').send(testData.updateModel).expect(200)
