@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
 		var models = req.app.get('models');
 		var apps = models.App.findAll()
 			.then(function(apps){
-				res.json({apps:apps});
+				res.json(modelRoute.results(apps));
 			})
 			.catch(function(err){
 				console.log(err);

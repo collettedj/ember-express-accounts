@@ -29,8 +29,8 @@ router.get('/', function(req, res) {
 	}
 
 	if(!_.isEmpty(query)){
-		query.then(function(appRoles){
-			res.json({"app-roles":appRoles});
+		query.then(function(appUsers){
+			res.json(modelRoute.results(appUsers));
 		});		
 	}
 

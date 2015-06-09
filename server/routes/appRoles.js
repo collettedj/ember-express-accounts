@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
 		where: {appId:appId}
 	})
 	.then(function(appRoles){
-		res.json({"app-roles":appRoles});
+		res.json(modelRoute.results(appRoles));
 	});
 });
 

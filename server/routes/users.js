@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
 	var models = req.app.get('models');
 	var users = models.User.findAll()
 		.then(function(users){
-			res.json({users:users});
+			res.json(modelRoute.results(users));
 		});
 });
 

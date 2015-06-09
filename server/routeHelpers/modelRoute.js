@@ -11,6 +11,21 @@ module.exports = function(modelName){
 	var modelRouteInfo = utils.getModelRouteInfo(modelName);
 
 	return {
+
+		routeInfo: modelRouteInfo,
+
+		result: function(resObj){
+			var result = {};
+			result[modelRouteInfo.dashName]  = resObj;
+			return result;
+		},
+
+		results: function(resObj){
+			var result = {};
+			result[modelRouteInfo.dashNamePlural]  = resObj;
+			return result;			
+		},
+
 		getOne : {
 			verb: 'get',
 			route: modelRouteInfo.routePath,
