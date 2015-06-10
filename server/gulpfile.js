@@ -23,19 +23,19 @@ var handleError = function (err) {
     this.emit('end');
 };
 
-gulp.task("test", ['lint'], function() {
-    process.env.NODE_ENV = 'test';
-    return gulp.src(paths.testFiles)
-        .pipe(mocha({ 
-            reporter: "spec" 
-        })
-        .on("error", handleError));
-});
+// gulp.task("test", ['lint'], function() {
+//     process.env.NODE_ENV = 'test';
+//     return gulp.src(paths.testFiles)
+//         .pipe(mocha({ 
+//             reporter: "spec" 
+//         })
+//         .on("error", handleError));
+// });
 
-gulp.task('default', ['test'], function () {
+gulp.task('default', ['lint'], function () {
     nodemon({ script: './bin/www.js',
             ext: 'html js',
-            tasks: ['lint', 'test'],
+            tasks: ['lint'],
             execMap: {'js':'node --harmony --debug'},
             env: { 
               'NODE_ENV': 'development',
