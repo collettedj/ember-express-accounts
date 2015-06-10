@@ -5,8 +5,8 @@ var assert = require("assert");
 var app = require("../../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);
-var appsRoutesTestData = require("./generators/users-routes-test-data");
-var testData = appsRoutesTestData.createTestData(models);
+var userRoutesTestData = require("./generators/users-routes-test-data");
+var testData = userRoutesTestData.createTestData(models);
 
 test.afterAll(models);
 

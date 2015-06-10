@@ -1,7 +1,11 @@
 "use strict";
+
+var _ = require('lodash');
+var encrypt = require('../../../passport/encrypt');
+
 var getTemplateHash = {
 	username: 'username${i}',
-	password: 'password${i}',
+	password: encrypt.createHash('password1'),
 	email: 'email${i}',
 	firstName: 'firstName${i}',
 	lastName: 'lasteName${i}',		
@@ -21,8 +25,16 @@ function UsersRoutesTestData(models){
 
 require('./test-data.js').mixin(UsersRoutesTestData);
 
+UsersRoutesTestData.prototype.generateUsers = function(numRecords){
+	var users = this.generateData(this.dataTemplate, numRecords);
+	_.forEach(users, function(user, index){
+	});
+	return users;
+};
+
+
 UsersRoutesTestData.prototype.seedDatabase = function(numRecords){
-	var seedData = this.generateData(this.dataTemplate, numRecords);	
+	var seedData = this.generateUsers(numRecords);	
 	return this.models.User.bulkCreate(seedData, {returning: true});
 };
 
