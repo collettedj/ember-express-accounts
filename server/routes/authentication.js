@@ -28,10 +28,10 @@ module.exports = function(passport){
 		res.status(200).json(req.user);
 	});	
 
-	/* GET Registration Page */
-	router.get('/signup', function(req, res){
-		res.render('register',{message: req.flash('message')});
-	});
+	// /* GET Registration Page */
+	// router.get('/signup', function(req, res){
+	// 	res.render('register',{message: req.flash('message')});
+	// });
 
 	/* Handle Registration POST */
 	router.post('/signup', 
