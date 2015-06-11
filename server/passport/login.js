@@ -19,15 +19,24 @@ module.exports = function(passport){
                         return done('Invalid username or password');                 
                     }
                     // User exists but wrong password, log the error 
-                    if (!isValidPassword(user, password)){
-                        console.log('Invalid Password');
-                        return done('Invalid username or password');
-                    }
-                    // User and password both match, return user from done method
-                    // which will be treated like success
-                    var userInfo = user.toJSON();
-                    delete userInfo.password;
-                    return done(null, userInfo);
+                    // if (!isValidPassword(user, password)){
+                    //     console.log('Invalid Password');
+                    //     return done('Invalid username or password');
+                    // }
+                    // // User and password both match, return user from done method
+                    // // which will be treated like success
+
+
+                    return isValidPassword(user, password)
+                        .then(function(isValid){
+                            var userInfo = user.toJSON();
+                            if(isValid){
+                                delete userInfo.password;
+                                return done(null, userInfo);                                
+                            }else{
+                                return done('Invalid username or password');
+                            }
+                        });
                 })
                 .catch(function(err){
                     done(err);
