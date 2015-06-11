@@ -5,7 +5,7 @@ var encrypt = require('../../../passport/encrypt');
 
 var getTemplateHash = {
 	username: 'username${i}',
-	password: encrypt.createHash('password1'),
+	password: encrypt.createHashSync('password1'),
 	email: 'email${i}',
 	firstName: 'firstName${i}',
 	lastName: 'lasteName${i}',		

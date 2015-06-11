@@ -3,7 +3,7 @@ var bCrypt = require('bcrypt-nodejs');
 
 module.exports = {
 	// need to fix this to be asynchronous
- 	createHash: function(value){
+ 	createHashSync: function(value){
  		return bCrypt.hashSync(value, bCrypt.genSaltSync(10), null);
  	},
 

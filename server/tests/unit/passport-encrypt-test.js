@@ -5,7 +5,7 @@ var encrypt = require("../../passport/encrypt");
 describe("passport encrypt", function(){
 	it("createHash should match compareHash", function(){
 		var password = "mypassword";
-		var passwordHash = encrypt.createHash(password);
+		var passwordHash = encrypt.createHashSync(password);
 		assert.ok(encrypt.compareHash(password, passwordHash));
 	});
 });

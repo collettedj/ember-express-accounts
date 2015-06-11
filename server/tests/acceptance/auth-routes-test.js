@@ -30,6 +30,32 @@ describe("routes", function(){
 				});
 		});	  	
 
+		it("Register for an account", function(done){
+			var registerInfo = {
+					username:"user2",
+					email:"user@email.com",
+					password:"2wsx3edc@WSX#EDC",
+					firstName:"John",
+					lastName:"Doe",
+				};
+
+			request.post('/api/v1/auth/signup')
+				.send(registerInfo)
+				.expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					assert.ok(jsonRes.id > 0);
+					assert.equal(jsonRes.username, registerInfo.username);
+					assert.equal(jsonRes.email, registerInfo.email);
+					assert.equal(jsonRes.firstName, registerInfo.firstName);
+					assert.equal(jsonRes.lastName, registerInfo.lastName);
+					done();
+				});
+		});	  		
+
+	
+
 
 	});
 
