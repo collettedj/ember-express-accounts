@@ -36,6 +36,15 @@ describe("routes", function(){
 				});
 		});	  	
 
+		it("GET One does not exist /appRoles", function(done){
+			request.get('/api/v1/appRoles/100').expect(404)
+				.end(function(err,res){
+					assert.equal(null, err);
+					assert.equal(res.text, "app-role not found");
+					done();
+				});
+		});	  			
+
 		it("GET Many /appRoles", function(done){
 			request.get('/api/v1/appRoles').query({appId:1}).expect(200)
 				.end(function(err,res){

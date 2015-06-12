@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"isEm",
+				"_.isEmpty"
+			],
+			[
 				"seed",
 				"seedDatabase"
 			],
@@ -84,92 +88,50 @@
 	"buffers":
 	[
 		{
-			"file": "server/tests/apps-routes-test-data.js",
+			"file": "server/routes/index.js",
 			"settings":
 			{
-				"buffer_size": 900,
+				"buffer_size": 756,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/config/config.json",
+			"file": "server/routeHelpers/modelRoute.js",
 			"settings":
 			{
-				"buffer_size": 485,
+				"buffer_size": 3052,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/tests/app-roles-routes-test-data.js",
+			"file": "server/routes/appRoleUsers.js",
 			"settings":
 			{
-				"buffer_size": 991,
+				"buffer_size": 1056,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/tests/app-roles-routes-test.js",
+			"file": "server/tests/acceptance/generators/app-role-users-routes-test-data.js",
 			"settings":
 			{
-				"buffer_size": 2280,
+				"buffer_size": 2651,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/tests/apps-routes-test.js",
+			"file": "server/models/appRole.js",
 			"settings":
 			{
-				"buffer_size": 2260,
+				"buffer_size": 1541,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/tests/users-routes-test-data.js",
+			"file": "server/tests/acceptance/app-role-users-routes-test.js",
 			"settings":
 			{
-				"buffer_size": 796,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 473 files for \"usersSeedData\"\n\n/home/david/projects/ember-express/server/tests/users-routes-test-data.js:\n   41  UsersRoutesTestData.prototype.seedDatabase = function(numRecords){\n   42  	var appsSeedData = this.generateData(this.getTemplate, numRecords);	\n   43: 	return this.models.User.bulkCreate(usersSeedData);\n   44  };\n   45  \n\n1 match in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 363,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "server/tests/users-routes-test.js",
-			"settings":
-			{
-				"buffer_size": 1807,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/tests/testUtils.js",
-			"settings":
-			{
-				"buffer_size": 1132,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/tests/test-data.js",
-			"settings":
-			{
-				"buffer_size": 1362,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/tests/model-helper-utils-test.js",
-			"settings":
-			{
-				"buffer_size": 430,
+				"buffer_size": 3552,
 				"line_ending": "Unix"
 			}
 		}
@@ -181,7 +143,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 79.0,
+		"height": 375.0,
 		"last_filter": "Package Control: install",
 		"selected_items":
 		[
@@ -280,19 +242,61 @@
 	"expanded_folders":
 	[
 		"/home/david/projects/ember-express",
-		"/home/david/projects/ember-express/client/app/mirage/factories",
+		"/home/david/projects/ember-express/client/app/routes",
 		"/home/david/projects/ember-express/server",
-		"/home/david/projects/ember-express/server/config",
+		"/home/david/projects/ember-express/server/modelHelpers",
 		"/home/david/projects/ember-express/server/models",
+		"/home/david/projects/ember-express/server/routeHelpers",
+		"/home/david/projects/ember-express/server/routes",
 		"/home/david/projects/ember-express/server/tests",
-		"/home/david/projects/ember-express/server/views"
+		"/home/david/projects/ember-express/server/tests/acceptance",
+		"/home/david/projects/ember-express/server/tests/acceptance/generators"
 	],
 	"file_history":
 	[
+		"/home/david/projects/ember-express/server/tests/acceptance/app-users-routes-test.js",
+		"/home/david/projects/ember-express/server/routes/apps.js",
+		"/home/david/projects/ember-express/client/app/routes/app.js",
+		"/home/david/projects/ember-express/server/models/appRoleUser.js",
+		"/home/david/projects/ember-express/server/models/appRole.js",
+		"/home/david/projects/ember-express/server/models/appUser.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/auth-routes-test.js",
+		"/home/david/projects/ember-express/server/passport/signup.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/generators/users-routes-test-data.js",
+		"/home/david/projects/ember-express/server/routes/authentication.js",
+		"/home/david/projects/ember-express/client/package.json",
+		"/home/david/projects/ember-express/client/app/routes/login.js",
+		"/home/david/projects/ember-express/server/passport/login.js",
+		"/home/david/projects/ember-express/client/app/templates/login.hbs",
+		"/home/david/projects/ember-express/client/app/controllers/login.js",
+		"/home/david/projects/ember-express/server/routes/appUsers.js",
+		"/home/david/projects/ember-express/server/tests/unit/passport-encrypt-test.js",
+		"/home/david/projects/ember-express/server/passport/encrypt.js",
+		"/home/david/projects/ember-express/server/app.js",
+		"/home/david/projects/ember-express/server/passport/init.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/users-routes-test.js",
+		"/home/david/projects/ember-express/server/routes/appRolesUsers.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/apps-routes-test.js",
+		"/home/david/projects/ember-express/server/config/config.json",
+		"/home/david/projects/ember-express/server/tests/acceptance/generators/app-roles-routes-test-data.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/app-roles-routes-test.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/generators/app-users-routes-test-data.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/bin/generate-docs.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/lib/utilities/doc-generator.js",
+		"/home/david/projects/ember-express/server/package.json",
 		"/home/david/projects/ember-express/server/gulpfile.js",
-		"/home/david/.bashrc",
+		"/home/david/projects/ember-express/server/tests/unit/model-helper-utils-test.js",
+		"/home/david/projects/ember-express/server/repl.js",
+		"/home/david/projects/ember-express/server/routes/users.js",
+		"/home/david/projects/ember-express/server/routes/appRoles.js",
+		"/home/david/projects/ember-express/server/routeHelpers/modelRoute.js",
 		"/home/david/projects/ember-express/server/tests/testUtils.js",
+		"/home/david/projects/ember-express/server/tests/acceptance/generators/test-data.js",
+		"/home/david/projects/ember-express/client/node_modules/ember-data/package.json",
+		"/home/david/projects/ember-express/client/node_modules/ember-cli/package.json",
+		"/home/david/projects/ember-express/server/tests/acceptance/generators/apps-routes-test-data.js",
 		"/home/david/projects/ember-express/server/tests/apps-routes-test.js",
+		"/home/david/.bashrc",
 		"/home/david/projects/ember-express/server/tests/users-routes-test.js",
 		"/home/david/projects/ember-express/server/tests/app-roles-routes-test.js",
 		"/home/david/projects/ember-express/server/models/user.js",
@@ -301,7 +305,6 @@
 		"/home/david/projects/ember-express/server/tests/model-helper-utils-test.js",
 		"/home/david/projects/ember-express/server/tests/.jshintrc",
 		"/home/david/projects/ember-express/server/tests/test-data.js",
-		"/home/david/projects/ember-express/server/routeHelpers/modelRoute.js",
 		"/home/david/projects/ember-express/server/models/index.js",
 		"/home/david/projects/ember-express/server/bin/www.js",
 		"/home/david/projects/ember-express/server/routeHelpers/utils.js",
@@ -309,10 +312,7 @@
 		"/home/david/projects/ember-express/client/.ember-cli",
 		"/home/david/projects/ember-express/server/publish/publish-db-force.js",
 		"/home/david/projects/ember-express/server/tests/routes-test.js",
-		"/home/david/projects/ember-express/server/config/config.json",
 		"/home/david/projects/ember-express/server/passport/isAuthenticated.js",
-		"/home/david/projects/ember-express/server/routes/apps.js",
-		"/home/david/projects/ember-express/server/app.js",
 		"/home/david/projects/ember-express/server/models/app.js",
 		"/home/david/projects/ember-express/client/app/models/app.js",
 		"/home/david/projects/ember-express/server/generator/templates/customClientModel.js",
@@ -321,10 +321,7 @@
 		"/home/david/projects/ember-express/server/generator/modelReader.js",
 		"/home/david/projects/ember-express/client/app/router.js",
 		"/home/david/projects/ember-express/client/bower.json",
-		"/home/david/projects/ember-express/client/package.json",
 		"/home/david/projects/ember-express/client/app/models/user-app.js",
-		"/home/david/projects/ember-express/server/models/appUser.js",
-		"/home/david/projects/ember-express/server/models/appRole.js",
 		"/home/david/projects/ember-express/client/app/models/custom/user.js",
 		"/home/david/projects/ember-express/client/.watchmanconfig",
 		"/home/david/projects/ember-express/client/app/models/custom/user-app.js",
@@ -354,18 +351,14 @@
 		"/home/david/savetabs.sh",
 		"/home/david/basrc",
 		"/tmp/cfg",
-		"/home/david/projects/ember-express/server/package.json",
 		"/home/david/projects/ember-express/client/app/routes/apps.js",
-		"/home/david/projects/ember-express/client/app/routes/app.js",
 		"/home/david/projects/ember-express/client/app/models/role.js",
 		"/home/david/projects/ember-express/client/app/templates/roles.hbs",
 		"/home/david/projects/ember-express/client/app/routes/roles.js",
 		"/home/david/projects/ember-express/client/app/controllers/roles.js",
 		"/home/david/projects/ember-express/client/app/controllers/apps.js",
-		"/home/david/projects/ember-express/server/routes/appRoles.js",
 		"/home/david/projects/ember-express/client/app/controllers/apps/index.js",
 		"/home/david/projects/ember-express/client/config/environment.js",
-		"/home/david/projects/ember-express/server/routes/users.js",
 		"/home/david/projects/ember-express/server/routes/roles.js",
 		"/home/david/projects/ember-express/server/models/role.js",
 		"/home/david/projects/ember-express/client/tests/unit/components/app-row-test.js",
@@ -376,17 +369,10 @@
 		"/home/david/projects/ember-express/client/app/templates/app-row.hbs",
 		"/home/david/projects/ember-express/server/publish/upgrade-dev.sql",
 		"/home/david/projects/ember-express/server/publish/testdb.sql",
-		"/home/david/projects/ember-express/server/passport/init.js",
 		"/home/david/projects/ember-express/client/app/initializers/custom-session.js",
-		"/home/david/projects/ember-express/client/app/routes/login.js",
-		"/home/david/projects/ember-express/server/passport/login.js",
-		"/home/david/projects/ember-express/server/passport/signup.js",
 		"/home/david/projects/ember-express/server/Gruntfile.js",
 		"/home/david/projects/ember-express/server/.jshintrc",
-		"/home/david/projects/ember-express/server/routes/authentication.js",
 		"/home/david/projects/ember-express/client/tests/acceptance/apps-test.js",
-		"/home/david/projects/ember-express/client/app/templates/login.hbs",
-		"/home/david/projects/ember-express/client/app/controllers/login.js",
 		"/home/david/projects/ember-express/server/bin/www",
 		"/home/david/projects/ember-express/client/app/controllers/user-row.js",
 		"/home/david/projects/ember-express/client/app/controllers/users.js",
@@ -395,28 +381,7 @@
 		"/home/david/projects/ember-express/server/publish/update-dev-db.sh",
 		"/home/david/projects/schemacomp/original.sql",
 		"/home/david/projects/schemacomp/upgrade.sql",
-		"/etc/rc.local",
-		"/home/david/projects/sails-test/createDatabase.txt",
-		"/home/david/projects/ember-express/server/node_modules/sequelize/lib/dialects/postgres/query.js",
-		"/home/david/projects/ember-express/server/database.js",
-		"/home/david/projects/ember-express/client/app/mirage/config.js",
-		"/home/david/projects/ember-express/client/app/mirage/routes/appRoles.js",
-		"/home/david/projects/ember-express/client/app/mirage/routes/apps.js",
-		"/home/david/projects/ember-express/client/app/mirage/routes/users.js",
-		"/home/david/projects/ember-express/client/app/mirage/routes/auth.js",
-		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/david/.config/sublime-text-3/Packages/User/Nodejs.sublime-settings",
-		"/home/david/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
-		"/home/david/projects/ember-express/client/node_modules/ember-cli-chart/addon/components/ember-chart.js",
-		"/home/david/projects/ember-express/client/bower_components/pretender/.bower.json",
-		"/home/david/projects/ember-express/client/app/templates/application.hbs",
-		"/home/david/projects/ember-express/client/app/controllers/application.js",
-		"/home/david/projects/ember-express/client/.jshintrc",
-		"/home/david/projects/ember-express/client/Brocfile.js",
-		"/home/david/projects/ember-express/client/app/mirage/fixtures/app-roles.js",
-		"/home/david/projects/ember-express/client/app/mirage/fixtures/apps.js",
-		"/home/david/projects/ember-express/client/app/mirage/fixtures/roles.js",
-		"/home/david/projects/ember-express/client/app/styles/app.less"
+		"/etc/rc.local"
 	],
 	"find":
 	{
@@ -441,6 +406,48 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"generateAppUsers",
+			"_appRolesTestData",
+			"AppUsersRoutesTestData",
+			"AppUser",
+			"AppRole",
+			"authError",
+			"createHashSync",
+			"compareHash",
+			"params",
+			"encrypt.createHash",
+			"encrypt",
+			"passport/login",
+			"passport/init",
+			"login",
+			"appsRoutesTestData",
+			"description",
+			"AppRole",
+			"appRoles",
+			"app-roles",
+			"appRoles",
+			"droptRight",
+			"appRoles",
+			"AppRole",
+			"appRole",
+			"AppRole",
+			"appRole",
+			"AppRole",
+			"appRole",
+			"AppRole",
+			"appRole",
+			"AppRole",
+			"appRole",
+			"AppRolesRoutesTestData",
+			"./testUtils",
+			"this",
+			", {returning: true}),",
+			"bulkCreate",
+			"this.models.AppRole.bulkCreate",
+			"Sequelize.Promise",
+			"test.cleanAndGenerateDb",
+			"jsonRes['app-roles']",
+			"app",
 			"models.App",
 			"apps",
 			"apps-",
@@ -526,49 +533,7 @@
 			"registerUser",
 			"api/v1",
 			"expressSession",
-			"<th>",
-			"th",
-			"user",
-			"etag",
-			"replacer",
-			"development",
-			"req.params.name",
-			"th>",
-			">\n",
-			"td>",
-			"th>",
-			"td",
-			"th>",
-			"th",
-			"th>",
-			"th",
-			"td",
-			"th",
-			">\n",
-			"th",
-			">\n",
-			"th",
-			">\n",
-			"th",
-			">\n",
-			"\n      ",
-			">\n",
-			"\n      ",
-			">\n",
-			"\n        ",
-			">\n",
-			"\n        ",
-			">\n",
-			"<th>",
-			"th",
-			"<th>",
-			"ember-validations",
-			"Ember.Validations",
-			"header",
-			"master",
-			"module.js",
-			"app.css",
-			"theme"
+			"<th>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -576,6 +541,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"AppRoleUser",
+			"AppUser",
+			"appUsers",
+			"app-users",
+			"appUsers",
+			"AppUser",
+			"appUser",
 			"models.AppRole",
 			"appRoles",
 			"app-roles-",
@@ -594,24 +566,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/tests/apps-routes-test-data.js",
+					"file": "server/routes/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 900,
+						"buffer_size": 756,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								788,
-								788
+								756,
+								756
 							]
 						],
 						"settings":
@@ -624,55 +596,145 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "server/config/config.json",
-					"semi_transient": false,
+					"file": "server/routeHelpers/modelRoute.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 485,
+						"buffer_size": 3052,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								311,
-								311
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 468.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/routes/appRoleUsers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1056,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1056,
+								1056
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/tests/acceptance/generators/app-role-users-routes-test-data.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1906,
+								1906
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server/models/appRole.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1541,
+								1541
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "server/tests/app-roles-routes-test-data.js",
+					"buffer": 5,
+					"file": "server/tests/acceptance/app-role-users-routes-test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 991,
+						"buffer_size": 3552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								765,
-								765
+								639,
+								639
 							]
 						],
 						"settings":
@@ -687,261 +749,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "server/tests/app-roles-routes-test.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2280,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								700,
-								700
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "server/tests/apps-routes-test.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2260,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1679,
-								1679
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "server/tests/users-routes-test-data.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 796,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								751,
-								751
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 363,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										310,
-										323
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								305,
-								305
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/david/projects/ember-express",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "server/tests/users-routes-test.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1479,
-								1479
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "server/tests/testUtils.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								845,
-								845
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "server/tests/test-data.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1362,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								814,
-								814
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "server/tests/model-helper-utils-test.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 430,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -999,6 +806,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"login.js",
+				"ember-express/client/app/controllers/login.js"
+			],
+			[
+				"login.hbs",
+				"ember-express/client/app/templates/login.hbs"
+			],
+			[
+				"app-users",
+				"ember-express/server/tests/acceptance/app-users-routes-test.js"
+			],
 			[
 				"testuti",
 				"ember-express/server/tests/testUtils.js"
@@ -1202,10 +1021,6 @@
 			[
 				"sig",
 				"server/passport/signup.js"
-			],
-			[
-				"login.js",
-				"server/passport/login.js"
 			],
 			[
 				"isau",
@@ -1502,14 +1317,6 @@
 			[
 				"model/users",
 				"client/app/models/user.js"
-			],
-			[
-				"application.",
-				"client/app/templates/application.hbs"
-			],
-			[
-				"custom-session",
-				"client/app/initializers/custom-session.js"
 			]
 		],
 		"width": 0.0
@@ -1544,7 +1351,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 303.0,
+	"side_bar_width": 405.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

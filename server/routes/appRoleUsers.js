@@ -10,8 +10,22 @@ var utils = require('../routeHelpers/utils');
 
 router.use(isAuthenticated);
 
+var checkQueryKeys = function(validQueryKeys){
+	return function(req, res, next){
+		var hasEveryKey = _.every(Object.keys(req.query), function(key){
+			return _.includes(validQueryKeys, key);
+		});	
+		if(hasEveryKey){
+			next();
+		}else{
+			res.status(404).send("Invalid query for model");
+		}
+
+	};
+};
+
 /* GET apps listing. */
-router.get('/', function(req, res) {
+router.get('/', checkQueryKeys(['appUserId', 'appRoleId']), function(req, res) {
 	var appUserId = req.query.appUserId;
 	var appRoleId = req.query.appRoleId;
 	var models = req.app.get('models');

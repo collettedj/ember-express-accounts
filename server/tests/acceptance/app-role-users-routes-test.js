@@ -25,55 +25,67 @@ describe("routes", function(){
 	  			.catch(done);
 	  	});
 
-		// it("GET One /appUsers", function(done){
-		// 	request.get('/api/v1/appUsers/1').expect(200)
+		it("GET One /appRoleUsers", function(done){
+			request.get('/api/v1/appRoleUsers/1').expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					assert.notStrictEqual(jsonRes['app-role-user'], undefined);
+					assert.equal(jsonRes['app-role-user'].id, 1);
+					done();
+				});
+		});	  	
+
+		it("GET Many /appRoleUsers By App Role Id", function(done){
+			request.get('/api/v1/appRoleUsers').query({appRoleId:1}).expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					var appRoleUsers = jsonRes['app-role-users'];
+
+					assert.notStrictEqual(appRoleUsers, undefined);
+					assert.equal(appRoleUsers.length, 10);
+					assert.equal(appRoleUsers[0].appRoleId, 1);
+					assert.equal(appRoleUsers[0].appUserId, 1);
+					assert.equal(appRoleUsers[1].appRoleId, 1);
+					assert.equal(appRoleUsers[1].appUserId, 2);
+					assert.equal(appRoleUsers[2].appRoleId, 1);
+					assert.equal(appRoleUsers[2].appUserId, 3);					
+					done();
+				});
+		});
+
+		it("GET Many /appRoleUsers By App User Id", function(done){
+			request.get('/api/v1/appRoleUsers').query({appUserId:1}).expect(200)
+				.end(function(err,res){
+					assert.equal(null, err);
+					var jsonRes = JSON.parse(res.text);
+					var appRoleUsers = jsonRes['app-role-users'];
+
+					assert.notStrictEqual(appRoleUsers, undefined);
+					assert.equal(appRoleUsers.length, 4);
+					assert.equal(appRoleUsers[0].appRoleId, 1);
+					assert.equal(appRoleUsers[0].appUserId, 1);
+					assert.equal(appRoleUsers[1].appRoleId, 2);
+					assert.equal(appRoleUsers[1].appUserId, 1);
+					assert.equal(appRoleUsers[2].appRoleId, 3);
+					assert.equal(appRoleUsers[2].appUserId, 1);					
+					done();
+				});
+		});
+
+		it("GET Many /appRoleUsers bad query", function(done){
+			request.get('/api/v1/appRoleUsers').query({someId:1}).expect(404)
+				.end(function(err,res){
+					assert.equal(null, err);
+					assert.equal(res.text, "Invalid query for model");
+					done();
+				});
+		});
+		// it("POST /appRoleUsers", function(done){
+		// 	request.post('/api/v1/appRoleUsers').send(testData.newModel).expect(200)
 		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			var jsonRes = JSON.parse(res.text);
-		// 			assert.notStrictEqual(jsonRes['app-user'], undefined);
-		// 			assert.equal(jsonRes['app-user'].id, 1);
-		// 			done();
-		// 		});
-		// });	  	
-
-		// it("GET Many /appUsers By App Id", function(done){
-		// 	request.get('/api/v1/appUsers').query({appId:1}).expect(200)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			var jsonRes = JSON.parse(res.text);
-		// 			var appUsers = jsonRes['app-users'];
-
-		// 			assert.notStrictEqual(appUsers, undefined);
-		// 			assert.equal(appUsers.length, 4);
-		// 			assert.equal(appUsers[0].appId, 1);
-		// 			assert.equal(appUsers[0].userId, 1);
-		// 			assert.equal(appUsers[1].appId, 1);
-		// 			assert.equal(appUsers[1].userId, 2);
-		// 			done();
-		// 		});
-		// });
-
-		// it("GET Many /appUsers By User Id", function(done){
-		// 	request.get('/api/v1/appUsers').query({userId:2}).expect(200)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			var jsonRes = JSON.parse(res.text);
-		// 			var appUsers = jsonRes['app-users'];
-
-		// 			assert.notStrictEqual(appUsers, undefined);
-		// 			assert.equal(appUsers.length, 3);
-		// 			assert.equal(appUsers[0].appId, 1);
-		// 			assert.equal(appUsers[0].userId, 2);
-		// 			assert.equal(appUsers[1].appId, 2);
-		// 			assert.equal(appUsers[1].userId, 2);
-		// 			done();
-		// 		});
-		// });		
-
-		// it("POST /appUsers", function(done){
-		// 	request.post('/api/v1/appUsers').send(testData.newModel).expect(200)
-		// 		.end(function(err,res){
-		// 			var appUser = res.body["app-user"];
+		// 			var appUser = res.body["app-role-user"];
 		// 			assert.equal(null, err);
 		// 			assert.equal(appUser.appId, testData.newModel.appUser.appId);
 		// 			assert.equal(appUser.userId, testData.newModel.appUser.userId);
@@ -87,19 +99,19 @@ describe("routes", function(){
 		// 		});
 		// });
 		
-		// it("PUT /appUsers", function(done){
-		// 	request.put('/api/v1/appUsers/1').send(testData.updateModel).expect(200)
+		// it("PUT /appRoleUsers", function(done){
+		// 	request.put('/api/v1/appRoleUsers/1').send(testData.updateModel).expect(200)
 		// 		.end(function(err,res){
 		// 			assert.equal(null, err);
 		// 			var jsonRes = JSON.parse(res.text);
-		// 			assert.equal(jsonRes["app-user"].appId, testData.updateModel.appUser.appId);
-		// 			assert.equal(jsonRes["app-user"].userId, testData.updateModel.appUser.userId);
+		// 			assert.equal(jsonRes["app-role-user"].appId, testData.updateModel.appUser.appId);
+		// 			assert.equal(jsonRes["app-role-user"].userId, testData.updateModel.appUser.userId);
 		// 			done();
 		// 		});
 		// });
 
-		// it("DELETE /appUsers", function(done){
-		// 	request.delete('/api/v1/appUsers/1').expect(204)
+		// it("DELETE /appRoleUsers", function(done){
+		// 	request.delete('/api/v1/appRoleUsers/1').expect(204)
 		// 		.end(function(err,res){
 		// 			assert.equal(null, err);
 		// 			done();

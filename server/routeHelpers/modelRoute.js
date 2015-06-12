@@ -5,6 +5,7 @@ var inspect = require('util').inspect;
 var chalk = require('chalk');
 var error = chalk.yellow;
 var utils = require('./utils');
+var format = require('util').format;
 
 
 
@@ -43,7 +44,13 @@ module.exports = function(modelName){
 					.then(function(oneModel){
 						var result = {};
 						result[modelRouteInfo.dashName] = oneModel;
-						res.json(result);
+
+						if(oneModel){
+							res.json(result);	
+						}else{
+							res.status(404).send(format("%s not found", modelRouteInfo.dashName));
+						}
+						
 					})
 					.catch(function(error){
 						handleError(res, error);
