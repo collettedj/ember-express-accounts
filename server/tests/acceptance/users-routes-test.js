@@ -48,7 +48,7 @@ describe("routes", function(){
 					assert.strictEqual(jsonRes.user.password, undefined);
 					assert.equal(jsonRes.user.email, "emailU");
 					assert.equal(jsonRes.user.firstName, "firstNameU");
-					assert.equal(jsonRes.user.lastName, "lasteNameU");
+					assert.equal(jsonRes.user.lastName, "lastNameU");
 					done();
 				});
 		});

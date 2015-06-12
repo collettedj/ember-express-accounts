@@ -23,12 +23,27 @@ describe("routes", function(){
 				.expect(200)
 				.end(function(err,res){
 					assert.equal(null, err);
-					// var jsonRes = JSON.parse(res.text);
+					var jsonRes = JSON.parse(res.text);
 					// assert.notStrictEqual(jsonRes.user, undefined);
-					// assert.equal(jsonRes.user.id, 1);
+					assert.equal(jsonRes.id, 1);
+					assert.equal(jsonRes.username, "username1");
+					assert.equal(jsonRes.email, "email1");
+					assert.equal(jsonRes.firstName, "firstName1");
+					assert.equal(jsonRes.lastName, "lastName1");
 					done();
 				});
 		});	  	
+
+		it("Login to website with bad password", function(done){
+			request.post('/api/v1/auth/login')
+			.send({username: "username1", password: "badpassword"})
+				.expect(401)
+				.end(function(err,res){
+					assert.equal(null, err);
+					assert.equal(res.text, "Invalid username or password");
+					done();
+				});
+		});	  			
 
 		it("Register for an account", function(done){
 			var registerInfo = {

@@ -17,21 +17,31 @@ var isAuthenticated = function (req, res, next) {
 module.exports = function(passport){
 
 	/* Handle Login POST */
-	router.post('/login', 
-		passport.authenticate('login'), 
-		function(req, res){
-			res.status(200).json(req.user);
-		}
-	);
+	// router.post('/login', 
+	// 	passport.authenticate('login'), 
+	// 	function(req, res){
+	// 		res.status(200).json(req.user);
+	// 	}
+	// );
+
+	router.post('/login', function(req, res, next) {
+	  passport.authenticate('login', function(err, user, info) {
+	    if (err) {
+	      return next(err);
+	    }
+	    if (!user) {
+	    	res.status(401).send(info);
+	    }
+	    req.logIn(user, function(err) {
+	      if (err) { return next(err); }
+	      return res.send(user);
+	    });
+	  })(req, res, next);
+	});
 
 	router.get('/user', function(req, res) {
 		res.status(200).json(req.user);
 	});	
-
-	// /* GET Registration Page */
-	// router.get('/signup', function(req, res){
-	// 	res.render('register',{message: req.flash('message')});
-	// });
 
 	/* Handle Registration POST */
 	router.post('/signup', 

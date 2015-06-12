@@ -8,7 +8,7 @@ var getTemplateHash = {
 	password: encrypt.createHashSync('password1'),
 	email: 'email${i}',
 	firstName: 'firstName${i}',
-	lastName: 'lasteName${i}',		
+	lastName: 'lastName${i}',		
 };
 
 function UsersRoutesTestData(models){
