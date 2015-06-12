@@ -4,8 +4,9 @@
 var inspect = require('util').inspect;
 var chalk = require('chalk');
 var error = chalk.yellow;
-var utils = require('./utils');
 var format = require('util').format;
+var utils = require('./utils');
+var _ = require('lodash');
 
 
 
@@ -137,7 +138,21 @@ module.exports = function(modelName){
 					handleError(res, error);
 				}
 			}
-		}
+		},
+
+		checkQueryKeys:function(validQueryKeys){
+			return function(req, res, next){
+				var hasEveryKey = _.every(Object.keys(req.query), function(key){
+					return _.includes(validQueryKeys, key);
+				});	
+				if(hasEveryKey){
+					next();
+				}else{
+					res.status(404).send("Invalid query for model");
+				}
+
+			};
+		},
 
 	};
 };

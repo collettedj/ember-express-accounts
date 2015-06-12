@@ -11,7 +11,7 @@ var utils = require('../routeHelpers/utils');
 router.use(isAuthenticated);
 
 /* GET apps listing. */
-router.get('/', function(req, res) {
+router.get('/', modelRoute.checkQueryKeys(['appId', 'userId']),  function(req, res) {
 	var appId = req.query.appId;
 	var userId = req.query.userId;
 	var models = req.app.get('models');
