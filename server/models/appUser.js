@@ -17,7 +17,11 @@ module.exports = function(sequelize, DataTypes) {
 
 				AppUser.belongsTo(models.User, {
 					foreignKey:'userId'
-				});				
+				});		
+
+				AppUser.hasMany(models.AppRoleUser, {
+                    foreignKey:'appRoleId'
+                });   
 			}
 		},
 
