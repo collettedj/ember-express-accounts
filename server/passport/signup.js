@@ -20,16 +20,27 @@ module.exports = function(passport){
                     }
                 })
                 .then(function(passwordHash){
-                    return models.User.create({
-                        username: username,
-                        password: passwordHash,
-                        email: req.body.email,
-                        firstName: req.body.firstName,
-                        lastName: req.body.lastName
+                    return models.sequelize.transaction(function(trans){
+                        return models.User.create({
+                            username: username,
+                            password: passwordHash,
+                            email: req.body.email,
+                            firstName: req.body.firstName,
+                            lastName: req.body.lastName
+                        }, {returning:true, transaction:trans})
+                        .then(function(newUser){
+                            return models.sequelize.Promise.props({
+                                user: newUser,
+                                passwordHistory: models.PasswordHistory.create({
+                                        userId: newUser.id,
+                                        password: newUser.password
+                                    }, {returning:true, transaction:trans})
+                            });
+                        });
                     });
                 })
-                .then(function(newUser){
-                    return done(null, newUser.toJSON());
+                .then(function(hash){
+                    return done(null, hash.user.toJSON());
                 })
                 .catch(function(err){
                     console.log(err);

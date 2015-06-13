@@ -10,9 +10,15 @@ module.exports = function(sequelize, DataTypes) {
 	}, 
 	{
 		classMethods: {
-			// associate: function(models) {
-			//   Task.belongsTo(models.User);
-			// }
+			associate: function(models) {
+				User.hasMany(models.AppUser, {
+                    foreignKey:'userId'
+                }); 
+
+				User.hasMany(models.PasswordHistory, {
+                    foreignKey:'userId'
+                });                 
+			}
 		}
 	});
 	return User;
