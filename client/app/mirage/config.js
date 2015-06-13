@@ -87,3 +87,10 @@ export default function() {
 
   */
 }
+
+/*
+You can optionally export a config that is only loaded during tests
+export function testConfig() {
+
+}
+*/

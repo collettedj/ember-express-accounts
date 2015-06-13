@@ -1,11 +1,8 @@
-import {
-  moduleForModel,
-  test
-} from 'ember-qunit';
+import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('app', {
+moduleForModel('app', 'Unit | Model | app', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:app-role']
 });
 
 test('it exists', function(assert) {
