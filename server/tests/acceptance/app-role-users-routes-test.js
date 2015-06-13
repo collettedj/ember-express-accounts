@@ -10,20 +10,14 @@ var testData = require("./generators/app-role-users-routes-test-data").createTes
 test.afterAll(models);
 
 describe("routes", function(){
-	describe("appRoleUsers route", function(){
 
-		beforeEach(function(done){
+	describe("appRoleUsers Http GET tests", function(){
+		before(function(done){
 			test.cleanAndGenerateDb(models, testData, done);
 	  	});
 
-	  	it("Total Rows Generated", function(done){
-	  		models.AppRoleUser.findAll()
-	  			.then(function(appRoleUsers){
-	  				assert.equal(appRoleUsers.length, 22);
-	  				done();
-	  			})
-	  			.catch(done);
-	  	});
+	  	test.testNotExist(request, "AppRoleUser");
+	  	test.testBadQuery(request, "AppRoleUser");	  	
 
 		it("GET One /appRoleUsers", function(done){
 			request.get('/api/v1/appRoleUsers/1').expect(200)
@@ -72,51 +66,61 @@ describe("routes", function(){
 					assert.equal(appRoleUsers[2].appUserId, 1);					
 					done();
 				});
-		});
+		});	  	
 
-		it("GET Many /appRoleUsers bad query", function(done){
-			request.get('/api/v1/appRoleUsers').query({someId:1}).expect(404)
+	});
+
+	describe("appRoleUsers route", function(){
+
+		beforeEach(function(done){
+			test.cleanAndGenerateDb(models, testData, done);
+	  	});
+
+
+	  	it("Total Rows Generated", function(done){
+	  		models.AppRoleUser.findAll()
+	  			.then(function(appRoleUsers){
+	  				assert.equal(appRoleUsers.length, 22);
+	  				done();
+	  			})
+	  			.catch(done);
+	  	});
+
+		it("POST /appRoleUsers", function(done){
+			request.post('/api/v1/appRoleUsers').send(testData.newModel).expect(200)
+				.end(function(err,res){
+					var appRoleUser = res.body["app-role-user"];
+					assert.equal(null, err);
+					assert.equal(appRoleUser.appRoleId, testData.newModel.appRoleUser.appRoleId);
+					assert.equal(appRoleUser.appUserId, testData.newModel.appRoleUser.appUserId);
+
+					models.AppRoleUser.findById(appRoleUser.id)
+						.then(function(insertedAppUser){
+							assert.equal(insertedAppUser.appRoleId, testData.newModel.appRoleUser.appRoleId);
+							assert.equal(insertedAppUser.appUserId, testData.newModel.appRoleUser.appUserId);
+							done();
+						}, done);
+				});
+		});
+		
+		it("PUT /appRoleUsers", function(done){
+			request.put('/api/v1/appRoleUsers/1').send(testData.updateModel).expect(200)
 				.end(function(err,res){
 					assert.equal(null, err);
-					assert.equal(res.text, "Invalid query for model");
+					var jsonRes = JSON.parse(res.text);
+					assert.equal(jsonRes["app-role-user"].appRoleId, testData.updateModel.appRoleUser.appRoleId);
+					assert.equal(jsonRes["app-role-user"].appUserId, testData.updateModel.appRoleUser.appUserId);
 					done();
 				});
 		});
-		// it("POST /appRoleUsers", function(done){
-		// 	request.post('/api/v1/appRoleUsers').send(testData.newModel).expect(200)
-		// 		.end(function(err,res){
-		// 			var appUser = res.body["app-role-user"];
-		// 			assert.equal(null, err);
-		// 			assert.equal(appUser.appId, testData.newModel.appUser.appId);
-		// 			assert.equal(appUser.userId, testData.newModel.appUser.userId);
 
-		// 			models.AppUser.findById(appUser.id)
-		// 				.then(function(insertedAppUser){
-		// 					assert.equal(insertedAppUser.appId, testData.newModel.appUser.appId);
-		// 					assert.equal(insertedAppUser.userId, testData.newModel.appUser.userId);
-		// 					done();
-		// 				}, done);
-		// 		});
-		// });
-		
-		// it("PUT /appRoleUsers", function(done){
-		// 	request.put('/api/v1/appRoleUsers/1').send(testData.updateModel).expect(200)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			var jsonRes = JSON.parse(res.text);
-		// 			assert.equal(jsonRes["app-role-user"].appId, testData.updateModel.appUser.appId);
-		// 			assert.equal(jsonRes["app-role-user"].userId, testData.updateModel.appUser.userId);
-		// 			done();
-		// 		});
-		// });
-
-		// it("DELETE /appRoleUsers", function(done){
-		// 	request.delete('/api/v1/appRoleUsers/1').expect(204)
-		// 		.end(function(err,res){
-		// 			assert.equal(null, err);
-		// 			done();
-		// 		});
-		// });
+		it("DELETE /appRoleUsers", function(done){
+			request.delete('/api/v1/appRoleUsers/1').expect(204)
+				.end(function(err,res){
+					assert.equal(null, err);
+					done();
+				});
+		});
 
 	});
 

@@ -11,11 +11,13 @@ var testData = userRoutesTestData.createTestData(models);
 test.afterAll(models);
 
 describe("routes", function(){
-	describe("users route", function(){
-
-		beforeEach(function(done){
+	describe("apps Http GET tests", function(){
+		before(function(done){
 			test.cleanAndGenerateDb(models, testData, done);
-	  	});
+	  	});		
+
+	  	test.testNotExist(request, "User");
+	  	test.testBadQuery(request, "App");
 
 		it("GET One /users", function(done){
 			request.get('/api/v1/users/1').expect(200)
@@ -37,7 +39,14 @@ describe("routes", function(){
 					assert.equal(jsonRes.users.length, 4);
 					done();
 				});
-		});
+		});	  	
+	});
+
+	describe("users route", function(){
+
+		beforeEach(function(done){
+			test.cleanAndGenerateDb(models, testData, done);
+	  	});
 
 		it("PUT /users", function(done){
 			request.put('/api/v1/users/1').send(testData.updateModel).expect(200)

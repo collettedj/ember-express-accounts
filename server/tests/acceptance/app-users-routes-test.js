@@ -10,20 +10,14 @@ var testData = require("./generators/app-users-routes-test-data").createTestData
 test.afterAll(models);
 
 describe("routes", function(){
-	describe("appUsers route", function(){
 
-		beforeEach(function(done){
+	describe("appUsers Http GET tests", function(){
+		before(function(done){
 			test.cleanAndGenerateDb(models, testData, done);
 	  	});
 
-	  	it("Total Rows Generated", function(done){
-	  		models.AppUser.findAll()
-	  			.then(function(appUsers){
-	  				assert.equal(appUsers.length, 10);
-	  				done();
-	  			})
-	  			.catch(done);
-	  	});
+	  	test.testNotExist(request, "AppUser");
+	  	test.testBadQuery(request, "AppUser");	  	
 
 		it("GET One /appUsers", function(done){
 			request.get('/api/v1/appUsers/1').expect(200)
@@ -68,7 +62,26 @@ describe("routes", function(){
 					assert.equal(appUsers[1].userId, 2);
 					done();
 				});
-		});		
+		});		  	
+	});
+
+	describe("appUsers route", function(){
+
+		beforeEach(function(done){
+			test.cleanAndGenerateDb(models, testData, done);
+	  	});
+
+
+	  	it("Total Rows Generated", function(done){
+	  		models.AppUser.findAll()
+	  			.then(function(appUsers){
+	  				assert.equal(appUsers.length, 10);
+	  				done();
+	  			})
+	  			.catch(done);
+	  	});
+
+	
 
 		it("POST /appUsers", function(done){
 			request.post('/api/v1/appUsers').send(testData.newModel).expect(200)

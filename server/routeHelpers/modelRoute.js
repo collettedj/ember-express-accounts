@@ -49,7 +49,7 @@ module.exports = function(modelName){
 						if(oneModel){
 							res.json(result);	
 						}else{
-							res.status(404).send(format("%s not found", modelRouteInfo.dashName));
+							res.status(404).send(format("%s not found", modelRouteInfo.emberModelNamePlural));
 						}
 						
 					})
@@ -148,7 +148,7 @@ module.exports = function(modelName){
 				if(hasEveryKey){
 					next();
 				}else{
-					res.status(404).send("Invalid query for model");
+					res.status(404).send(format("Invalid query for %s", modelRouteInfo.emberModelNamePlural));
 				}
 
 			};

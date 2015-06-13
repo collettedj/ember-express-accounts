@@ -11,11 +11,15 @@ var testData = appsRoutesTestData.createTestData(models);
 test.afterAll(models);
 
 describe("routes", function(){
-	describe("apps route", function(){
+	describe("apps Http GET tests", function(){
 
-		beforeEach(function(done){
+		before(function(done){
 			test.cleanAndGenerateDb(models, testData, done);
 	  	});
+
+
+	  	test.testNotExist(request, "App");
+	  	test.testBadQuery(request, "App");
 
 		it("GET One /apps", function(done){
 			request.get('/api/v1/apps/1').expect(200)
@@ -38,7 +42,14 @@ describe("routes", function(){
 					assert.equal(jsonRes.apps[0].name, "name1");
 					done();
 				});
-		});
+		});		
+	});
+
+	describe("apps route", function(){
+
+		beforeEach(function(done){
+			test.cleanAndGenerateDb(models, testData, done);
+	  	});
 
 		it("POST /apps", function(done){
 			request.post('/api/v1/apps').send(testData.newModel).expect(200)

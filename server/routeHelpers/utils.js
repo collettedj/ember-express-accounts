@@ -17,13 +17,15 @@ module.exports = {
 		var paramName = this.lowerFirstLetter(modelName) + "Id";
 		var routePath = "/:" + paramName;
 		var emberModelName = this.lowerFirstLetter(modelName);
+		var emberModelNamePlural = emberModelName + "s";
  
 		return {
 			dashName: modelDashName,
 			dashNamePlural: modelDashNamePlural,
 			paramName: paramName,
 			routePath: routePath,
-			emberModelName: emberModelName
+			emberModelName: emberModelName,
+			emberModelNamePlural: emberModelNamePlural
 		};
 	},
 

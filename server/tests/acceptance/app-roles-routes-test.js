@@ -10,20 +10,14 @@ var testData = require("./generators/app-roles-routes-test-data").createTestData
 test.afterAll(models);
 
 describe("routes", function(){
-	describe("appRoles route", function(){
 
-		beforeEach(function(done){
+  	describe("appRoles Http GET tests", function(){
+		before(function(done){
 			test.cleanAndGenerateDb(models, testData, done);
 	  	});
 
-	  	it("Total Rows Generated", function(done){
-	  		models.AppRole.findAll()
-	  			.then(function(appRoles){
-	  				assert.equal(appRoles.length, 10);
-	  				done();
-	  			})
-	  			.catch(done);
-	  	});
+	  	test.testNotExist(request, "AppRole");
+  		test.testBadQuery(request, "AppRole");
 
 		it("GET One /appRoles", function(done){
 			request.get('/api/v1/appRoles/1').expect(200)
@@ -36,14 +30,6 @@ describe("routes", function(){
 				});
 		});	  	
 
-		it("GET One does not exist /appRoles", function(done){
-			request.get('/api/v1/appRoles/100').expect(404)
-				.end(function(err,res){
-					assert.equal(null, err);
-					assert.equal(res.text, "app-role not found");
-					done();
-				});
-		});	  			
 
 		it("GET Many /appRoles", function(done){
 			request.get('/api/v1/appRoles').query({appId:1}).expect(200)
@@ -57,7 +43,24 @@ describe("routes", function(){
 					assert.equal(appRoles[0].name, "name1");
 					done();
 				});
-		});
+		});	  		
+  	});
+
+
+	describe("appRoles tests", function(){
+
+		beforeEach(function(done){
+			test.cleanAndGenerateDb(models, testData, done);
+	  	});
+
+	  	it("Total Rows Generated", function(done){
+	  		models.AppRole.findAll()
+	  			.then(function(appRoles){
+	  				assert.equal(appRoles.length, 10);
+	  				done();
+	  			})
+	  			.catch(done);
+	  	});		
 
 		it("POST /appRoles", function(done){
 			request.post('/api/v1/appRoles').send(testData.newModel).expect(200)

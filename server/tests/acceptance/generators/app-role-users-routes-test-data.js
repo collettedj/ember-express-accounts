@@ -15,10 +15,10 @@ function AppRoleUsersTestData(models, appRolesTestData, appUsersTestData){
 	this.dataTemplate = this.compileTemplates(appRoleUserTemplateHash);
 	this.models = models;
 	this.newModel = {
-		"appUser": this.generateAppRoleUser(4, 4)	
+		"appRoleUser": this.generateAppRoleUser(4, 4)	
 	};
 	this.updateModel = {
-		"appUser": this.generateAppRoleUser(1, 1)
+		"appRoleUser": this.generateAppRoleUser(1, 1)
 	};
 }
 
