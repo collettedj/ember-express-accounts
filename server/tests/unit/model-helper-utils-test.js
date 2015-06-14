@@ -1,5 +1,5 @@
 "use strict";
-var assert = require("assert");
+var assert = require("chai").assert;
 var utils = require("../../modelHelpers/utils.js");
 
 describe("model helper utils", function(){

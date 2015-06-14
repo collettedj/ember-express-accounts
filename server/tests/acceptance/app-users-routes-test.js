@@ -1,7 +1,7 @@
 "use strict";
 
 var test = require('../testUtils');
-var assert = require("assert");
+var assert = require("chai").assert;
 var app = require("../../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);

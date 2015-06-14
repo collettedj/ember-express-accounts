@@ -1,7 +1,7 @@
 "use strict";
 
 var test = require('../testUtils');
-var assert = require("assert");
+var assert = require("chai").assert;
 var app = require("../../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);
@@ -16,7 +16,6 @@ describe("routes", function(){
 		before(function(done){
 			test.cleanAndGenerateDb(models, testData, done);
 	  	});
-
 
 	  	test.testNotExist(request, "App");
 	  	test.testBadQuery(request, "App");

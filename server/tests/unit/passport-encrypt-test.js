@@ -1,5 +1,5 @@
 "use strict";
-var assert = require("assert");
+var assert = require("chai").assert;
 var encrypt = require("../../passport/encrypt");
 
 describe("passport encrypt", function(){

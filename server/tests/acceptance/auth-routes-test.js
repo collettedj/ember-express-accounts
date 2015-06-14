@@ -1,7 +1,7 @@
 "use strict";
 
 var test = require('../testUtils');
-var assert = require("assert");
+var assert = require("chai").assert;
 var app = require("../../app");
 var models = app.get('models');
 var request = require("supertest").agent(app);
@@ -46,6 +46,7 @@ describe("routes", function(){
 		});	  			
 
 		it("Register for an account", function(done){
+			var models = app.get('models');
 			var registerInfo = {
 					username:"user2",
 					email:"user@email.com",
@@ -65,7 +66,15 @@ describe("routes", function(){
 					assert.equal(jsonRes.email, registerInfo.email);
 					assert.equal(jsonRes.firstName, registerInfo.firstName);
 					assert.equal(jsonRes.lastName, registerInfo.lastName);
-					done();
+
+					models.PasswordHistory.findAll({userId:jsonRes.id})
+						.then(function(passwordHistories){
+							assert.equal(passwordHistories.length, 1);
+							done();
+						})
+						.catch(done);
+
+					
 				});
 		});	  		
 

@@ -5,7 +5,7 @@ var debug = require('debug');
 var logDb = debug("tests:db");
 var logRoute = debug("tests:route");
 var chalk = require('chalk');
-var assert = require("assert");
+var assert = require("chai").assert;
 var routeUtils = require('../routeHelpers/utils.js');
 
 
