@@ -1,12 +1,18 @@
 "use strict";
 
-module.exports = function (req, res, next) {
-	// if user is authenticated in the session, call the next() to call the next request handler 
-	// Passport adds this method to request object. A middleware is allowed to add properties to
-	// request and response objects
-	if (req.isAuthenticated() || process.env.NODE_ENV === "test"){
+var isAuthenticated;
+
+if(process.env.NODE_ENV === "test"){
+	isAuthenticated = function (req, res, next) {
 		return next();
-	}
-	// if the user is not authenticated then redirect him to the login page
-	res.sendStatus('401');
-};
+	};
+}else{
+	isAuthenticated = function (req, res, next) {
+		if (req.isAuthenticated()){
+			return next();
+		}
+		res.sendStatus('401');
+	};
+}
+
+module.exports = isAuthenticated;
