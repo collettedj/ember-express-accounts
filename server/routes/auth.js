@@ -21,6 +21,7 @@ router.post('/login', function(req, res, next) {
 	  })(req, res, next);
 });
 
+
 router.get('/user', function(req, res) {
 	res.status(200).json(req.user);
 });	
