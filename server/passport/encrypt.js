@@ -1,10 +1,10 @@
 "use strict";
 
-var Promise = require('bluebird');
+var BPromise = require('bluebird');
 var bCrypt = require('bcrypt-nodejs');
-var genSalt = Promise.promisify(bCrypt.genSalt);
-var hash = Promise.promisify(bCrypt.hash);
-var compare = Promise.promisify(bCrypt.compare);
+var genSalt = BPromise.promisify(bCrypt.genSalt);
+var hash = BPromise.promisify(bCrypt.hash);
+var compare = BPromise.promisify(bCrypt.compare);
 
 module.exports = {
 	// need to fix this to be asynchronous

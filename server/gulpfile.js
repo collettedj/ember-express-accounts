@@ -7,7 +7,7 @@ var nodemon = require('gulp-nodemon');
 var stylish = require('jshint-stylish');
 
 var paths = {
-    jshintFiles: ['gulpfile.js', 'routes/**/*.js', 'models/**/*.js', 'tests/**/*.js', 'passport/**/*.js', 'routeHelpers/**/*.js'],
+    jshintFiles: ['*.js', 'routes/**/*.js', 'models/**/*.js', 'tests/**/*.js', 'passport/**/*.js', 'routeHelpers/**/*.js'],
     testFiles: './tests/**/*test.js'
 };
 

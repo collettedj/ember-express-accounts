@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('lodash');
-var Promise = require('sequelize').Promise;
+var BPromise = require('sequelize').Promise;
 
 var appUserTemplateHash = {
 	appId: 1,
@@ -43,7 +43,7 @@ AppUsersRoutesTestData.prototype.generateAppUsers = function(appId, userIds){
 
 AppUsersRoutesTestData.prototype.seedDatabase = function(numRecords){
 	var self = this;
-	return Promise.props({
+	return BPromise.props({
 		users: self._usersTestsData.seedDatabase(4),
 		apps: self._appsTestData.seedDatabase(4)
 	})

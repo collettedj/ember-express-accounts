@@ -1,10 +1,12 @@
+"use strict";
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var compression = require('compression')
+var compression = require('compression');
 //var mongoose = require('mongoose');
 var app = express();
 
@@ -20,7 +22,7 @@ app.set('view engine', 'hbs');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 
-if(process.env.NODE_ENV != 'test'){
+if(process.env.NODE_ENV !== 'test'){
   app.use(logger('dev'));  
 }
 
@@ -44,7 +46,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function (req, res, next) {
-    if ('HEAD' == req.method || 'OPTIONS' == req.method) return next();
+    if ('HEAD' === req.method || 'OPTIONS' === req.method){
+        return next();
+    } 
 
     // break session hash / force express to spit out a new cookie once per second at most
     req.session._garbage = Date();

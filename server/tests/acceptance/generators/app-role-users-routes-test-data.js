@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('lodash');
-var Promise = require('sequelize').Promise;
+var BPromise = require('sequelize').Promise;
 
 var appRoleUserTemplateHash = {
 	appRoleId: 1,
@@ -52,7 +52,7 @@ AppRoleUsersTestData.prototype.seedDatabase = function(numRecords){
 			self._appRolesTestData.generateAppRoles(2, appIds[2]),
 			self._appRolesTestData.generateAppRoles(1, appIds[3]),
 		]);
-		return Promise.props({
+		return BPromise.props({
 				appUsers: appUsers,
 				appRoles: self.models.AppRole.bulkCreate(appRoles, {returning: true})
 		});
