@@ -11,15 +11,16 @@ var utils = require('../routeHelpers/utils');
 router.use(isAuthenticated);
 
 /* GET users listing. */
-router.get('/', modelRoute.checkQueryKeys([]), function(req, res) {
-	var models = req.app.get('models');
-	var users = models.User.findAll()
-		.then(function(users){
-			res.json(modelRoute.results(users));
-		});
-});
+// router.get('/', modelRoute.checkQueryKeys([]), function(req, res) {
+// 	var models = req.app.get('models');
+// 	var users = models.User.findAll()
+// 		.then(function(users){
+// 			res.json(modelRoute.results(users));
+// 		});
+// });
 
 
+utils.applyRoute(router, modelRoute.getMany);
 utils.applyRoute(router, modelRoute.getOne);
 utils.applyRoute(router, modelRoute.put);
 utils.applyRoute(router, modelRoute.delete);

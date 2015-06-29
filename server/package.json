@@ -19,6 +19,7 @@
     "express-session": "^1.11.1",
     "gulp": "^3.9.0",
     "hbs": "~2.9.0",
+    "jsonapi-serializer": "^1.0.2",
     "less-middleware": "1.0.x",
     "lodash": "^3.9.3",
     "morgan": "~1.5.1",

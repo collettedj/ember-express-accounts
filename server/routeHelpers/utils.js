@@ -30,6 +30,6 @@ module.exports = {
 	},
 
 	applyRoute: function(router, routeInfo){
-		router[routeInfo.verb](routeInfo.route, routeInfo.handler);
+		router[routeInfo.verb](routeInfo.route, routeInfo.handlers);
 	}
 };

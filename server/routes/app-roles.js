@@ -10,17 +10,18 @@ var utils = require('../routeHelpers/utils');
 router.use(isAuthenticated);
 
 /* GET apps listing. */
-router.get('/', modelRoute.checkQueryKeys(['appId']), function(req, res) {
-	var appId = req.query.appId;
-	var models = req.app.get('models');
-	models.AppRole.findAll({
-		where: {appId:appId}
-	})
-	.then(function(appRoles){
-		res.json(modelRoute.results(appRoles));
-	});
-});
+// router.get('/', modelRoute.checkQueryKeys(['appId']), function(req, res) {
+// 	var appId = req.query.appId;
+// 	var models = req.app.get('models');
+// 	models.AppRole.findAll({
+// 		where: {appId:appId}
+// 	})
+// 	.then(function(appRoles){
+// 		res.json(modelRoute.results(appRoles));
+// 	});
+// });
 
+utils.applyRoute(router, modelRoute.getMany);
 utils.applyRoute(router, modelRoute.getOne);
 utils.applyRoute(router, modelRoute.put);
 utils.applyRoute(router, modelRoute.post);

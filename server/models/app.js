@@ -14,6 +14,10 @@ module.exports = function(sequelize, DataTypes) {
                 App.hasMany(models.AppRole, {
                     foreignKey:'appId'
                 });
+
+                App.hasMany(models.AppUser, {
+                    foreignKey:'appId'
+                });                
             }
         }, 
         hooks: {
